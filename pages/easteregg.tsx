@@ -1,4 +1,4 @@
-import Egg from './components/easter.tsx';
+import Egg from './constituents/easter';
 
 function test() {
   return (
