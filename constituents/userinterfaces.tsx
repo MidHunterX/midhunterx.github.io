@@ -1,12 +1,19 @@
 import {Button, ButtonSecondary} from '@/constituents/buttons'
 
-export function Jumbotron({ head, body, button1, button2 }) {
+type JumboProps = {
+  head: string;
+  body: string;
+  button1: string;
+  button2: string;
+}
+
+export function Jumbotron( { head, body, button1, button2 } : JumboProps ) {
   return (
-    <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
-      <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">{head}</h1>
-        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">{body}</p>
-        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+    <section className="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+      <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">{head}</h1>
+        <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">{body}</p>
+        <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
           <Button href='/' text={button1}/>
           <ButtonSecondary href='/' text={button2}/>
         </div>
@@ -15,7 +22,13 @@ export function Jumbotron({ head, body, button1, button2 }) {
   );
 }
 
-export const Bento1 = ({ head, body, button }) => (
+type BentoProps = {
+  head: string;
+  body: string;
+  button: string;
+}
+
+export const Bento1 = ( { head, body, button } : BentoProps ) => (
   <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
     <h1 className="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">{head}</h1>
     <p className="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">{body}</p>
@@ -28,7 +41,7 @@ export const Bento1 = ({ head, body, button }) => (
   </div>
 );
 
-export const Bento2 = ({ head, body, button }) => (
+export const Bento2 = ( { head, body, button } : BentoProps ) => (
   <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
     <h2 className="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">{head}</h2>
     <p className="text-lg font-normal text-gray-500 dark:text-gray-400 mb-4">{body}</p>
@@ -40,7 +53,7 @@ export const Bento2 = ({ head, body, button }) => (
   </div>
 );
 
-export function BentoBox({children}) {
+export function BentoBox( {children} : {children:any} ) {
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
