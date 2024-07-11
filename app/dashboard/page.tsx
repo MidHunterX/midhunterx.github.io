@@ -1,4 +1,4 @@
-import {ButtonSecondary} from '@/constituents/userinterfaces'
+import {ButtonSecondary} from '@/constituents/buttons'
 
 export default function Page() {
   return (
