@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 function Heading() {
   return (
@@ -6,7 +6,11 @@ function Heading() {
   );
 }
 
-function Egg({ children }) {
+interface EggProps {
+  children: ReactNode;
+}
+
+const Egg: React.FC<EggProps> = ({ children }) => {
   return (
     <div>
       <Heading/>
@@ -16,6 +20,6 @@ function Egg({ children }) {
       <footer>&copy; Egg</footer>
     </div>
   );
-}
+};
 
 export default Egg;
