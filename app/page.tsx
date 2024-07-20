@@ -1,15 +1,8 @@
 // Use { } for Named Exports (without a default)
 import * as UI from '@/constituents/userinterfaces'
-import {NavItem, NavItemSelected, NavBar} from '@/constituents/sections/navigational-strip'
 
 export default function Application() {
   return ( <>
-
-    <NavBar>
-      <NavItemSelected href="#home" text="Home"/>
-      <NavItem href="#home" text="Skills"/>
-      <NavItem href="/dashboard" text="Dashboard"/>
-    </NavBar>
 
     <UI.Jumbotron
       head='Greetings, this is Mid Hunter'
