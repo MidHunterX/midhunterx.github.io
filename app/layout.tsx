@@ -1,4 +1,4 @@
-import {NavItem, NavItemSelected, NavBar} from '@/constituents/sections/navigational-strip'
+import {NavItem, NavItemSelected, NavBar} from '@/constituents/navigational-strip'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";

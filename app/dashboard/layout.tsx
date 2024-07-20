@@ -1,4 +1,4 @@
-import {NavItem, NavItemSelected, NavBar} from '@/constituents/sections/navigational-strip'
+import {NavItem, NavItemSelected, NavBar} from '@/constituents/navigational-strip'
 
 export default function DashboardLayout({
   children, // will be a page or nested layout
