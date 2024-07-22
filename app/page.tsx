@@ -1,8 +1,11 @@
 // Use { } for Named Exports (without a default)
 import * as UI from '@/constituents/userinterfaces'
+import FastTravel from '@/world/navigation'
 
 export default function Application() {
   return ( <>
+
+    <FastTravel/>
 
     <UI.Jumbotron
       head='Greetings, this is Mid Hunter'

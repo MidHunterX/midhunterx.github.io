@@ -1,4 +1,3 @@
-import {NavItem, NavItemSelected, NavBar} from '@/constituents/navigational-strip'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -18,11 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar>
-          <NavItemSelected href="#home" text="Home"/>
-          <NavItem href="#home" text="Skills"/>
-          <NavItem href="/dashboard" text="Dashboard"/>
-        </NavBar>
         <main>{children}</main>
       </body>
     </html>
