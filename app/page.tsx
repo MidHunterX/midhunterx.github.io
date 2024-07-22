@@ -1,10 +1,13 @@
+"use client";
 // Use { } for Named Exports (without a default)
 import * as UI from '@/constituents/userinterfaces'
+import LoadingScreen from "@/constituents/anim-loading/LoadingScreen";
 import FastTravel from '@/world/navigation'
 
 export default function Application() {
   return ( <>
 
+    <LoadingScreen/>
     <FastTravel/>
 
     <UI.Jumbotron
