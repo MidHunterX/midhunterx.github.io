@@ -25,6 +25,15 @@ Step 4: Profit?
 - Next.js - Bundler
 - React - UI Library
 - Tailwind CSS - CSS Framework
+### Font Awesome
+For some reason, react-fontawesome package does not support FontAwesome v5. So, this is the official React Component from the ![Official Documentation](https://docs.fontawesome.com/web/use-with/react).
+```
+npm i --save @fortawesome/fontawesome-svg-core
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+npm i --save @fortawesome/react-fontawesome@latest
+```
 
 ## 📔 NextJS Notes
 

@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 
 const FastTravel = () => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -25,9 +27,10 @@ const FastTravel = () => {
         data-blobity-tooltip="View Resume"
         data-blobity-magnetic="false"
       >
-        <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
-          Resume
-        </h4>
+        <FontAwesomeIcon
+          className="py-2 px-2 text-[16px] sm:px-4 md:py-1"
+          icon={faFilePdf}
+        />
       </Link>
 
       <Link
