@@ -25,6 +25,7 @@ Step 4: Profit?
 - Next.js - Bundler
 - React - UI Library
 - Tailwind CSS - CSS Framework
+- Flowbite - Tailwind Components
 - GSAP - Animation Framework
 
 ```
