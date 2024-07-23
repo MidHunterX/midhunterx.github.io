@@ -114,3 +114,7 @@ Ok to proceed? (y)
 ✔ Would you like to use App Router? (recommended) … Yes
 ✔ Would you like to customize the default import alias (@/\*)? … No
 ```
+
+## Personal Notes
+
+- Use absolute path whenever possible to avoid breaking when relocating

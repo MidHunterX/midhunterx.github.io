@@ -4,8 +4,8 @@ import * as UI from "@/constituents/userinterfaces";
 import LoadingScreen from "@/constituents/anim-loading/LoadingScreen";
 import FastTravel from "@/world/navigation";
 
-import HeroSection from "./section-hero.tsx";
-import ProjectsSection from "./section-projects.tsx";
+import Home from "@/world/home";
+import Workshop from "@/world/workshop";
 
 export default function Application() {
   return (
@@ -13,8 +13,8 @@ export default function Application() {
       <LoadingScreen />
       <FastTravel />
 
-      <HeroSection />
-      <ProjectsSection />
+      <Home />
+      <Workshop />
     </>
   );
 }

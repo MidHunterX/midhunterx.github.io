@@ -1,7 +1,7 @@
 "use client";
 import * as UI from "@/constituents/userinterfaces";
 
-export default function HeroSection() {
+export default function Home() {
   return (
     <>
       <UI.Jumbotron

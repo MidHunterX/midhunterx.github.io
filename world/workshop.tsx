@@ -1,7 +1,7 @@
 "use client";
 import * as UI from "@/constituents/userinterfaces";
 
-export default function ProjectsSection() {
+export default function Workshop() {
   return (
     <>
       <UI.BentoBox>

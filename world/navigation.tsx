@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
 const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   // first prevent the default behavior
@@ -20,25 +20,19 @@ type NavItemProps = {
   href: string;
   label: string;
   text: string;
-}
+};
 
-const NavItem = ( { href, label, text } : NavItemProps ) => (
-  <Link
-    href={href}
-    onClick={handleScroll}
-    aria-label={label}
-  >
+const NavItem = ({ href, label, text }: NavItemProps) => (
+  <Link href={href} onClick={handleScroll} aria-label={label}>
     <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
       {text}
     </h4>
   </Link>
 );
 
-
-const FastTravel = () => {
+export default function FastTravel() {
   return (
     <nav className="fixed bottom-5 left-0 right-0 mx-auto flex items-center justify-center gap-1 rounded-lg bg-[#07070a] px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
-
       <Link
         href="https://drive.google.com/file/d/1Mmwl-FRGPm5QVe3AjtukJr_Jpc366Ear/view"
         target="_blank"
@@ -53,32 +47,17 @@ const FastTravel = () => {
         />
       </Link>
 
-      <NavItem
-        href="#home"
-        label="Scroll to Home Section"
-        text="Home"
-      />
+      <NavItem href="#home" label="Scroll to Home Section" text="Home" />
 
-      <NavItem
-        href="#work"
-        label="Scroll to Work Section"
-        text="Work"
-      />
+      <NavItem href="#work" label="Scroll to Work Section" text="Work" />
 
-      <NavItem
-        href="#about"
-        label="Scroll to About Section"
-        text="About"
-      />
+      <NavItem href="#about" label="Scroll to About Section" text="About" />
 
       <NavItem
         href="#contact"
         label="Scroll to Contact Section"
         text="Contact"
       />
-
     </nav>
   );
-};
-
-export default FastTravel;
+}
