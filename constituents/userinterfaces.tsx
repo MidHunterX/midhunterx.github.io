@@ -116,8 +116,8 @@ export const ProjectItem = ({
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {body}
         </p>
-        {live && <ButtonProjectLive href={live} text="Live Project" />}
-        {code && <ButtonProjectCode href={code} text="Source" />}
+        {live && <ButtonProjectLive href={live} text="View Project" />}
+        {code && <ButtonProjectCode href={code} text="Code" />}
       </div>
     </div>
   );
