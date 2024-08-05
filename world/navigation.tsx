@@ -25,7 +25,7 @@ type NavItemProps = {
 };
 
 const NavItem = ({ href, label, text }: NavItemProps) => (
-  <Link href={href} onClick={handleScroll} aria-label={label}>
+  <Link href={href} onClick={handleScroll} aria-label={label} data-blobity-magnetic="false">
     <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
       {text}
     </h4>
