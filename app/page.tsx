@@ -1,6 +1,5 @@
 "use client";
 // Use { } for Named Exports (without a default)
-import * as UI from "@/constituents/userinterfaces";
 import LoadingScreen from "@/world/anim/loading/LoadingScreen";
 import FastTravel from "@/world/navigation";
 
