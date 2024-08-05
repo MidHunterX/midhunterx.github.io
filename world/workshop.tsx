@@ -9,11 +9,11 @@ export default function Workshop() {
 
         <div className="grid md:grid-cols-3 gap-8 mb-10">
           <ProjectItem
-            img="https://raw.githubusercontent.com/MidHunterX/Played-Games-List/89945f39ae5b996d8a289271567fb8f72670b107/assets/head.png"
-            head="Played Games List"
-            body="A web development project which help keep create and keep an organized list of all the PC games I have finished playing, while also familiarizing and applying basic web development concepts and best practices."
-            live="https://midhunterx.github.io/Played-Games-List/"
-            code="https://github.com/MidHunterX/Played-Games-List"
+            img=""
+            head="Breaking the Caesar Cipher"
+            body="A Computer Science Engineering Mini Project of a Webservice implementing Symmetric Encryption/Decryption using the good ol' Caesar Cipher algorithm"
+            live="https://midhunterx.github.io/Caesar-Cipher-Cryptography"
+            code="https://github.com/MidHunterX/Caesar-Cipher-Cryptography"
           />
 
           <ProjectItem
@@ -21,6 +21,18 @@ export default function Workshop() {
             head="GNOSIS"
             body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning and information exchange."
             code="https://github.com/MidHunterX/GNOSIS"
+          />
+        </div>
+
+        <h1>Personal Projects</h1>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-10">
+          <ProjectItem
+            img="https://raw.githubusercontent.com/MidHunterX/Played-Games-List/89945f39ae5b996d8a289271567fb8f72670b107/assets/head.png"
+            head="Played Games List"
+            body="A web development project which help keep create and keep an organized list of all the PC games I have finished playing, while also familiarizing and applying basic web development concepts and best practices."
+            live="https://midhunterx.github.io/Played-Games-List/"
+            code="https://github.com/MidHunterX/Played-Games-List"
           />
 
           <ProjectItem
