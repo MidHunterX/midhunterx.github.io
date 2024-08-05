@@ -3,7 +3,7 @@ import * as UI from "@/constituents/userinterfaces";
 
 export default function Workshop() {
   return (
-    <>
+    <section id="workshop">
       <UI.BentoBox>
         <UI.Bento1
           head="Familiar with tools and technologies such as"
@@ -78,6 +78,6 @@ export default function Workshop() {
           />
         </div>
       </UI.BentoBox>
-    </>
+    </section>
   );
 }

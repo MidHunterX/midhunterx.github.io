@@ -3,6 +3,8 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
+/* ===================== SMOOTH TRAVEL TO DESTINATION ===================== */
+
 const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   // first prevent the default behavior
   e.preventDefault();
@@ -47,15 +49,19 @@ export default function FastTravel() {
         />
       </Link>
 
-      <NavItem href="#home" label="Scroll to Home Section" text="Home" />
+      <NavItem href="#home" label="Fast Travel to Home" text="Home" />
 
-      <NavItem href="#work" label="Scroll to Work Section" text="Work" />
+      <NavItem
+        href="#workshop"
+        label="Fast Travel to Work Shop"
+        text="Projects"
+      />
 
       <NavItem href="#about" label="Scroll to About Section" text="About" />
 
       <NavItem
         href="#contact"
-        label="Scroll to Contact Section"
+        label="Fast Travel to Postal Service"
         text="Contact"
       />
     </nav>
