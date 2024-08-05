@@ -1,6 +1,6 @@
 "use client";
 // Use { } for Named Exports (without a default)
-import useBlobity from 'blobity/lib/react/useBlobity';
+import useBlobity from "blobity/lib/react/useBlobity";
 import LoadingScreen from "@/world/anim/loading/LoadingScreen";
 import FastTravel from "@/world/navigation";
 import Home from "@/world/home";
@@ -12,6 +12,8 @@ export default function Application() {
     mode: "normal", // normal, slow, bouncy
     focusableElementsOffsetX: 5,
     focusableElementsOffsetY: 5,
+    focusableElements:
+      "[data-blobity], a:not([data-no-blobity]), button:not([data-no-blobity]), [data-blobity-tooltip]",
     color: "#e4ded7",
     // dotColor: "#0e1016", // replaces mouse cursor
     invert: true,
