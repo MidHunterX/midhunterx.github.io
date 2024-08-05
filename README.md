@@ -5,9 +5,9 @@
 Step 1: Clone the project, cd into it and install dependencies
 
 ```bash
-git clone git@github.com:MidHunterX/portfolio
-cd portfolio
-npm install
+git clone git@github.com:MidHunterX/midhunterx.github.io
+cd midhunterx.github.io
+npm install --force --legacy-peer-deps
 ```
 
 Step 2: Run the development server
