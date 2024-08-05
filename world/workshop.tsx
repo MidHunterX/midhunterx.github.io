@@ -8,9 +8,9 @@ export default function Workshop() {
       className="bg-[#161D1F] py-[140px] px-10 flex flex-col gap-20 items-center"
     >
 
-      <h1>Projects</h1>
+      <h2>Projects</h2>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-10">
+      <div className="grid sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
         <ProjectItem
           img="https://raw.githubusercontent.com/mithundnair/Portfolio/main/images/Screenshot%20(7).png"
           head="Breaking the Caesar Cipher"
@@ -34,9 +34,9 @@ export default function Workshop() {
         />
       </div>
 
-      <h1>Personal Projects</h1>
+      <h2>Personal Projects</h2>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-10">
+      <div className="grid sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
         <ProjectItem
           img="https://raw.githubusercontent.com/MidHunterX/Played-Games-List/89945f39ae5b996d8a289271567fb8f72670b107/assets/head.png"
           head="Played Games List"
