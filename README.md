@@ -32,6 +32,14 @@ Step 4: Profit?
 npm install @gsap/react
 ```
 
+### Blobity
+
+When trying to install blobity on newer nodejs, dependency errors `npm error code ETARGET` and `npm error notarget` prevents you from installing this package. Typical npm behaviour. In order to accomplish this installation task, you gotta do it by force >:D
+
+```
+npm install blobity --force --legacy-peer-deps
+```
+
 ### Font Awesome
 
 For some reason, react-fontawesome package does not support FontAwesome v5. So, this is the official React Component from the ![Official Documentation](https://docs.fontawesome.com/web/use-with/react).
