@@ -1,6 +1,8 @@
 import {
   Button,
   ButtonSecondary,
+  ButtonArrow,
+  LinkArrow,
   ButtonProjectLive,
   ButtonProjectCode,
 } from "@/constituents/buttons";
@@ -45,7 +47,7 @@ type BentoProps = {
 };
 
 export const Bento1 = ({ head, body, href, button }: BentoProps) => (
-  <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
+  <div className="bg-gray-50 dark:bg-[#161D1F] border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
     <h1 className="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">
       {head}
     </h1>
@@ -70,11 +72,9 @@ export const Bento2 = ({ head, body, href, button }: BentoProps) => (
 
 export function BentoBox({ children }: { children: any }) {
   return (
-    <section className="bg-white dark:bg-gray-900">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-        {children}
-      </div>
-    </section>
+    <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+      {children}
+    </div>
   );
 }
 
@@ -107,7 +107,7 @@ export const ProjectItem = ({
   }
 
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
       <img className="rounded-t-lg" src={img} alt="" />
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
