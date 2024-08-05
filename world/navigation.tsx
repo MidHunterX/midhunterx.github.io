@@ -25,7 +25,7 @@ type NavItemProps = {
 };
 
 const NavItem = ({ href, label, text }: NavItemProps) => (
-  <Link href={href} onClick={handleScroll} aria-label={label} data-blobity-magnetic="false">
+  <Link href={href} onClick={handleScroll} aria-label={label}>
     <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
       {text}
     </h4>
@@ -57,7 +57,7 @@ export default function FastTravel() {
         text="Projects"
       />
 
-      <NavItem href="#about" label="Scroll to About Section" text="About" />
+      <NavItem href="#skills" label="Scroll to Skills Section" text="Skills" />
 
       <NavItem
         href="#contact"
