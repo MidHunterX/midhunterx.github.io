@@ -34,9 +34,9 @@ const NavItem = ({ href, label, text }: NavItemProps) => (
 
 export default function FastTravel() {
   return (
-    <nav className="fixed bottom-5 left-0 right-0 mx-auto flex items-center justify-center gap-1 rounded-lg bg-[#07070a] px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
+    <nav className="fixed bottom-8 left-0 right-0 mx-auto flex items-center justify-center gap-1 rounded-lg bg-[#07070a] px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
       <Link
-        href="https://drive.google.com/file/d/1Mmwl-FRGPm5QVe3AjtukJr_Jpc366Ear/view"
+        href="/"
         target="_blank"
         className="flex"
         aria-label="Open my resume"
