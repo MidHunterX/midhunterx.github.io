@@ -33,5 +33,14 @@ body {
 }
 
 h1 {
-  @apply text-4xl mb-4 font-bold dark:text-white;
+  @apply mb-3 text-5xl font-extrabold dark:text-white;
+}
+h2 {
+  @apply mb-3 text-5xl font-bold dark:text-white;
+}
+h3 {
+  @apply mb-3 text-2xl font-bold dark:text-white;
+}
+h4 {
+  @apply mb-3 text-xl font-bold dark:text-white;
 }
