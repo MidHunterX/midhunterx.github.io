@@ -22,6 +22,13 @@ export default function Workshop() {
             body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning and information exchange."
             code="https://github.com/MidHunterX/GNOSIS"
           />
+
+          <ProjectItem
+            img="https://raw.githubusercontent.com/MidHunterX/Scholar-CAP/main/img/header.png"
+            head="Scholar CAP"
+            body="Scholar CAP (Computer Aided Processing) is a comprehensive toolset designed to simplify the processing of student scholarship forms, specifically focusing on banking details. From initial data extraction and cleaning to verification, correction of typos, and the generation of NEFT formats."
+            code="https://github.com/MidHunterX/Scholar-CAP"
+          />
         </div>
 
         <h1>Personal Projects</h1>
