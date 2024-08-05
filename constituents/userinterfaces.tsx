@@ -1,8 +1,8 @@
 import {
   Button,
   ButtonSecondary,
-  ButtonArrow,
-  LinkArrow,
+  ButtonProjectLive,
+  ButtonProjectCode,
 } from "@/constituents/buttons";
 
 // ░░█ █░█ █▀▄▀█ █▄▄ █▀█ ▀█▀ █▀█ █▀█ █▄░█
@@ -120,8 +120,8 @@ export const ProjectItem = ({
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {body}
         </p>
-        {live && <Button href={live} text="View Project" />}
-        {code && <ButtonSecondary href={code} text="Source Code" />}
+        {live && <ButtonProjectLive href={live} text="Live Project" />}
+        {code && <ButtonProjectCode href={code} text="Source" />}
       </div>
     </div>
   );

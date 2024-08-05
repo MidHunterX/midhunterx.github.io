@@ -9,7 +9,7 @@ export default function Workshop() {
 
         <div className="grid md:grid-cols-3 gap-8 mb-10">
           <ProjectItem
-            img=""
+            img="https://raw.githubusercontent.com/mithundnair/Portfolio/main/images/Screenshot%20(7).png"
             head="Breaking the Caesar Cipher"
             body="A Computer Science Engineering Mini Project of a Webservice implementing Symmetric Encryption/Decryption using the good ol' Caesar Cipher algorithm"
             live="https://midhunterx.github.io/Caesar-Cipher-Cryptography"
