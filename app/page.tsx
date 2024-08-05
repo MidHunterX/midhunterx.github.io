@@ -5,6 +5,8 @@ import LoadingScreen from "@/world/anim/loading/LoadingScreen";
 import FastTravel from "@/world/navigation";
 import Home from "@/world/home";
 import Workshop from "@/world/workshop";
+import Skills from "@/world/skills";
+import Contact from "@/world/contact";
 
 export default function Application() {
   const blobity = useBlobity({
@@ -33,6 +35,8 @@ export default function Application() {
       <FastTravel />
       <Home />
       <Workshop />
+      <Skills />
+      <Contact />
     </>
   );
 }
