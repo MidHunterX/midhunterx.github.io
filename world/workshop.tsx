@@ -46,14 +46,14 @@ export default function Workshop() {
         />
 
         <ProjectItem
-          img="https://raw.githubusercontent.com/MidHunterX/Hunter-OS/master/.config/feh/.assets/feh.jpg"
+          img="https://repository-images.githubusercontent.com/765967283/ccd23ee4-afbf-4a78-a67f-62a870c308e0"
           head="Hunter OS"
           body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configurations meticulously curated to meet individual needs."
           code="https://github.com/MidHunterX/Hunter-OS"
         />
 
         <ProjectItem
-          img="https://raw.githubusercontent.com/MidHunterX/NvME/master/img/nvim_record.jpg"
+          img="https://repository-images.githubusercontent.com/678069975/10655fc3-f874-4d12-905b-3ed3daf63053"
           head="NvME"
           body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
           code="https://github.com/MidHunterX/NvME"
