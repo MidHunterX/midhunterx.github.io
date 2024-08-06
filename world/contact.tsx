@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -83,7 +82,6 @@ export default function Contact() {
                 <textarea
                   name="message"
                   id="message"
-                  rows="4"
                   className="w-full px-0 text-sm text-gray-900 bg-[#253134] border-0 focus:ring-0 text-white placeholder-gray-400"
                   placeholder="Write a message"
                 ></textarea>
@@ -100,7 +98,6 @@ export default function Contact() {
           </div>
         </div>
       </form>
-
     </section>
   );
 }
