@@ -9,32 +9,32 @@ export default function Skills() {
       <h2>Skills</h2>
 
       <div className="w-full grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-8 text-center py-2 sm:px-0">
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 1</p>
         </div>
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 2</p>
         </div>
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 3</p>
         </div>
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 4</p>
         </div>
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 5</p>
         </div>
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 6</p>
         </div>
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 7</p>
         </div>
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 8</p>
         </div>
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`} >
-          <p>item</p>
+        <div className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow">
+          <p>Skill 9</p>
         </div>
       </div>
 
