@@ -5,8 +5,8 @@
 Step 1: Clone the project, cd into it and install dependencies
 
 ```bash
-git clone git@github.com:MidHunterX/midhunterx.github.io
-cd midhunterx.github.io
+git clone git@github.com:MidHunterX/Portfolio
+cd Portfolio
 npm install --legacy-peer-deps
 ```
 
