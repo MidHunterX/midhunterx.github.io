@@ -7,11 +7,11 @@ const nextConfig = {
 
   // Deploy under subpath of a domain. This is the slug of your GitHub repository.
   // https://nextjs.org/docs/app/api-reference/next-config-js/basePath
-  // basePath: "/Portfolio",
+  basePath: "/Portfolio",
 
   // GitHub uses Jekyll by default to build static pages, and Jekyll ignores all files prefixed with _
   // https://nextjs.org/docs/app/api-reference/next-config-js/assetPrefix
-  assetPrefix: "./",
+  // assetPrefix: "./",
 
   // Disable server-based image optimization. Next.js does not support dynamic features with static exports.
   // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
