@@ -71,7 +71,7 @@ export default function Skills() {
           ...skillList.map((skill, index) => (
             <div
               key={`${title}-${index}`}
-              className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
+              className="block max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
               data-blobity-tooltip={`${skill.name}`}
               data-blobity-magnetic="false"
             >
@@ -94,11 +94,11 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-[100px] px-10 flex flex-col gap-20 items-center"
+      className="py-[100px] lg:px-[80px] sm:px-[50px] flex flex-col gap-20 items-center"
     >
       <h2>Skills</h2>
 
-      <div className="w-full grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center p-2 sm:px-0">
+      <div className="w-full grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
         {renderAllSkills()}
       </div>
     </section>
