@@ -71,14 +71,17 @@ export default function Skills() {
           ...skillList.map((skill, index) => (
             <div
               key={`${title}-${index}`}
-              className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow"
+              className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
+              data-blobity-tooltip={`${skill.name}`}
+              data-blobity-magnetic="false"
             >
               <Image
                 src={`/ico/${title}/${skill.icon}.svg`}
                 alt={`${skill.name} icon`}
+                data-blobity-tooltip={`${skill.name}`}
+                data-blobity-magnetic="true"
                 width={150}
                 height={150}
-                data-blobity-tooltip={`${skill.name}`}
               />
             </div>
           )),
@@ -91,7 +94,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-[#161D1F] py-[140px] px-10 flex flex-col gap-20 items-center"
+      className="py-[100px] px-10 flex flex-col gap-20 items-center"
     >
       <h2>Skills</h2>
 
