@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faToolbox } from "@fortawesome/free-solid-svg-icons";
 
 export default function Skills() {
   // █▀▀ █▀▀ ▀█▀ █▀▀ █░█   █▀ █▄▀ █ █░░ █░░ █▀
@@ -96,7 +98,10 @@ export default function Skills() {
       id="skills"
       className="py-[100px] lg:px-[80px] sm:px-[50px] flex flex-col gap-20 items-center"
     >
-      <h2>Skills</h2>
+      <h2>
+        <FontAwesomeIcon className="pe-4" icon={faToolbox} />
+        Skills
+      </h2>
 
       <div className="w-full grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
         {renderAllSkills()}

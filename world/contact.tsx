@@ -1,4 +1,6 @@
 "use client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {
   return (
@@ -6,7 +8,10 @@ export default function Contact() {
       id="contact"
       className="bg-[#161D1F] pb-[140px]"
     >
-      <h2 className="text-center">Contact</h2>
+      <h2 className="text-center">
+        <FontAwesomeIcon className="pe-4" icon={faAddressBook} />
+        Contact
+      </h2>
 
       <form
         action=""

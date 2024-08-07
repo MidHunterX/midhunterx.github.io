@@ -1,5 +1,7 @@
 "use client";
 import { ButtonProjectLive, ButtonProjectCode } from "@/constituents/buttons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBox } from "@fortawesome/free-solid-svg-icons";
 
 // █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █ ▀█▀ █▀▀ █▀▄▀█
 // █▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░   █ ░█░ ██▄ █░▀░█
@@ -45,7 +47,10 @@ export default function Workshop() {
       id="workshop"
       className="py-[100px] lg:px-[80px] sm:px-[50px] flex flex-col gap-20 items-center"
     >
-      <h2>Projects</h2>
+      <h2>
+        <FontAwesomeIcon className="pe-4" icon={faBox} />
+        Projects
+      </h2>
 
       <div className="grid sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectItem
@@ -71,7 +76,7 @@ export default function Workshop() {
         />
       </div>
 
-      <h2>Personal Projects</h2>
+      <h3> Personal Projects </h3>
 
       <div className="grid sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectItem
