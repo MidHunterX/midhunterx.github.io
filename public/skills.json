@@ -1,0 +1,32 @@
+{
+  "languages": [
+    { "name": "C", "icon": "c" },
+    { "name": "Python", "icon": "python" },
+    { "name": "Java", "icon": "java" },
+    { "name": "Lua", "icon": "lua" },
+    { "name": "Bash", "icon": "bash" },
+    { "name": "HTML", "icon": "html5" },
+    { "name": "CSS", "icon": "css3" },
+    { "name": "JavaScript", "icon": "javascript" },
+    { "name": "TypeScript", "icon": "typescript" }
+  ],
+  "databases": [
+    { "name": "MySQL", "icon": "mysql" },
+    { "name": "SQLite", "icon": "sqlite" }
+  ],
+  "frameworks": [
+    { "name": "Django", "icon": "django" },
+    { "name": "NodeJS", "icon": "nodejs" },
+    { "name": "NextJS", "icon": "nextjs" },
+    { "name": "Bootstrap", "icon": "bootstrap" },
+    { "name": "TailwindCSS", "icon": "tailwindcss" }
+  ],
+  "tools": [
+    { "name": "Git", "icon": "git" },
+    { "name": "Neovim", "icon": "nvim" },
+    { "name": "Tmux", "icon": "tmux" },
+    { "name": "SSH", "icon": "ssh" },
+    { "name": "Firefox", "icon": "firefox" },
+    { "name": "Linux", "icon": "linux" }
+  ]
+}
