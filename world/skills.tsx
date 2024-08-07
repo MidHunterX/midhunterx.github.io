@@ -25,7 +25,7 @@ export default function Skills() {
     const fetchSkills = async () => {
       try {
         const response = await fetch("/skills.json");
-        const data: SkillCategory = await response.json();
+        const data: Skills = await response.json();
         setSkills(data);
       } catch (error) {
         console.error("Error fetching skills:", error);
