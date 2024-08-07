@@ -12,10 +12,12 @@ type JumboProps = {
   head: string;
   body: string;
   button1: string;
+  href1: string;
   button2: string;
+  href2: string;
 };
 
-export function Jumbotron({ head, body, button1, button2 }: JumboProps) {
+export function Jumbotron({ head, body, button1, href1, button2, href2 }: JumboProps) {
   return (
     <section className="bg-center bg-no-repeat bg-[url('../public/hero.jpg')] bg-gray-700 bg-blend-multiply">
       <div className="px-4 mx-auto text-center flex flex-col justify-center max-w-screen-xl h-screen py-24 lg:py-56">
@@ -26,8 +28,8 @@ export function Jumbotron({ head, body, button1, button2 }: JumboProps) {
           {body}
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-          <Button href="/" text={button1} />
-          <ButtonSecondary href="/" text={button2} />
+          <Button href={href1} text={button1} />
+          <ButtonSecondary href={href2} text={button2} />
         </div>
       </div>
     </section>
