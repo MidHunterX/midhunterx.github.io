@@ -3,20 +3,23 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function Skills() {
-  interface SkillCategory {
+  // █▀▀ █▀▀ ▀█▀ █▀▀ █░█   █▀ █▄▀ █ █░░ █░░ █▀
+  // █▀░ ██▄ ░█░ █▄▄ █▀█   ▄█ █░█ █ █▄▄ █▄▄ ▄█
+  // Reads skills.json and set @var:skills
+  type Skill = {
+    name: string;
+    icon: string;
+  };
+
+  type Skills = {
     languages: Skill[];
     databases: Skill[];
     frameworks: Skill[];
     libraries: Skill[];
     tools: Skill[];
-  }
+  };
 
-  interface Skill {
-    name: string;
-    icon: string;
-  }
-
-  const [skills, setSkills] = useState<SkillCategory | null>(null);
+  const [skills, setSkills] = useState<Skills | null>(null);
 
   useEffect(() => {
     const fetchSkills = async () => {
@@ -35,23 +38,55 @@ export default function Skills() {
     return <p>Loading...</p>;
   }
 
+  // █▀█ █▀▀ █▄░█ █▀▄ █▀▀ █▀█   █▀ █▄▀ █ █░░ █░░ █▀
+  // █▀▄ ██▄ █░▀█ █▄▀ ██▄ █▀▄   ▄█ █░█ █ █▄▄ █▄▄ ▄█
+  // Prints skills from given category
+  // Syntax: renderSkills("category", data.category)
+  // Example: renderSkills("languages", skills.languages)
   const renderSkills = (title: string, skillList: Skill[]) => (
-    <>
-      <div className="w-full grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 text-center py-2 sm:px-0">
-        {skillList.map((skill, index) => (
-          <div id={`skill-${index}`} className="block p-4">
-            <Image
-              src={`/ico/${title}/${skill.icon}.svg`}
-              alt={`${skill.name} icon`}
-              width={100}
-              height={100}
-              data-blobity-tooltip={`${skill.name}`}
-            />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="w-full grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 text-center py-2 sm:px-0">
+      {skillList.map((skill, index) => (
+        <div key={`skill-${index}`} className="block p-4">
+          <Image
+            src={`/ico/${title}/${skill.icon}.svg`}
+            alt={`${skill.name} icon`}
+            width={150}
+            height={150}
+            data-blobity-tooltip={`${skill.name}`}
+          />
+        </div>
+      ))}
+    </div>
   );
+
+  // █▀█ █▀▀ █▄░█ █▀▄ █▀▀ █▀█   ▄▀█ █░░ █░░   █▀ █▄▀ █ █░░ █░░ █▀
+  // █▀▄ ██▄ █░▀█ █▄▀ ██▄ █▀▄   █▀█ █▄▄ █▄▄   ▄█ █░█ █ █▄▄ █▄▄ ▄█
+  // Renders skills from every skills one after the next
+  // syntax: renderAllSkills()
+  const renderAllSkills = () => {
+    const skillElements = [];
+    if (skills) {
+      for (const [title, skillList] of Object.entries(skills)) {
+        skillElements.push(
+          ...skillList.map((skill, index) => (
+            <div
+              key={`${title}-${index}`}
+              className="block max-w-sm p-6 border border-gray-200 rounded-lg shadow"
+            >
+              <Image
+                src={`/ico/${title}/${skill.icon}.svg`}
+                alt={`${skill.name} icon`}
+                width={150}
+                height={150}
+                data-blobity-tooltip={`${skill.name}`}
+              />
+            </div>
+          )),
+        );
+      }
+    }
+    return skillElements;
+  };
 
   return (
     <section
@@ -60,17 +95,9 @@ export default function Skills() {
     >
       <h2>Skills</h2>
 
-      <div>
-        <h3>Languages</h3>
-        {renderSkills("languages", skills.languages)}
-        <h3>Databases</h3>
-        {renderSkills("databases", skills.databases)}
-        <h3>Frameworks</h3>
-        {renderSkills("frameworks", skills.frameworks)}
-        <h3>Tools</h3>
-        {renderSkills("tools", skills.tools)}
+      <div className="w-full grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center p-2 sm:px-0">
+        {renderAllSkills()}
       </div>
-
     </section>
   );
 }
