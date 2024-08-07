@@ -3,8 +3,6 @@ import {
   ButtonSecondary,
   ButtonArrow,
   LinkArrow,
-  ButtonProjectLive,
-  ButtonProjectCode,
 } from "@/constituents/buttons";
 
 // ░░█ █░█ █▀▄▀█ █▄▄ █▀█ ▀█▀ █▀█ █▀█ █▄░█
@@ -77,44 +75,3 @@ export function BentoBox({ children }: { children: any }) {
     </div>
   );
 }
-
-// █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █ ▀█▀ █▀▀ █▀▄▀█
-// █▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░   █ ░█░ ██▄ █░▀░█
-
-type ProjectItemProps = {
-  img: string;
-  head: string;
-  body: string;
-  live?: string;
-  code?: string;
-};
-
-export const ProjectItem = ({
-  img,
-  head,
-  body,
-  live,
-  code,
-}: ProjectItemProps) => {
-  let href: string;
-
-  if (live) {
-    href = live;
-  } else if (code) {
-    href = code;
-  } else {
-    href = "/";
-  }
-
-  return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
-      <img className="rounded-t-lg" src={img} alt="" />
-      <div className="p-5">
-        <h3> {head} </h3>
-        <p className="mb-3"> {body} </p>
-        {live && <ButtonProjectLive href={live} text="View Project" />}
-        {code && <ButtonProjectCode href={code} text="Code" />}
-      </div>
-    </div>
-  );
-};

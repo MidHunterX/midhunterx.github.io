@@ -1,13 +1,50 @@
 "use client";
-import { BentoBox, ProjectItem } from "@/constituents/userinterfaces";
+import { ButtonProjectLive, ButtonProjectCode } from "@/constituents/buttons";
+
+// █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █ ▀█▀ █▀▀ █▀▄▀█
+// █▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░   █ ░█░ ██▄ █░▀░█
+
+type ProjectItemProps = {
+  img: string;
+  head: string;
+  body: string;
+  live?: string;
+  code?: string;
+};
+
+const ProjectItem = ({ img, head, body, live, code }: ProjectItemProps) => {
+  let href: string;
+
+  if (live) {
+    href = live;
+  } else if (code) {
+    href = code;
+  } else {
+    href = "/";
+  }
+
+  return (
+    <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
+      <img className="rounded-t-lg" src={img} alt="" />
+      <div className="p-5">
+        <h3> {head} </h3>
+        <p className="mb-3"> {body} </p>
+        {live && <ButtonProjectLive href={live} text="View Project" />}
+        {code && <ButtonProjectCode href={code} text="Code" />}
+      </div>
+    </div>
+  );
+};
+
+// █░█░█ █▀█ █▀█ █▄▀ █▀ █░█ █▀█ █▀█
+// ▀▄▀▄▀ █▄█ █▀▄ █░█ ▄█ █▀█ █▄█ █▀▀
 
 export default function Workshop() {
   return (
     <section
       id="workshop"
-      className="bg-[#161D1F] py-[140px] px-10 flex flex-col gap-20 items-center"
+      className="py-[100px] lg:px-[80px] sm:px-[50px] flex flex-col gap-20 items-center"
     >
-
       <h2>Projects</h2>
 
       <div className="grid sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
@@ -59,7 +96,6 @@ export default function Workshop() {
           code="https://github.com/MidHunterX/NvME"
         />
       </div>
-
     </section>
   );
 }
