@@ -52,7 +52,7 @@ export default function Workshop() {
         Projects
       </h2>
 
-      <div className="grid sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid place-content-center sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectItem
           img="https://raw.githubusercontent.com/mithundnair/Portfolio/main/images/Screenshot%20(7).png"
           head="Breaking the Caesar Cipher"
