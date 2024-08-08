@@ -103,7 +103,7 @@ export default function Skills() {
         Skills
       </h2>
 
-      <div className="w-full grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
+      <div className="w-full place-content-center grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
         {renderAllSkills()}
       </div>
     </section>
