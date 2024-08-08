@@ -7,6 +7,11 @@ const config: Config = {
     "./world/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
+  // The selector strategy replaced the class strategy in Tailwind CSS v3.4.1.
+  // tailwindcss.com/docs/dark-mode
+  // darkMode: 'selector',
+
   theme: {
     extend: {
       backgroundImage: {
