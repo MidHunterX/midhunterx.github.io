@@ -4,6 +4,8 @@ import * as UI from "@/constituents/userinterfaces";
 export default function Home() {
   return (
     <section id="home">
+      <UI.Hero/>
+      {/*
       <UI.Jumbotron
         head="Greetings, this is Mid Hunter"
         body="Creating software and automation with ease just for fun."
@@ -12,6 +14,7 @@ export default function Home() {
         button2="Contact"
         href2="#contact"
       />
+      */}
     </section>
   );
 }
