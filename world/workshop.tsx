@@ -12,17 +12,33 @@ type ProjectItemProps = {
   body: string;
   live?: string;
   code?: string;
+  techs?: string[];
 };
 
-const ProjectItem = ({ img, head, body, live, code }: ProjectItemProps) => {
+const ProjectItem = ({ img, head, body, live, code, techs }: ProjectItemProps) => {
   return (
     <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
       <img className="rounded-t-lg" src={img} alt="" />
       <div className="p-5">
         <h3> {head} </h3>
         <p className="mb-3"> {body} </p>
-        {live && <ButtonProjectLive href={live} text="View Project" />}
-        {code && <ButtonProjectCode href={code} text="Code" />}
+
+        <div className="mb-4">
+          {techs && (
+            <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
+              {techs.map((tech, index) => (
+                <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded border border-gray-500 px-2.5">
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        <div className="mt-8">
+          {live && <ButtonProjectLive href={live} text="View Project" />}
+          {code && <ButtonProjectCode href={code} text="Code" />}
+        </div>
       </div>
     </div>
   );
@@ -49,6 +65,7 @@ export default function Workshop() {
           body="A Computer Science Engineering Mini Project of a Webservice implementing Symmetric Encryption/Decryption using the good ol' Caesar Cipher algorithm"
           live="https://midhunterx.github.io/Caesar-Cipher-Cryptography"
           code="https://github.com/MidHunterX/Caesar-Cipher-Cryptography"
+          techs={['HTML', 'CSS', 'Javascript']}
         />
 
         <ProjectItem
@@ -56,6 +73,7 @@ export default function Workshop() {
           head="GNOSIS"
           body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning and information exchange."
           code="https://github.com/MidHunterX/GNOSIS"
+          techs={['Python', 'Django', 'GeminiAI']}
         />
 
         <ProjectItem
@@ -63,6 +81,7 @@ export default function Workshop() {
           head="Scholar CAP"
           body="Scholar CAP (Computer Aided Processing) is a comprehensive toolset designed to simplify the processing of student scholarship forms, specifically focusing on banking details. From initial data extraction and cleaning to verification, correction of typos, and the generation of NEFT formats."
           code="https://github.com/MidHunterX/Scholar-CAP"
+          techs={['Python', 'openpyxl', 'Multi-Threading']}
         />
       </div>
 
@@ -75,6 +94,7 @@ export default function Workshop() {
           body="A web development project which help keep create and keep an organized list of all the PC games I have finished playing, while also familiarizing and applying basic web development concepts and best practices."
           live="https://midhunterx.github.io/Played-Games-List/"
           code="https://github.com/MidHunterX/Played-Games-List"
+          techs={['HTML', 'CSS', 'Javascript']}
         />
 
         <ProjectItem
@@ -82,6 +102,7 @@ export default function Workshop() {
           head="Hunter OS"
           body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configurations meticulously curated to meet individual needs."
           code="https://github.com/MidHunterX/Hunter-OS"
+          techs={['Bash', 'Python', 'Conf']}
         />
 
         <ProjectItem
@@ -89,6 +110,7 @@ export default function Workshop() {
           head="NvME"
           body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
           code="https://github.com/MidHunterX/NvME"
+          techs={['Lua']}
         />
       </div>
     </section>
