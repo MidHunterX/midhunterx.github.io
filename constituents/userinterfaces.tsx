@@ -53,7 +53,7 @@ export function Hero() {
     <section className="bg-center bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen h-screen py-16 mx-auto items-center lg:flex">
 
       <div className="w-full lg:w-1/2 px-[50px]">
-        <div class="max-w-fit bg-gray-100 text-gray-800 text-xs font-medium mb-2 px-4 py-1 rounded dark:bg-gray-800 dark:text-gray-200 border border-gray-500">Greetings, my name is</div>
+        <div className="max-w-fit bg-gray-100 text-gray-800 text-xs font-medium mb-2 px-4 py-1 rounded dark:bg-gray-800 dark:text-gray-200 border border-gray-500">Greetings, my name is</div>
         <h1 className="mb-4 text-6xl lg:text-8xl md:text-5xl text-white font-extrabold tracking-tight leading-none">
           Mid Hunter
         </h1>
