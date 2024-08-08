@@ -15,16 +15,6 @@ type ProjectItemProps = {
 };
 
 const ProjectItem = ({ img, head, body, live, code }: ProjectItemProps) => {
-  let href: string;
-
-  if (live) {
-    href = live;
-  } else if (code) {
-    href = code;
-  } else {
-    href = "/";
-  }
-
   return (
     <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
       <img className="rounded-t-lg" src={img} alt="" />
