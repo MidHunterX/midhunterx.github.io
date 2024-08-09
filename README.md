@@ -26,11 +26,13 @@ Step 4: Profit?
 - React - UI Library
 - Tailwind CSS - CSS Framework
 - Flowbite - Tailwind Component Library
-- GSAP - Animation Framework
 
-```
-npm install @gsap/react
-```
+| Library                 | Description             |
+| ----------------------- | ----------------------- |
+| fortawesome/fontawesome | SVG Icon Library        |
+| gmrchk/blobity          | Kinet based cursor blob |
+| greensock/gsap          | Animation Framework     |
+| pacocoursey/next-themes | NextJS Theme Provider   |
 
 ### Blobity
 
@@ -51,78 +53,3 @@ npm i --save @fortawesome/free-regular-svg-icons
 npm i --save @fortawesome/free-brands-svg-icons
 npm i --save @fortawesome/react-fontawesome@latest
 ```
-
-## 📔 NextJS Notes
-
-### Project Stucture
-
-#### ./ (Project Dir)
-
-```sh
-app/                - App Router
-pages/              - Pages Router
-public/             - Static assets to be served
-next.config.js      - Configuration file for Next.js
-package.json        - Project dependencies and scripts
-instrumentation.ts  - OpenTelemetry and Instrumentation file
-middleware.ts       - Next.js request middleware
-.eslintrc.json      - Configuration file for ESLint
-.gitignore          - Git files and folders to ignore
-next-env.d.ts       - TypeScript declaration file for Next.js
-tsconfig.json       - Configuration file for TypeScript
-jsconfig.json       - Configuration file for JavaScript
-```
-
-#### app/ (App Router)
-
-Global stuff here
-
-```sh
-layout.tsx          - Layout
-page.tsx            - Page
-loading.tsx         - Loading UI
-not-found.tsx       - Not found UI
-error.tsx           - Error UI
-global-error.tsx    - Global error UI
-route.js            - API endpoint
-template.tsx        - Re-rendered layout
-default.tsx         - Parallel route fallback page
-```
-
-#### pages/ (Pages Router)
-
-Automatically creates url routes for each file inside this directory (https://website/filename)
-
-```sh
-_app.tsx            - Custom App
-_document.tsx       - Custom Document
-_error.tsx          - Custom Error Page
-404.tsx             - 404 Error Page
-500.tsx             - 500 Error Page
-index.tsx           - Home page
-folder/index.tsx    - Nested page
-file.tsx            - Nested page
-```
-
-### Create NextJS React App
-
-```
-npx create-next-app@latest
-```
-
-```
-Need to install the following packages:
-create-next-app@14.1.4
-Ok to proceed? (y)
-✔ What is your project named? … portfolio
-✔ Would you like to use TypeScript? … Yes
-✔ Would you like to use ESLint? … Yes
-✔ Would you like to use Tailwind CSS? … Yes
-✔ Would you like to use `src/` directory? … No
-✔ Would you like to use App Router? (recommended) … Yes
-✔ Would you like to customize the default import alias (@/\*)? … No
-```
-
-## Personal Notes
-
-- Use absolute path whenever possible to avoid breaking when relocating
