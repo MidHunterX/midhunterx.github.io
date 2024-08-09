@@ -68,13 +68,13 @@ oMMo              oMMo
 `;
 
   return (
-    <section className="bg-center bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen h-screen py-[100px] lg:px-[80px] sm:px-[50px] lg:flex lg:flex-row items-center">
+    <section className="bg-cover bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen min-h-screen pt-8 pb-[50px] lg:flex lg:flex-row items-center">
 
-      <div className="collapse xl:visible lg:visible text-white flex flex-col items-center justify-center w-full lg:w-1/3">
-        <pre className="mb-4 font-mono text-sm whitespace-pre-wrap">{art2}</pre>
+      <div className="text-white flex flex-col items-center justify-center w-full lg:w-1/3">
+        <pre className="mb-4 font-mono text-sm whitespace-pre-wrap">{art}</pre>
       </div>
 
-      <div className="w-full lg:w-2/3 px-[50px]">
+      <div className="w-full lg:w-1/2 px-[50px]">
         <div className="max-w-fit bg-gray-100 text-gray-800 text-xs font-medium mb-2 px-4 py-1 rounded dark:bg-gray-800 dark:text-gray-200 border border-gray-500">
           Greetings, I am known as
         </div>
