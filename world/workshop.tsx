@@ -51,7 +51,7 @@ export default function Workshop() {
   return (
     <section
       id="workshop"
-      className="py-[100px] lg:px-[80px] sm:px-[50px] flex flex-col gap-20 items-center"
+      className="px-3 md:px-[100px] py-[100px] flex flex-col gap-20 items-center"
     >
       <h2>
         <FontAwesomeIcon className="pe-4" icon={faBox} />
@@ -71,7 +71,7 @@ export default function Workshop() {
         <ProjectItem
           img="https://raw.githubusercontent.com/MidHunterX/GNOSIS/master/static/sc_queslist.jpg"
           head="GNOSIS"
-          body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning and information exchange."
+          body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning."
           code="https://github.com/MidHunterX/GNOSIS"
           techs={['Python', 'Django', 'GeminiAI']}
         />
@@ -79,7 +79,7 @@ export default function Workshop() {
         <ProjectItem
           img="https://raw.githubusercontent.com/MidHunterX/Scholar-CAP/main/img/header.png"
           head="Scholar CAP"
-          body="Scholar CAP (Computer Aided Processing) is a comprehensive toolset designed to simplify the processing of student scholarship forms, specifically focusing on banking details. From initial data extraction and cleaning to verification, correction of typos, and the generation of NEFT formats."
+          body="Scholar CAP (Computer Aided Processing) is a python based toolset designed to simplify the processing of student scholarship forms, specifically focusing on banking details. From initial data extraction, sanitization, validation to generation of custom formatted Excel sheet for NEFT."
           code="https://github.com/MidHunterX/Scholar-CAP"
           techs={['Python', 'openpyxl', 'Multi-Threading']}
         />
