@@ -8,9 +8,11 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
+  // enable dark mode via class strategy
+  // darkMode: 'class',
   // The selector strategy replaced the class strategy in Tailwind CSS v3.4.1.
   // tailwindcss.com/docs/dark-mode
-  // darkMode: 'selector',
+  darkMode: 'selector',
 
   theme: {
     extend: {
