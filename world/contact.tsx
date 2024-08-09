@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[#161D1F] pb-[140px]"
+      className="px-3 pb-[150px]"
     >
       <h2 className="text-center">
         <FontAwesomeIcon className="pe-4" icon={faAddressBook} />

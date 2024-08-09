@@ -33,14 +33,24 @@ body {
 }
 
 h1 {
-  @apply mb-3 text-5xl font-extrabold dark:text-white;
+  @apply text-5xl font-extrabold dark:text-white;
 }
 h2 {
-  @apply mb-3 text-5xl font-bold dark:text-white;
+  @apply text-4xl font-bold dark:text-white;
 }
 h3 {
-  @apply mb-3 text-2xl font-bold dark:text-white;
+  @apply text-3xl font-bold dark:text-white;
 }
 h4 {
-  @apply mb-3 text-xl font-bold dark:text-white;
+  @apply text-2xl font-bold dark:text-white;
+}
+h5 {
+  @apply text-xl font-bold dark:text-white;
+}
+h6 {
+  @apply text-lg font-bold dark:text-white;
+}
+
+p {
+  @apply mb-3 text-gray-700 dark:text-gray-300;
 }

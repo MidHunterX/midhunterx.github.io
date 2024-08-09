@@ -26,7 +26,7 @@ type NavItemProps = {
 
 const NavItem = ({ href, label, text }: NavItemProps) => (
   <Link href={href} onClick={handleScroll} aria-label={label}>
-    <p className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
+    <p className="text-white m-0 rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
       {text}
     </p>
   </Link>
@@ -34,7 +34,7 @@ const NavItem = ({ href, label, text }: NavItemProps) => (
 
 export default function FastTravel() {
   return (
-    <nav className="fixed bottom-8 left-0 right-0 mx-auto flex items-center justify-center gap-1 rounded-lg bg-[#07070a] px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
+    <nav className="fixed bottom-0 sm:bottom-8 left-0 right-0 mx-auto flex items-center justify-center gap-1 rounded-lg border border-2 border-gray-500 bg-[#07070a] px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
       <Link
         href="/"
         target="_blank"
