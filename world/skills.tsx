@@ -73,7 +73,7 @@ export default function Skills() {
           ...skillList.map((skill, index) => (
             <div
               key={`${title}-${index}`}
-              className="block max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
+              className="place-content-center max-w-[180px] p-1 md:p-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
               data-blobity-tooltip={`${skill.name}`}
               data-blobity-magnetic="false"
             >
@@ -96,14 +96,14 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-[100px] lg:px-[80px] sm:px-[50px] flex flex-col gap-20 items-center"
+      className="px-3 md:px-[100px] flex flex-col gap-20 items-center"
     >
       <h2>
         <FontAwesomeIcon className="pe-4" icon={faToolbox} />
         Skills
       </h2>
 
-      <div className="w-full place-content-center grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
+      <div className="justify-center grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
         {renderAllSkills()}
       </div>
     </section>
