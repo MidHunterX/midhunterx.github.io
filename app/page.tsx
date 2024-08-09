@@ -7,6 +7,7 @@ import Home from "@/world/home";
 import Workshop from "@/world/workshop";
 import Skills from "@/world/skills";
 import Contact from "@/world/contact";
+import ThemeSwitch from "@/world/themeswitch";
 
 export default function Application() {
   const blobity = useBlobity({
@@ -34,6 +35,7 @@ export default function Application() {
       <LoadingScreen />
       <FastTravel />
       <Home />
+      <ThemeSwitch />
       <Workshop />
       <Skills />
       <Contact />
