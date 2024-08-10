@@ -1,5 +1,9 @@
 "use client";
-import { ButtonProjectLive, ButtonProjectCode } from "@/constituents/buttons";
+import {
+  ButtonProjectLive,
+  ButtonProjectCode,
+  ButtonDisabled,
+} from "@/constituents/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBox } from "@fortawesome/free-solid-svg-icons";
 
@@ -42,6 +46,34 @@ const ProjectItem = ({ img, head, body, live, code, techs }: ProjectItemProps) =
   );
 };
 
+const ProjectItemDisabled = ({ img, head, body, live, code, techs }: ProjectItemProps) => {
+  return (
+    <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
+      <img className="rounded-t-lg" src={img} alt="" />
+      <div className="p-5">
+        <h3> {head} </h3>
+        <p> {body} </p>
+        {/* TECHNOLOGIES */}
+        {techs && (
+          <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
+            {techs.map((tech, index) => (
+              <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded-lg border border-gray-500 px-2.5 py-1">
+                {tech}
+              </li>
+            ))}
+          </ul>
+        )}
+        {/* BUTTONS */}
+        <div className="mt-8">
+          <ButtonDisabled text="Viewing Project" />
+          {code && <ButtonProjectCode href={code} text="Code" />}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
 // █░█░█ █▀█ █▀█ █▄▀ █▀ █░█ █▀█ █▀█
 // ▀▄▀▄▀ █▄█ █▀▄ █░█ ▄█ █▀█ █▄█ █▀▀
 
@@ -71,7 +103,7 @@ export default function Workshop() {
           head="GNOSIS"
           body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning."
           code="https://github.com/MidHunterX/GNOSIS"
-          techs={['Python', 'Django', 'GeminiAI']}
+          techs={['Python', 'Django', 'Bootstrap', 'GeminiAI']}
         />
 
         <ProjectItem
@@ -80,6 +112,15 @@ export default function Workshop() {
           body="Scholar CAP (Computer Aided Processing) is a python based toolset designed to simplify the processing of student scholarship forms, specifically focusing on banking details. From initial data extraction, sanitization, validation to generation of custom formatted Excel sheet for NEFT."
           code="https://github.com/MidHunterX/Scholar-CAP"
           techs={['Python', 'openpyxl', 'Multi-Threading']}
+        />
+
+        <ProjectItemDisabled
+          img="project/portfolio.jpg"
+          head="Portfolio Website"
+          body="This is the webpage you are looking at right now. Developed using Next.js to deepen my understanding of React's core concepts and modern web development practices."
+          live="https://midhunterx.github.io"
+          code="https://github.com/MidHunterX/midhunterx.github.io"
+          techs={['Next.js', 'React.js', 'TailwindCSS']}
         />
 
         <ProjectItem
