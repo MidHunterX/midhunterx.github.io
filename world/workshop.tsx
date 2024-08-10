@@ -81,11 +81,7 @@ export default function Workshop() {
           code="https://github.com/MidHunterX/Scholar-CAP"
           techs={['Python', 'openpyxl', 'Multi-Threading']}
         />
-      </div>
 
-      <h3> Personal Projects </h3>
-
-      <div className="grid sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectItem
           img="project/playedgames.jpg"
           head="Played Games List"
