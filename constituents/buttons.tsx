@@ -23,7 +23,7 @@ export const ButtonSecondary = ({ href, text }:ButtonProps) => (
   <Link className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 me-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400" href={href}> {text} </Link>
 );
 
-export const ButtonDisabled = ({ text }:ButtonProps) => (
+export const ButtonDisabled = ({ text }:{ text: string }) => (
   <a className="inline-flex justify-center items-center py-3 px-5 me-4 text-base font-medium text-center text-white rounded-lg bg-gray-500 cursor-not-allowed"> {text} </a>
 );
 
