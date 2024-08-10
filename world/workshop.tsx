@@ -60,7 +60,7 @@ export default function Workshop() {
 
       <div className="grid place-content-center sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectItem
-          img="https://raw.githubusercontent.com/mithundnair/Portfolio/main/images/Screenshot%20(7).png"
+          img="project/breakingcipher.jpg"
           head="Breaking the Caesar Cipher"
           body="A Computer Science Engineering Mini Project of a Webservice implementing Symmetric Encryption/Decryption using the good ol' Caesar Cipher algorithm"
           live="https://midhunterx.github.io/Caesar-Cipher-Cryptography"
@@ -69,7 +69,7 @@ export default function Workshop() {
         />
 
         <ProjectItem
-          img="https://raw.githubusercontent.com/MidHunterX/GNOSIS/master/static/sc_queslist.jpg"
+          img="project/gnosis.jpg"
           head="GNOSIS"
           body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning."
           code="https://github.com/MidHunterX/GNOSIS"
@@ -77,7 +77,7 @@ export default function Workshop() {
         />
 
         <ProjectItem
-          img="https://raw.githubusercontent.com/MidHunterX/Scholar-CAP/main/img/header.png"
+          img="project/scholarcap.jpg"
           head="Scholar CAP"
           body="Scholar CAP (Computer Aided Processing) is a python based toolset designed to simplify the processing of student scholarship forms, specifically focusing on banking details. From initial data extraction, sanitization, validation to generation of custom formatted Excel sheet for NEFT."
           code="https://github.com/MidHunterX/Scholar-CAP"
@@ -89,7 +89,7 @@ export default function Workshop() {
 
       <div className="grid sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectItem
-          img="https://raw.githubusercontent.com/MidHunterX/Played-Games-List/89945f39ae5b996d8a289271567fb8f72670b107/assets/head.png"
+          img="project/playedgames.jpg"
           head="Played Games List"
           body="A web development project which help keep create and keep an organized list of all the PC games I have finished playing, while also familiarizing and applying basic web development concepts and best practices."
           live="https://midhunterx.github.io/Played-Games-List/"
@@ -98,7 +98,7 @@ export default function Workshop() {
         />
 
         <ProjectItem
-          img="https://repository-images.githubusercontent.com/765967283/ccd23ee4-afbf-4a78-a67f-62a870c308e0"
+          img="project/hunteros.jpg"
           head="Hunter OS"
           body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configurations meticulously curated to meet individual needs."
           code="https://github.com/MidHunterX/Hunter-OS"
@@ -106,7 +106,7 @@ export default function Workshop() {
         />
 
         <ProjectItem
-          img="https://repository-images.githubusercontent.com/678069975/10655fc3-f874-4d12-905b-3ed3daf63053"
+          img="project/nvme.jpg"
           head="NvME"
           body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
           code="https://github.com/MidHunterX/NvME"
