@@ -21,20 +21,18 @@ const ProjectItem = ({ img, head, body, live, code, techs }: ProjectItemProps) =
       <img className="rounded-t-lg" src={img} alt="" />
       <div className="p-5">
         <h3> {head} </h3>
-        <p className="mb-3"> {body} </p>
-
-        <div className="mb-4">
-          {techs && (
-            <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
-              {techs.map((tech, index) => (
-                <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded border border-gray-500 px-2.5">
-                  {tech}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-
+        <p> {body} </p>
+        {/* TECHNOLOGIES */}
+        {techs && (
+          <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
+            {techs.map((tech, index) => (
+              <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded-lg border border-gray-500 px-2.5 py-1">
+                {tech}
+              </li>
+            ))}
+          </ul>
+        )}
+        {/* BUTTONS */}
         <div className="mt-8">
           {live && <ButtonProjectLive href={live} text="View Project" />}
           {code && <ButtonProjectCode href={code} text="Code" />}
