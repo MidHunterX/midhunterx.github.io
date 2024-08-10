@@ -1,4 +1,4 @@
-import { Button, ButtonSecondary, } from "@/constituents/buttons";
+import { Button, ButtonScroll, ButtonSecondary } from "@/constituents/buttons";
 
 // ░░█ █░█ █▀▄▀█ █▄▄ █▀█ ▀█▀ █▀█ █▀█ █▄░█
 // █▄█ █▄█ █░▀░█ █▄█ █▄█ ░█░ █▀▄ █▄█ █░▀█
@@ -30,6 +30,7 @@ export function Jumbotron({ head, body, button1, href1, button2, href2 }: JumboP
     </section>
   );
 }
+
 
 export function Hero() {
   const art = `
@@ -87,7 +88,7 @@ oMMo              oMMo
         </p>
         <p className="my-3 text-gray-400 text-justify">A Computer Science Engineering graduate passionate about software development. Experienced in creating web applications and innovative solutions to complex problems. Explore my portfolio to see my projects and feel free to connect with me!</p>
         <div className="mt-8 flex flex-row">
-          <Button href="#workshop" text="Get Started" />
+          <ButtonScroll href="#workshop" text="Get Started" />
           <ButtonSecondary href="#" text="Download CV" />
         </div>
       </div>
