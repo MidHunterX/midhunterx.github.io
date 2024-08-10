@@ -1,4 +1,4 @@
-import { Button, ButtonScroll, ButtonSecondary } from "@/constituents/buttons";
+import { Button, ButtonScroll, ButtonResume, ButtonSecondary } from "@/constituents/buttons";
 
 // ░░█ █░█ █▀▄▀█ █▄▄ █▀█ ▀█▀ █▀█ █▀█ █▄░█
 // █▄█ █▄█ █░▀░█ █▄█ █▄█ ░█░ █▀▄ █▄█ █░▀█
@@ -89,7 +89,7 @@ oMMo              oMMo
         <p className="my-3 text-gray-400 text-justify">A Computer Science Engineering graduate passionate about software development. Experienced in creating web applications and innovative solutions to complex problems. Explore my portfolio to see my projects and feel free to connect with me!</p>
         <div className="mt-8 flex flex-row">
           <ButtonScroll href="#workshop" text="Get Started" />
-          <ButtonSecondary href="#" text="Download CV" />
+          <ButtonResume href="MidhunJinan_Resume.pdf" text="View Resume" />
         </div>
       </div>
 
