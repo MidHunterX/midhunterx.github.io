@@ -1,5 +1,10 @@
 # Personal Portfolio
 
+- Automatically changes theme based on device `Dark Mode` setting
+- Fully Responsive Design - Adapts to different viewports
+- Implemented XML like component abstaction for data on `./world/workshop.tsx`
+- Implemented JSON file reading for data on `./world/skills.tsx`
+
 ## 🍻 Getting Started
 
 Step 1: Clone the project, cd into it and install dependencies
