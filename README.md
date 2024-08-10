@@ -58,3 +58,8 @@ npm i --save @fortawesome/free-regular-svg-icons
 npm i --save @fortawesome/free-brands-svg-icons
 npm i --save @fortawesome/react-fontawesome@latest
 ```
+
+## Documentation Bookmarks
+
+- [Animating FontAwesome Icons](https://docs.fontawesome.com/web/style/animate/)
+- [Curated React Libraries List](https://github.com/brillout/awesome-react-components)
