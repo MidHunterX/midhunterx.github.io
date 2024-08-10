@@ -10,21 +10,25 @@ U='\033[4m' # Underline
 X=${RESET}
 Y=${YLO}
 R=${RED}
+B=${BLU}
 G=${GRN}
 
 echo
-echo -e "${YLO}▀█▀ █▀▀ █▀ ▀█▀ █ █▄░█ █▀▀   ${X}█▄▄ █░█ █ █░░ █▀▄"
-echo -e "${YLO}░█░ ██▄ ▄█ ░█░ █ █░▀█ █▄█   ${X}█▄█ █▄█ █ █▄▄ █▄▀"
+echo -e "${B}▀█▀ █▀▀ █▀ ▀█▀ █ █▄░█ █▀▀   ${X}█▄▄ █░█ █ █░░ █▀▄"
+echo -e "${B}░█░ ██▄ ▄█ ░█░ █ █░▀█ █▄█   ${X}█▄█ █▄█ █ █▄▄ █▄▀"
 echo -e "============================================="
 
 if npm run build; then
-  echo -e "✅ ${GRN}BUILD SUCCEEDED${R}"
+  echo -e "✅ ${G}NO ERRORS FOUND!${R}"
   echo
-  echo -e "${G}█▀█ █░█ █▀ █░█ █ █▄░█ █▀▀   ${X}█▀▀ █▀█ █▀▄ █▀▀"
-  echo -e "${G}█▀▀ █▄█ ▄█ █▀█ █ █░▀█ █▄█   ${X}█▄▄ █▄█ █▄▀ ██▄"
+  echo -e "${Y}█▀█ █░█ █▀ █░█ █ █▄░█ █▀▀   ${X}█▀▀ █▀█ █▀▄ █▀▀"
+  echo -e "${Y}█▀▀ █▄█ ▄█ █▀█ █ █░▀█ █▄█   ${X}█▄▄ █▄█ █▄▀ ██▄"
   echo -e "==========================================="
   echo
   git push origin master
+  echo
+  echo -e "${G}█▀▄ █▀█ █▄░█ █▀▀  █ ${X}"
+  echo -e "${G}█▄▀ █▄█ █░▀█ ██▄  ▄ ${X}"
 else
   echo
   echo -e "❌ ${RED}BUILD FAILED"
