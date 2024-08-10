@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="1963"
-   height="2500"
-   viewBox="0 0 256 326"
-   preserveAspectRatio="xMinYMin meet"
+   width="512"
+   height="512"
+   viewBox="0 0 66.771268 66.7648"
+   preserveAspectRatio="xMinYMin"
    version="1.1"
    id="svg2"
    sodipodi:docname="django.svg"
@@ -23,18 +23,19 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.2195619"
-     inkscape:cx="981.5"
-     inkscape:cy="1247.9397"
-     inkscape:window-width="1894"
+     inkscape:zoom="0.62101483"
+     inkscape:cx="351.84345"
+     inkscape:cy="481.46998"
+     inkscape:window-width="939"
      inkscape:window-height="1054"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <g
-     fill="#2BA977"
-     id="g2">
+     fill="#2ba977"
+     id="g2"
+     transform="matrix(0.19814215,0,0,0.19814215,7.1280454,0.878894)">
     <path
        d="m 117.57694,35.473318 h 41.66143 V 226.42163 c -21.33978,4.0365 -37.04941,5.62466 -54.04693,5.62466 -50.8839,-0.0531 -77.371331,-22.78561 -77.371331,-66.44495 0,-42.0657 28.095929,-69.366372 71.634063,-69.366372 6.756158,0 11.903038,0.531735 18.122768,2.124593 z m 1.45993,97.297312 c -4.87945,-1.59365 -8.90031,-2.1246 -14.04797,-2.1246 -21.07155,0 -33.242804,12.85313 -33.242804,35.37835 0,21.93093 11.635609,34.04041 32.975374,34.04041 4.61046,0 8.36388,-0.25961 14.3154,-1.05643 z"
        id="path1"
