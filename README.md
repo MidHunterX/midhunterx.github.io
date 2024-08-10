@@ -27,17 +27,17 @@ Step 4: Profit?
 
 ## 💽 Technologies Used
 
-- Next.js - Bundler
-- React - UI Library
-- Tailwind CSS - CSS Framework
-- Flowbite - Tailwind Component Library
-
-| Library                 | Description             |
-| ----------------------- | ----------------------- |
-| fortawesome/fontawesome | SVG Icon Library        |
-| gmrchk/blobity          | Kinet based cursor blob |
-| greensock/gsap          | Animation Framework     |
-| pacocoursey/next-themes | NextJS Theme Provider   |
+| Framework/Library       | Description                |
+| ----------------------- | -------------------------- |
+| Next.js                 | Bundler                    |
+| React                   | UI Library                 |
+| Tailwind CSS            | CSS Framework              |
+| fortawesome/fontawesome | SVG Icon Library           |
+| gmrchk/blobity          | Kinet based cursor blob    |
+| greensock/gsap          | Animation Framework        |
+| pacocoursey/next-themes | NextJS Theme Provider      |
+| Flowbite                | Tailwind Component Library |
+| MerakiUI                | Tailwind Component Library |
 
 ### Blobity
 
