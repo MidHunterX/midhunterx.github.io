@@ -1,6 +1,7 @@
 "use client";
 // Use { } for Named Exports (without a default)
 import useBlobity from "blobity/lib/react/useBlobity";
+import { useTheme } from "next-themes";
 import LoadingScreen from "@/world/anim/loading/LoadingScreen";
 import FastTravel from "@/world/navigation";
 import Home from "@/world/home";
@@ -30,8 +31,9 @@ export default function Application() {
     radius: 4,
     magnetic: true,
   });
+  const { resolvedTheme } = useTheme()
   return (
-    <>
+    <section style={{ color: resolvedTheme === 'dark' ? 'white' : 'black' }} >
       <LoadingScreen />
       <FastTravel />
       <Home />
@@ -39,6 +41,6 @@ export default function Application() {
       <Workshop />
       <Skills />
       <Contact />
-    </>
+    </section>
   );
 }
