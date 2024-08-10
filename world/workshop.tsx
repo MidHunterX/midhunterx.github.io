@@ -51,10 +51,10 @@ export default function Workshop() {
       id="workshop"
       className="px-3 md:px-[100px] py-[100px] flex flex-col gap-20 items-center"
     >
-      <h2>
+      <h1>
         <FontAwesomeIcon className="pe-4" icon={faBox} />
         Projects
-      </h2>
+      </h1>
 
       <div className="grid place-content-center sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectItem

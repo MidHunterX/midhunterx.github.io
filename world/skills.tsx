@@ -98,10 +98,10 @@ export default function Skills() {
       id="skills"
       className="px-3 md:px-[100px] py-[100px] flex flex-col gap-20 items-center"
     >
-      <h2>
+      <h1>
         <FontAwesomeIcon className="pe-4" icon={faToolbox} />
         Skills
-      </h2>
+      </h1>
 
       <div className="justify-center grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
         {renderAllSkills()}
