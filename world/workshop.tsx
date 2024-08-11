@@ -1,7 +1,7 @@
 "use client";
 import {
-  ButtonProjectLive,
-  ButtonProjectCode,
+  Button,
+  ButtonSecondary,
   ButtonDisabled,
 } from "@/constituents/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -38,8 +38,8 @@ const ProjectItem = ({ img, head, body, live, code, techs }: ProjectItemProps) =
         )}
         {/* BUTTONS */}
         <div className="mt-8">
-          {live && <ButtonProjectLive href={live} text="View Project" />}
-          {code && <ButtonProjectCode href={code} text="Code" />}
+          {live && <Button target="_blank" href={live} text="View Project" />}
+          {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
         </div>
       </div>
     </div>
@@ -65,8 +65,8 @@ const ProjectItemDisabled = ({ img, head, body, live, code, techs }: ProjectItem
         )}
         {/* BUTTONS */}
         <div className="mt-8">
-          <ButtonDisabled text="Viewing Project" />
-          {code && <ButtonProjectCode href={code} text="Code" />}
+          {live && <ButtonDisabled text="Viewing Project" />}
+          {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
         </div>
       </div>
     </div>

@@ -1,22 +1,10 @@
 "use client";
 import Link from "next/link";
+import { smoothScroll } from '@/world/smoothScroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
 /* ===================== SMOOTH TRAVEL TO DESTINATION ===================== */
-
-const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-  // first prevent the default behavior
-  e.preventDefault();
-  // get the href and remove everything before the hash (#)
-  const href = e.currentTarget.href;
-  const targetId = href.replace(/.*\#/, "");
-  // get the element by id and use scrollIntoView
-  const elem = document.getElementById(targetId);
-  elem?.scrollIntoView({
-    behavior: "smooth",
-  });
-};
 
 type NavItemProps = {
   href: string;
@@ -25,7 +13,7 @@ type NavItemProps = {
 };
 
 const NavItem = ({ href, label, text }: NavItemProps) => (
-  <Link href={href} onClick={handleScroll} aria-label={label}>
+  <Link href={href} onClick={smoothScroll} aria-label={label}>
     <p className="text-white m-0 rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
       {text}
     </p>

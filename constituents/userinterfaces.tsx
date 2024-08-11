@@ -1,4 +1,5 @@
-import { Button, ButtonScroll, ButtonResume, ButtonSecondary } from "@/constituents/buttons";
+import { Button, ButtonSecondary } from "@/constituents/buttons";
+import { smoothScroll } from '@/world/smoothScroll';
 
 // ░░█ █░█ █▀▄▀█ █▄▄ █▀█ ▀█▀ █▀█ █▀█ █▄░█
 // █▄█ █▄█ █░▀░█ █▄█ █▄█ ░█░ █▀▄ █▄█ █░▀█
@@ -69,7 +70,7 @@ oMMo              oMMo
 `;
 
   return (
-    <section className="bg-cover bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen min-h-screen pt-8 pb-[50px] lg:flex lg:flex-row items-center">
+    <section className="dark bg-cover bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen min-h-screen pt-8 pb-[50px] lg:flex lg:flex-row items-center">
 
       <div className="text-white flex flex-col items-center justify-center w-full lg:w-1/3">
         <pre className="mb-4 font-mono text-sm whitespace-pre-wrap">{art}</pre>
@@ -88,8 +89,8 @@ oMMo              oMMo
         </p>
         <p className="my-3 text-gray-400 text-justify">A Computer Science Engineering graduate passionate about software development. Experienced in creating web applications and innovative solutions to complex problems. Explore my portfolio to see my projects and feel free to connect with me!</p>
         <div className="mt-8 flex flex-row">
-          <ButtonScroll href="#workshop" text="Get Started" />
-          <ButtonResume href="MidhunJinan_Resume.pdf" text="View Resume" />
+          <Button href="#workshop" onClick={ smoothScroll } text="Get Started" />
+          <ButtonSecondary target="_blank" href="MidhunJinan_Resume.pdf" text="View Resume" />
         </div>
       </div>
 

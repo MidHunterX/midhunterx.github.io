@@ -63,3 +63,14 @@ npm i --save @fortawesome/react-fontawesome@latest
 
 - [Animating FontAwesome Icons](https://docs.fontawesome.com/web/style/animate/)
 - [Curated React Libraries List](https://github.com/brillout/awesome-react-components)
+- Using `.dark` in TailwindCSS forces element and children to dark theme
+- Pass additional props(atributes) into component
+
+```tsx
+type Props = {
+    [key: string]: any;
+}
+export const Component = ({ ...rest }:Props) => (
+    <tag {...rest}> </tag>
+);
+```
