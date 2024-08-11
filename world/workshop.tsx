@@ -65,7 +65,7 @@ const ProjectItemDisabled = ({ img, head, body, live, code, techs }: ProjectItem
         )}
         {/* BUTTONS */}
         <div className="mt-8">
-          {live && <ButtonDisabled text="Viewing Project" />}
+          {live && <ButtonDisabled text="Currently Viewing" />}
           {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
         </div>
       </div>
@@ -135,7 +135,7 @@ export default function Workshop() {
         <ProjectItem
           img="project/hunteros.jpg"
           head="Hunter OS"
-          body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configurations meticulously curated to meet individual needs."
+          body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configs curated to meet individual needs."
           code="https://github.com/MidHunterX/Hunter-OS"
           techs={['Bash', 'Python', 'Conf']}
         />
