@@ -1,9 +1,12 @@
 # Personal Portfolio
 
+## ✨ Features
+
 - Automatically changes theme based on device `Dark Mode` setting
 - Fully Responsive Design - Adapts to different viewports
 - Implemented XML like component abstaction for data on `./world/workshop.tsx`
 - Implemented JSON file reading for data on `./world/skills.tsx`
+- If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob wont know kinetic effects.
 
 ## 🍻 Getting Started
 
@@ -63,7 +66,6 @@ npm i --save @fortawesome/react-fontawesome@latest
 
 - [Animating FontAwesome Icons](https://docs.fontawesome.com/web/style/animate/)
 - [Curated React Libraries List](https://github.com/brillout/awesome-react-components)
-- If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob wont know kinetic effects.
 - Using `.dark` in TailwindCSS forces element and children to dark theme
 - Pass additional props(atributes) into component
 
