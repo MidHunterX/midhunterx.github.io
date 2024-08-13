@@ -87,12 +87,15 @@ It is done using [Open Graph](https://nextjs.org/docs/app/building-your-applicat
 ```tsx
 // layout.tsx
 export const metadata: Metadata = {
-    openGraph: {
-        title: "Mid Hunter's Developer Portfolio",
-        description: "Crafting digital experiences with precision and artistry",
-    },
+  metadataBase: new URL("https://midhunterx.github.io"),
+  openGraph: {
+    title: "Mid Hunter's Developer Portfolio",
+    description: "Crafting digital experiences with precision and artistry",
+  },
 };
 ```
 
 - Step 2: Add a preview image named `opengraph-image.jpg` of size `1200x630` px right beside `layout.tsx`
 - Step 3: Test preview using a chrome extension called `Social Share Preview`. It works even with localhost development.
+
+Note: Change metadataBase URL to `http://localhost:3000` on development temporarily to see changes in localhost.
