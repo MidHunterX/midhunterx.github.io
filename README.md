@@ -3,6 +3,7 @@
 ## ✨ Features
 
 - Automatically changes theme based on device `Dark Mode` setting
+- SVG icons changes colors automatically based on selected theme.
 - Fully Responsive Design - Adapts to different viewports
 - Implemented XML like component abstaction for data on `./world/workshop.tsx`
 - Implemented JSON file reading for data on `./world/skills.tsx`
@@ -76,3 +77,22 @@ type Props = {
 };
 export const Component = ({ ...rest }: Props) => <tag {...rest}> </tag>;
 ```
+
+## Show Thumbnail when sharing though Social Media
+
+It is done using [Open Graph](https://nextjs.org/docs/app/building-your-application/optimizing/metadata#merging). Open Graph is an internet protocol that was originally created by Facebook to standardize the use of metadata within a webpage to represent the content of a page.
+
+- Step 1: Add the `openGraph` Metadata
+
+```tsx
+// layout.tsx
+export const metadata: Metadata = {
+    openGraph: {
+        title: "Mid Hunter's Developer Portfolio",
+        description: "Crafting digital experiences with precision and artistry",
+    },
+};
+```
+
+- Step 2: Add a preview image named `opengraph-image.jpg` of size `1200x630` px right beside `layout.tsx`
+- Step 3: Test preview using a chrome extension called `Social Share Preview`. It works even with localhost development.

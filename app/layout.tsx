@@ -6,8 +6,13 @@ import { ThemeProvider } from 'next-themes'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mid Hunter's Developer Portfolio",
-  description: "Crafting digital experiences with precision and artistry",
+  metadataBase: new URL('http://localhost:3000'),
+  keywords: ['Developer', 'Portfolio', 'Mid Hunter'],
+  creator: 'Mid Hunter',
+  openGraph: {
+    title: "Midhun Jinan's Developer Portfolio",
+    description: "Crafting digital experiences with precision and artistry",
+  },
 };
 
 export default function RootLayout({
