@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: ['Developer', 'Portfolio', 'Mid Hunter'],
   creator: 'Mid Hunter',
   openGraph: {
-    title: "Midhun Jinan's Developer Portfolio",
+    title: "Mid Hunter's Developer Portfolio",
     description: "Crafting digital experiences with precision and artistry",
   },
 };
