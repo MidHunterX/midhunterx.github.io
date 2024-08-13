@@ -2,12 +2,12 @@
 
 ## ✨ Features
 
-- Automatically changes theme based on device `Dark Mode` setting
+- Automatically changes theme based on device `Dark Mode` setting (stackoverflow does not seem to have this feature).
 - SVG icons changes colors automatically based on selected theme.
 - Fully Responsive Design - Adapts to different viewports
 - Implemented XML like component abstaction for data on `./world/workshop.tsx`
 - Implemented JSON file reading for data on `./world/skills.tsx`
-- If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob wont know kinetic effects.
+- If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob won't show kinetic effects.
 
 ## 🍻 Getting Started
 
