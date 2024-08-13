@@ -48,9 +48,9 @@ export default function Contact() {
               <p className="w-6 h-6 mx-2 text-blue-500 dark:text-gray-100">
                 <FontAwesomeIcon icon={faLocationDot} />
               </p>
-              <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">Menamkulam, Trivandrum, Kerala</span>
+              <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">Pallithura, Kazhakkoottam, Trivandrum, Kerala</span>
             </div>
-            <iframe className="rounded-xl" scrolling="no" src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7890.773724909952!2d76.85454414085073!3d8.558747425334175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05be4fbdf8f063%3A0xd2af4cebaff0d8e2!2sMenamkulam%2C%20Thiruvananthapuram%2C%20Menamkulam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1723312902820!5m2!1sen!2sin"} ></iframe>
+            <iframe className="rounded-xl focus:outline-none" src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31563.759167396533!2d76.84119880712232!3d8.55073150552278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05be456a010a99%3A0x749c31577640f200!2sPallithura%2C%20Thiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1723556639494!5m2!1sen!2sin"} width="360" height="230" allowfullscreen="" loading="lazy"></iframe>
           </article>
 
           <article className="mb-8">
