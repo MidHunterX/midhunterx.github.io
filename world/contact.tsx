@@ -51,7 +51,7 @@ export default function Contact() {
               </p>
               <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">Pallithura, Kazhakkoottam, Trivandrum, Kerala</span>
             </div>
-            <iframe className="rounded-xl focus:outline-none" src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31563.759167396533!2d76.84119880712232!3d8.55073150552278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05be456a010a99%3A0x749c31577640f200!2sPallithura%2C%20Thiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1723556639494!5m2!1sen!2sin"} width="360" height="230" allowfullscreen="" loading="lazy"></iframe>
+            <iframe className="rounded-xl focus:outline-none" src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31563.759167396533!2d76.84119880712232!3d8.55073150552278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05be456a010a99%3A0x749c31577640f200!2sPallithura%2C%20Thiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1723556639494!5m2!1sen!2sin"} width="360" height="230" loading="lazy"></iframe>
           </article>
 
           <article className="mb-8">

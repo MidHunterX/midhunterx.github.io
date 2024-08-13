@@ -20,7 +20,7 @@ type ProjectCardProps = {
   children: ReactNode; // ReactNode allows any JSX content
 };
 
-const ProjectCard = ({ img, head, body, techs, children }: ProjectProps) => {
+const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => {
   return (
     <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
       <img className="rounded-t-lg" src={img} alt="" />
