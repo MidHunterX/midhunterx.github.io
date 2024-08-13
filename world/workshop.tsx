@@ -6,6 +6,44 @@ import {
 } from "@/constituents/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBox } from "@fortawesome/free-solid-svg-icons";
+import React, { ReactNode } from 'react';
+
+
+// █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █▀▀ ▄▀█ █▀█ █▀▄
+// █▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░   █▄▄ █▀█ █▀▄ █▄▀
+
+type ProjectCardProps = {
+  img: string;
+  head: string;
+  body: string;
+  techs?: string[];
+  children: ReactNode; // ReactNode allows any JSX content
+};
+
+const ProjectCard = ({ img, head, body, techs, children }: ProjectProps) => {
+  return (
+    <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
+      <img className="rounded-t-lg" src={img} alt="" />
+      <div className="p-5">
+        <h3> {head} </h3>
+        <p> {body} </p>
+        {/* TECHNOLOGIES */}
+        {techs && (
+          <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
+            {techs.map((tech, index) => (
+              <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded-lg border border-gray-500 px-2.5 py-1">
+                {tech}
+              </li>
+            ))}
+          </ul>
+        )}
+        {/* BUTTONS */}
+        { children }
+      </div>
+    </div>
+  );
+};
+
 
 // █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █ ▀█▀ █▀▀ █▀▄▀█
 // █▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░   █ ░█░ ██▄ █░▀░█
@@ -21,55 +59,23 @@ type ProjectItemProps = {
 
 const ProjectItem = ({ img, head, body, live, code, techs }: ProjectItemProps) => {
   return (
-    <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
-      <img className="rounded-t-lg" src={img} alt="" />
-      <div className="p-5">
-        <h3> {head} </h3>
-        <p> {body} </p>
-        {/* TECHNOLOGIES */}
-        {techs && (
-          <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
-            {techs.map((tech, index) => (
-              <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded-lg border border-gray-500 px-2.5 py-1">
-                {tech}
-              </li>
-            ))}
-          </ul>
-        )}
-        {/* BUTTONS */}
-        <div className="mt-8">
-          {live && <Button target="_blank" href={live} text="View Project" />}
-          {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
-        </div>
+    <ProjectCard img={img} head={head} body={body} techs={techs} >
+      <div className="mt-8">
+        {live && <Button target="_blank" href={live} text="View Project" />}
+        {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
       </div>
-    </div>
+    </ProjectCard>
   );
 };
 
 const ProjectItemDisabled = ({ img, head, body, live, code, techs }: ProjectItemProps) => {
   return (
-    <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
-      <img className="rounded-t-lg" src={img} alt="" />
-      <div className="p-5">
-        <h3> {head} </h3>
-        <p> {body} </p>
-        {/* TECHNOLOGIES */}
-        {techs && (
-          <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
-            {techs.map((tech, index) => (
-              <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded-lg border border-gray-500 px-2.5 py-1">
-                {tech}
-              </li>
-            ))}
-          </ul>
-        )}
-        {/* BUTTONS */}
-        <div className="mt-8">
-          {live && <ButtonDisabled text="Currently Viewing" />}
-          {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
-        </div>
+    <ProjectCard img={img} head={head} body={body} techs={techs} >
+      <div className="mt-8">
+        {live && <ButtonDisabled text="Currently Viewing" />}
+        {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
       </div>
-    </div>
+    </ProjectCard>
   );
 };
 
