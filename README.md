@@ -39,6 +39,7 @@ Step 4: Profit?
 | gmrchk/blobity          | Kinet based cursor blob    |
 | greensock/gsap          | Animation Framework        |
 | pacocoursey/next-themes | NextJS Theme Provider      |
+| @svgr/webpack           | Custom SVG Type for TS     |
 | Flowbite                | Tailwind Component Library |
 | MerakiUI                | Tailwind Component Library |
 
