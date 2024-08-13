@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next-themes'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://midhunterx.github.io'),
   keywords: ['Developer', 'Portfolio', 'Mid Hunter'],
   creator: 'Mid Hunter',
   openGraph: {
