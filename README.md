@@ -2,6 +2,7 @@
 
 ## ✨ Features
 
+- Shows custom thumbnail when sharing url on WhatsApp/Social Media using Open Graph Metadata Protocol
 - Automatically changes theme based on device `Dark Mode` setting (stackoverflow does not seem to have this feature).
 - SVG icons changes colors automatically based on selected theme.
 - Fully Responsive Design - Adapts to different viewports
