@@ -13,7 +13,7 @@ export const loadingAnimation = () => {
   })
     .from(".texts-container span", {
       duration: 1.5,
-      delay: 0,
+      delay: 1,
       y: 70,
       skewY: 10,
       stagger: 0.5,
