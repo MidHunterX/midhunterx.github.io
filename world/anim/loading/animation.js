@@ -13,10 +13,10 @@ export const loadingAnimation = () => {
   })
     .from(".texts-container span", {
       duration: 1.5,
-      delay: 1,
+      delay: 0,
       y: 70,
       skewY: 10,
-      stagger: 0.4,
+      stagger: 0.5,
       ease: "Power3.easeOut",
     })
     .to(".texts-container span", {
@@ -40,7 +40,7 @@ export const loadingAnimation = () => {
     .to(
       ".preloader",
       {
-        duration: 1.5,
+        duration: 1,
         height: "0vh",
         ease: "Power3.easeOut",
         onComplete: mobileLanding(),
