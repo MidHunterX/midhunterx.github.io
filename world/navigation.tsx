@@ -3,6 +3,7 @@ import Link from "next/link";
 import { smoothScroll } from '@/world/smoothScroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { ThemeSwitchNav } from "@/world/themeswitch"
 
 /* ===================== SMOOTH TRAVEL TO DESTINATION ===================== */
 
@@ -22,7 +23,7 @@ const NavItem = ({ href, label, text }: NavItemProps) => (
 
 export default function FastTravel() {
   return (
-    <nav className="fixed bottom-0 sm:bottom-8 left-0 right-0 mx-auto flex items-center justify-center gap-1 sm:rounded-lg border border-0 sm:border-2 border-gray-500 bg-neutral-950 px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
+    <nav className="fixed bottom-0 sm:bottom-8 left-0 right-0 mx-auto flex items-center justify-center gap-1 sm:rounded-lg border border-0 sm:border-2 border-gray-500 bg-neutral-950 px-1 py-1 text-[#e4ded7] backdrop-blur-md w-fit">
       <Link
         href="MidhunJinan_Resume.pdf"
         target="_blank"
@@ -52,6 +53,8 @@ export default function FastTravel() {
         label="Fast Travel to Postal Service"
         text="Contact"
       />
+
+      <ThemeSwitchNav />
     </nav>
   );
 }

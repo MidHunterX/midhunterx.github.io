@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
-const ThemeSwitch = () => {
+export const ThemeSwitchSelect = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -27,4 +27,32 @@ const ThemeSwitch = () => {
   );
 };
 
-export default ThemeSwitch;
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon, faDesktop } from "@fortawesome/free-solid-svg-icons";
+
+export const ThemeSwitchNav = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    return null;
+  }
+
+  const nextTheme =
+    theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
+  const nextIcon =
+    nextTheme === "light" ? faSun : nextTheme === "dark" ? faMoon : faDesktop;
+
+  return (
+    <button
+      className="text-white m-0 rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4"
+      onClick={() => setTheme(nextTheme)}
+      // data-blobity-tooltip={`Switch to ${nextTheme} theme`}
+      data-blobity-magnetic="false"
+    >
+      <FontAwesomeIcon icon={nextIcon} />
+    </button>
+  );
+};
