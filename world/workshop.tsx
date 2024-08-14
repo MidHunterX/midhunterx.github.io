@@ -61,8 +61,8 @@ const ProjectItem = ({ img, head, body, live, code, techs }: ProjectItemProps) =
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs} >
       <div className="mt-8">
-        {live && <Button target="_blank" href={live} text="View Project" />}
-        {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
+        {live && <Button target="_blank" href={live} text="Website" />}
+        {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
       </div>
     </ProjectCard>
   );
@@ -73,7 +73,7 @@ const ProjectItemDisabled = ({ img, head, body, live, code, techs }: ProjectItem
     <ProjectCard img={img} head={head} body={body} techs={techs} >
       <div className="mt-8">
         {live && <ButtonDisabled text="Currently Viewing" />}
-        {code && <ButtonSecondary target="_blank" href={code} text="Code" />}
+        {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
       </div>
     </ProjectCard>
   );
