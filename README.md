@@ -14,6 +14,16 @@
 
 Step 1: Clone the project, cd into it and install dependencies
 
+Using **HTTPS**:
+
+```bash
+git clone https://github.com/MidHunterX/midhunterx.github.io
+cd midhunterx.github.io
+npm install --legacy-peer-deps
+```
+
+Using **SSH** (personal):
+
 ```bash
 git clone git@github.com:MidHunterX/midhunterx.github.io
 cd midhunterx.github.io
