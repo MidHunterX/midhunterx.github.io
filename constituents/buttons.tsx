@@ -10,7 +10,7 @@ type ButtonProps = {
 export const Button = ({ href, text, ...rest }:ButtonProps) => (
   <Link
     className="inline-flex justify-center py-3 px-5 me-4 text-base font-medium text-center rounded-lg
-    text-white bg-violet-700 hover:bg-blue-500
+    text-white bg-blue-700 hover:bg-blue-900
     dark:text-black dark:bg-yellow-200 dark:hover:bg-yellow-500 "
     href={href} {...rest}> {text}
   </Link>

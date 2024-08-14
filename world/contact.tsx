@@ -34,19 +34,19 @@ export default function Contact() {
           <article className="mb-8">
             <h2>Contact details</h2>
             <div className="flex items-start -mx-2">
-              <p className="w-6 h-6 mx-2 text-blue-500 dark:text-gray-100">
+              <p className="w-6 h-6 mx-2 text-gray-800 dark:text-gray-100">
                 <FontAwesomeIcon icon={faPhone} />
               </p>
               <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">+91 8089-5293-74</span>
             </div>
             <div className="flex items-start -mx-2">
-              <p className="w-6 h-6 mx-2 text-blue-500 dark:text-gray-100">
+              <p className="w-6 h-6 mx-2 text-gray-800 dark:text-gray-100">
                 <FontAwesomeIcon icon={faEnvelope} />
               </p>
               <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">midhunterx@gmail.com</span>
             </div>
             <div className="flex items-start -mx-2">
-              <p className="w-6 h-6 mx-2 text-blue-500 dark:text-gray-100">
+              <p className="w-6 h-6 mx-2 text-gray-800 dark:text-gray-100">
                 <FontAwesomeIcon icon={faLocationDot} />
               </p>
               <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">Pallithura, Kazhakkoottam, Trivandrum, Kerala</span>
