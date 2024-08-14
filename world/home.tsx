@@ -43,7 +43,7 @@ oMMo              oMMo
         <p className="text-lg font-normal text-white lg:text-xl">
           I am a<span className="text-yellow-200"> Software Developer</span>
         </p>
-        <p className="my-3 text-gray-400 text-justify">
+        <p className="my-3 text-sm md:text-lg text-gray-400 text-justify">
           Just a guy passionate about solving problems and building things.
           Experienced in creating web applications and innovative solutions to
           complex problems. Explore my portfolio to see my projects and feel
