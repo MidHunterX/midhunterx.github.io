@@ -42,19 +42,26 @@ Step 4: Profit?
 
 ## 💽 Technologies Used
 
-| Framework/Library       | Description             |
-| ----------------------- | ----------------------- |
-| Next.js                 | Bundler                 |
-| React                   | UI Library              |
-| Tailwind CSS            | CSS Framework           |
-| fortawesome/fontawesome | SVG Icon Library        |
-| gmrchk/blobity          | Kinet based cursor blob |
-| greensock/gsap          | Animation Framework     |
-| pacocoursey/next-themes | NextJS Theme Provider   |
-| @svgr/webpack           | Custom SVG Type for TS  |
-| react-pdf               | React PDF Render        |
+| Framework/Library       | Description                |
+| ----------------------- | -------------------------- |
+| Next.js                 | Bundler                    |
+| React                   | UI Library                 |
+| Tailwind CSS            | CSS Framework              |
+| fortawesome/fontawesome | SVG Icon Library           |
+| gmrchk/blobity          | Kinet based cursor blob    |
+| greensock/gsap          | Animation Framework        |
+| pacocoursey/next-themes | NextJS Theme Provider      |
+| @svgr/webpack           | Custom SVG Type for TS     |
+| react-pdf               | React PDF Render           |
+| @headlessui/react       | Headless Component Library |
 
-Referenced Component Libraries: Flowbite, MerakiUI
+### Headless Component Libraries
+
+Headless components are fully functional UI elements like modal, buttons, popovers etc. but without styling. Let others maintain the functional part and you handle the styling part with complete freedom.
+
+`Headless UI` components are well tested on multiple browsers, platforms, and devices and deals with edge cases that I never could or want to deal with myself: stuff like focus management, keyboard navigation, event listeners, accessibility attributes, valid markup and screen reader support.
+
+Referenced Styled Component Libraries: Flowbite, MerakiUI
 
 ### Blobity
 
