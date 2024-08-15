@@ -1,6 +1,8 @@
 "use client";
 import { Button, ButtonSecondary } from "@/constituents/buttons";
 import { smoothScroll } from "@/world/smoothScroll";
+import ResumeModal from "@/constituents/modals";
+
 
 // █░█ █▀▀ █▀█ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
 // █▀█ ██▄ █▀▄ █▄█   ▄█ ██▄ █▄▄ ░█░ █ █▄█ █░▀█
@@ -50,12 +52,8 @@ oMMo              oMMo
           free to connect with me!
         </p>
         <div className="mt-8 flex flex-row">
-          <Button href="#workshop" onClick={smoothScroll} text="Get Started" />
-          <ButtonSecondary
-            target="_blank"
-            href="MidhunJinan_Resume.pdf"
-            text="View Resume"
-          />
+          <ResumeModal />
+          <ButtonSecondary href="#workshop" onClick={smoothScroll} text="Get Started" />
         </div>
       </div>
     </section>
