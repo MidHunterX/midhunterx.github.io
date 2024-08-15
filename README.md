@@ -42,18 +42,19 @@ Step 4: Profit?
 
 ## 💽 Technologies Used
 
-| Framework/Library       | Description                |
-| ----------------------- | -------------------------- |
-| Next.js                 | Bundler                    |
-| React                   | UI Library                 |
-| Tailwind CSS            | CSS Framework              |
-| fortawesome/fontawesome | SVG Icon Library           |
-| gmrchk/blobity          | Kinet based cursor blob    |
-| greensock/gsap          | Animation Framework        |
-| pacocoursey/next-themes | NextJS Theme Provider      |
-| @svgr/webpack           | Custom SVG Type for TS     |
-| Flowbite                | Tailwind Component Library |
-| MerakiUI                | Tailwind Component Library |
+| Framework/Library       | Description             |
+| ----------------------- | ----------------------- |
+| Next.js                 | Bundler                 |
+| React                   | UI Library              |
+| Tailwind CSS            | CSS Framework           |
+| fortawesome/fontawesome | SVG Icon Library        |
+| gmrchk/blobity          | Kinet based cursor blob |
+| greensock/gsap          | Animation Framework     |
+| pacocoursey/next-themes | NextJS Theme Provider   |
+| @svgr/webpack           | Custom SVG Type for TS  |
+| react-pdf               | React PDF Render        |
+
+Referenced Component Libraries: Flowbite, MerakiUI
 
 ### Blobity
 
