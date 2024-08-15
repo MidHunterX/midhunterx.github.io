@@ -1,6 +1,7 @@
 import { useState, useRef, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Button, ButtonNull, ButtonSecondaryNull } from "@/constituents/buttons";
+import Image from 'next/image'
 
 // █▀█ █▀▀ █▀ █░█ █▀▄▀█ █▀▀
 // █▀▄ ██▄ ▄█ █▄█ █░▀░█ ██▄
@@ -55,11 +56,15 @@ export default function ResumeModal() {
               >
                 <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all bg-neutral-800">
                   <section className="dark">
-                    <img
+                    <Image
+                      className="rounded-lg"
                       ref={resumeRef}
                       src="MidhunJinan_Resume.jpg"
                       alt="Mid Hunter's Resume"
-                      className="rounded-lg"
+                      width="1241"
+                      height="1754"
+                      placeholder="blur"
+                      blurDataURL="MidhunJinan_Resume_LOD.jpg"
                     />
                     <div className="flex m-3">
                       <Button
