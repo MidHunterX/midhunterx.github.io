@@ -52,7 +52,6 @@ Step 4: Profit?
 | greensock/gsap          | Animation Framework        |
 | pacocoursey/next-themes | NextJS Theme Provider      |
 | @svgr/webpack           | Custom SVG Type for TS     |
-| react-pdf               | React PDF Render           |
 | @headlessui/react       | Headless Component Library |
 
 ### Headless Component Libraries
@@ -62,6 +61,10 @@ Headless components are fully functional UI elements like modal, buttons, popove
 `Headless UI` components are well tested on multiple browsers, platforms, and devices and deals with edge cases that I never could or want to deal with myself: stuff like focus management, keyboard navigation, event listeners, accessibility attributes, valid markup and screen reader support.
 
 Referenced Styled Component Libraries: Flowbite, MerakiUI
+
+### PDF Previews
+
+`react-pdf` a great package to fully render interactive PDF in a canvas. That being said, canvas are a bit hard to make it responsive especially if it should resize based on parent element which is near to impossible. And it has some bulk to it which I do not want in this project. It would be a good fit in a more document heavy project. So instead I converted image of PDF and placed it as there is only one PDF in my use case.
 
 ### Blobity
 
