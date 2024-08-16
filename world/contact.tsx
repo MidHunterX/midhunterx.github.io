@@ -19,20 +19,20 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="px-3 md:px-[100px] py-[100px] pb-[150px] flex flex-col gap-20 items-center"
+      className="px-3 md:px-[100px] py-[100px] pb-[150px]"
     >
-      <h1 className="text-center">
+      <h2>
         <FontAwesomeIcon className="pe-4" icon={faAddressBook} />
         Contact
-      </h1>
+      </h2>
 
-      <section className="lg:flex gap-20">
+      <section className="w-fit mx-auto lg:flex gap-20">
 
         {/* █░░ █▀▀ █▀▀ ▀█▀   █▀ █ █▀▄ █▀▀
             █▄▄ ██▄ █▀░ ░█░   ▄█ █ █▄▀ ██▄ */}
         <section className="lg:w-1/2 lg:mx-6 pb-4">
           <article className="mb-8">
-            <h2>Contact details</h2>
+            <h3>Contact details</h3>
             <div className="flex items-start -mx-2">
               <p className="w-6 h-6 mx-2 text-gray-800 dark:text-gray-100">
                 <FontAwesomeIcon icon={faPhone} />

@@ -96,14 +96,14 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="px-3 md:px-[100px] py-[100px] flex flex-col gap-20 items-center"
+      className="px-3 md:px-[100px] py-[100px]"
     >
-      <h1>
+      <h2>
         <FontAwesomeIcon className="pe-4" icon={faToolbox} />
         Skills
-      </h1>
+      </h2>
 
-      <div className="justify-center grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
+      <div className="w-fit mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
         {renderAllSkills()}
       </div>
     </section>

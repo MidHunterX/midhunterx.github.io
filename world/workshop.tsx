@@ -87,14 +87,14 @@ export default function Workshop() {
   return (
     <section
       id="workshop"
-      className="px-3 md:px-[100px] py-[100px] flex flex-col gap-20 items-center"
+      className="px-3 md:px-[100px] py-[100px]"
     >
-      <h1>
+      <h2>
         <FontAwesomeIcon className="pe-4" icon={faBox} />
         Projects
-      </h1>
+      </h2>
 
-      <div className="grid place-content-center sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid w-fit mx-auto sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectItem
           img="project/breakingcipher.jpg"
           head="Breaking the Caesar Cipher"
