@@ -1,5 +1,7 @@
 # Personal Portfolio
 
+> **`Responsive`**, `Optimized` and _`Aesthetic`_
+
 ## ✨ Features
 
 - Shows custom thumbnail when sharing url on WhatsApp/Social Media using Open Graph Metadata Protocol
