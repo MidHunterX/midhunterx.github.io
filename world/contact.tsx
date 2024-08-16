@@ -11,6 +11,7 @@ import {
 import SvgGithub from "/public/svg/github.svg";
 import SvgLinkedIn from "/public/svg/linkedin.svg";
 import SvgInstagram from "/public/svg/instagram.svg";
+import SvgX from "/public/svg/x.svg";
 
 
 export default function Contact() {
@@ -76,6 +77,13 @@ export default function Contact() {
                 data-blobity-magnetic="false"
               >
                 <SvgInstagram className={follow_ico_class} width={follow_ico_size} />
+              </a>
+              <a className="me-3 mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
+                href="https://x.com/Mid_Hunter"
+                target="_blank"
+                data-blobity-magnetic="false"
+              >
+                <SvgX className={follow_ico_class} width={follow_ico_size} />
               </a>
             </div>
           </article>
