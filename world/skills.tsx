@@ -74,7 +74,7 @@ export default function Skills() {
           ...skillList.map((skill, index) => (
             <div
               key={`${title}-${index}`}
-              className="place-content-center max-w-[180px] p-1 md:p-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
+              className="place-content-center p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
               data-blobity-tooltip={`${skill.name}`}
               data-blobity-magnetic="false"
             >

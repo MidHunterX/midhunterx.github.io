@@ -55,7 +55,7 @@ export default function Contact() {
           </article>
 
           <article className="mb-8">
-            <h3>Follow me</h3>
+            <h3>Follow me on</h3>
             <div className="flex gap-2 mt-4 -mx-1.5 ">
               <a className="me-3 mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
                 href="https://github.com/midhunterx"
