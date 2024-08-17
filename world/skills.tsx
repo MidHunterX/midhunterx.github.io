@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faToolbox } from "@fortawesome/free-solid-svg-icons";
+import IconCloud from "@/world/effects/iconCloud"
 
 export default function Skills() {
   // █▀▀ █▀▀ ▀█▀ █▀▀ █░█   █▀ █▄▀ █ █░░ █░░ █▀
@@ -93,6 +94,32 @@ export default function Skills() {
     return skillElements;
   };
 
+  // █ █▀▀ █▀█ █▄░█   █▀▀ █░░ █▀█ █░█ █▀▄
+  // █ █▄▄ █▄█ █░▀█   █▄▄ █▄▄ █▄█ █▄█ █▄▀
+  // Get icon names for generating icon cloud
+  const getSkillIcons = () => {
+    const skillIcons = [];
+    if (skills) {
+      for (const skillList of Object.values(skills)) {
+        skillIcons.push(
+          ...skillList.map((skill) => skill.icon)
+        );
+      }
+    }
+    return skillIcons;
+  };
+  const getSkillNames = () => {
+    const skillNames = [];
+    if (skills) {
+      for (const skillList of Object.values(skills)) {
+        skillNames.push(
+          ...skillList.map((skill) => skill.name)
+        );
+      }
+    }
+    return skillNames;
+  };
+
   return (
     <section
       id="skills"
@@ -103,9 +130,19 @@ export default function Skills() {
         Skills
       </h2>
 
-      <div className="w-fit mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
-        {renderAllSkills()}
+      <div className="flex gap-10">
+        {/* CLOUD ONLY FOR PC-MASTER-RACE ;) */}
+        <div className="w-fit mx-auto hidden lg:block">
+          <IconCloud
+            iconSlugs={getSkillIcons()}
+            names={getSkillNames()}
+          />
+        </div>
+        <div className="w-fit mx-auto block grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5 xl:grid-cols-7 gap-6">
+          {renderAllSkills()}
+        </div>
       </div>
+
     </section>
   );
 }
