@@ -4,7 +4,7 @@
     { "name": "Python", "icon": "python" },
     { "name": "Java", "icon": "java" },
     { "name": "Lua", "icon": "lua" },
-    { "name": "Bash", "icon": "bash" },
+    { "name": "Bash", "icon": "gnubash" },
     { "name": "HTML", "icon": "html5" },
     { "name": "CSS", "icon": "css3" },
     { "name": "JavaScript", "icon": "javascript" },
@@ -17,15 +17,14 @@
   "frameworks": [
     { "name": "Django", "icon": "django" },
     { "name": "NodeJS", "icon": "nodejs" },
-    { "name": "NextJS", "icon": "nextjs" },
+    { "name": "NextJS", "icon": "nextdotjs" },
     { "name": "Bootstrap", "icon": "bootstrap" },
     { "name": "TailwindCSS", "icon": "tailwindcss" }
   ],
   "tools": [
     { "name": "Git", "icon": "git" },
-    { "name": "Neovim", "icon": "nvim" },
+    { "name": "Neovim", "icon": "neovim" },
     { "name": "Tmux", "icon": "tmux" },
-    { "name": "SSH", "icon": "ssh" },
     { "name": "Firefox", "icon": "firefox" },
     { "name": "Linux", "icon": "linux" }
   ]
