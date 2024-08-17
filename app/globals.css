@@ -54,3 +54,10 @@ h6 {
 p {
   @apply mb-3 text-gray-700 dark:text-gray-300;
 }
+
+/* THEME TRANSITION */
+/* ================ */
+/* BUG: makes blobity magnetic effect lag by this transition time */
+/* main, section, article, div, svg, h2, h3, p, a, li {
+  @apply transition-all duration-300;
+} */
