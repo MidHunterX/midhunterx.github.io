@@ -44,17 +44,18 @@ Step 4: Profit?
 
 ## 💽 Technologies Used
 
-| Framework/Library       | Description                |
-| ----------------------- | -------------------------- |
-| Next.js                 | Bundler                    |
-| React                   | UI Library                 |
-| Tailwind CSS            | CSS Framework              |
-| fortawesome/fontawesome | SVG Icon Library           |
-| gmrchk/blobity          | Kinet based cursor blob    |
-| greensock/gsap          | Animation Framework        |
-| pacocoursey/next-themes | NextJS Theme Provider      |
-| @svgr/webpack           | Custom SVG Type for TS     |
-| @headlessui/react       | Headless Component Library |
+| Framework/Library              | Description                |
+| ------------------------------ | -------------------------- |
+| Next.js                        | Bundler                    |
+| React                          | UI Library                 |
+| Tailwind CSS                   | CSS Framework              |
+| @fortawesome/react-fontawesome | SVG Icon Library           |
+| blobity                        | Kinet based cursor blob    |
+| gsap                           | Animation Framework        |
+| next-themes                    | NextJS Theme Provider      |
+| @svgr/webpack                  | Custom SVG Type for TS     |
+| @headlessui/react              | Headless Component Library |
+| react-icon-cloud               | Interactive Word Cloud     |
 
 ### Headless Component Libraries
 
@@ -62,7 +63,7 @@ Headless components are fully functional UI elements like modal, buttons, popove
 
 `Headless UI` components are well tested on multiple browsers, platforms, and devices and deals with edge cases that I never could or want to deal with myself: stuff like focus management, keyboard navigation, event listeners, accessibility attributes, valid markup and screen reader support.
 
-Referenced Styled Component Libraries: Flowbite, MerakiUI
+Referenced Styled Component Libraries: Flowbite, MerakiUI, MagicUI
 
 ### PDF Previews
 
