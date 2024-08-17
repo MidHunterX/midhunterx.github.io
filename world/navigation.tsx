@@ -22,7 +22,7 @@ const NavItem = ({ href, label, children }: NavItemProps) => (
 
 export default function FastTravel() {
   return (
-    <nav className="fixed bottom-0 sm:bottom-8 left-0 right-0 mx-auto flex items-center justify-center gap-1 sm:rounded-lg border border-0 sm:border-2 border-gray-500 bg-neutral-950 px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-fit">
+    <nav className="fixed bottom-0 sm:bottom-8 left-0 right-0 mx-auto flex items-center justify-center gap-1 sm:rounded-lg border border-0 sm:border-2 border-gray-500 bg-neutral-950 px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-fit z-10">
       <NavItem href="#home" label="Fast Travel to Home">
         Home
       </NavItem>
