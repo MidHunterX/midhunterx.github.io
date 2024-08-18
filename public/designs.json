@@ -1,0 +1,56 @@
+{
+  "digitalart": {
+    "11": [],
+    "169": [
+      "d_archer.jpg",
+      "d_brick.jpg",
+      "d_dinosaur.jpg",
+      "d_snow.jpg",
+      "d_sunsetsea.jpg"
+    ]
+  },
+
+  "artwork": {
+    "11": [
+      "a_candy.jpg",
+      "a_coffindance.jpg",
+      "a_halloween.jpg",
+      "a_kinds.jpg",
+      "a_master.jpg",
+      "a_milky.jpg",
+      "a_scared.jpg",
+      "a_tagwatch.jpg"
+    ],
+    "169": [
+      "a_assassin.jpg",
+      "a_cheesemoon.jpg",
+      "a_chilling.jpg",
+      "a_danceclub.jpg",
+      "a_family.jpg",
+      "a_frens.jpg",
+      "a_king.jpg",
+      "a_koala.jpg",
+      "a_mittens.jpg",
+      "a_mother.jpg",
+      "a_sleeping.jpg",
+      "a_sunsetchill.jpg",
+      "a_surfing.jpg",
+      "a_thirdperson.jpg"
+    ]
+  },
+
+  "logo": {
+    "11": ["l_ambigram.jpg", "l_csekings.jpg", "l_kvr.jpg"],
+    "169": []
+  },
+
+  "manipulation": {
+    "11": ["m_egg.jpg", "m_feeshy2.jpg", "m_animal.jpg"],
+    "169": ["m_feeshy.jpg"]
+  },
+
+  "vector": {
+    "11": ["v_me.jpg", "v_psblock.jpg", "v_sandring.jpg", "v_vaish.jpg"],
+    "169": ["v_3dcar.jpg"]
+  }
+}
