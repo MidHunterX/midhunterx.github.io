@@ -25,8 +25,8 @@ export default function Projects() {
       <TabGroup>
         {/* TAB SELECTION */}
         <TabList className="w-fit mx-auto flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
-          <TabItem text="Software Developer" />
-          <TabItem text="Digital Artist" />
+          <TabItem text="Software Projects" />
+          <TabItem text="Digital Artworks" />
         </TabList>
 
         {/* TAB BODY */}
