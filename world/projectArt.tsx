@@ -150,7 +150,7 @@ export default function ArtworkSection() {
         Artworks
       </h2>
 
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 pb-5">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:p-4 md:bg-neutral-900 md:rounded-xl">
         {grid_bento()}
         {grid_bento()}
         {grid_bento()}
