@@ -5,12 +5,12 @@ import { useTheme } from "next-themes";
 import LoadingScreen from "@/world/anim/loading/LoadingScreen";
 import FastTravel from "@/world/navigation";
 import Home from "@/world/home";
-import Workshop from "@/world/workshop";
+import Projects from "@/world/projects";
 import Skills from "@/world/skills";
 import Contact from "@/world/contact";
 
 export default function Application() {
-  const blobity = useBlobity({
+  useBlobity({
     licenseKey: "opensource",
     mode: "normal", // normal, slow, bouncy
     focusableElementsOffsetX: 5,
@@ -30,13 +30,14 @@ export default function Application() {
     radius: 4,
     magnetic: true,
   });
-  const { resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme();
+
   return (
-    <section style={{ color: resolvedTheme === 'dark' ? 'white' : 'black' }} >
+    <section style={{ color: resolvedTheme === "dark" ? "white" : "black" }}>
       <LoadingScreen />
       <FastTravel />
       <Home />
-      <Workshop />
+      <Projects />
       <Skills />
       <Contact />
     </section>

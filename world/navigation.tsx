@@ -27,7 +27,7 @@ export default function FastTravel() {
         Home
       </NavItem>
 
-      <NavItem href="#workshop" label="Fast Travel to Work Shop">
+      <NavItem href="#projects" label="Fast Travel to Work Shop">
         Projects
       </NavItem>
 

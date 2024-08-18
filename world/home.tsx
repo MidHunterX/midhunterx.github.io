@@ -1,5 +1,5 @@
 "use client";
-import { Button, ButtonSecondary } from "@/constituents/buttons";
+import { ButtonSecondary } from "@/constituents/buttons";
 import { smoothScroll } from "@/world/smoothScroll";
 import ResumeModal from "@/constituents/modals";
 
@@ -53,7 +53,7 @@ oMMo              oMMo
         </p>
         <div className="mt-8 flex flex-row">
           <ResumeModal />
-          <ButtonSecondary href="#workshop" onClick={smoothScroll} text="Get Started" />
+          <ButtonSecondary href="#projects" onClick={smoothScroll} text="Get Started" />
         </div>
       </div>
     </section>

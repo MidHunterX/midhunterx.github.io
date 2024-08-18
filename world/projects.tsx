@@ -80,13 +80,13 @@ const ProjectItemDisabled = ({ img, head, body, live, code, techs }: ProjectItem
 };
 
 
-// █░█░█ █▀█ █▀█ █▄▀ █▀ █░█ █▀█ █▀█
-// ▀▄▀▄▀ █▄█ █▀▄ █░█ ▄█ █▀█ █▄█ █▀▀
+// █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
+// █▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░   ▄█ ██▄ █▄▄ ░█░ █ █▄█ █░▀█
 
-export default function Workshop() {
+export default function Projects() {
   return (
     <section
-      id="workshop"
+      id="projects"
       className="px-3 md:px-[100px] py-[100px]"
     >
       <h2>
