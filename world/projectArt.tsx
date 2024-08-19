@@ -1,6 +1,6 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPalette } from "@fortawesome/free-solid-svg-icons";
+import { faPalette, faSync } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -19,6 +19,9 @@ export default function ArtworkSection() {
   useEffect(() => {
     const fetchDesigns = async () => {
       try {
+        // SLOW DEVICE TEST
+        // const sleep = ms => new Promise(r => setTimeout(r, ms));
+        // await sleep(5000)
         const response = await fetch("/designs.json");
         const data: Designs = await response.json();
         setDesigns(data);
@@ -28,8 +31,19 @@ export default function ArtworkSection() {
     };
     fetchDesigns();
   }, []);
+
+  // SHOW WHILE LOADING JSON DATA
   if (!designs) {
-    return <p>Loading Designs...</p>;
+    return (
+      <div className="w-fit mx-auto py-[100px] h-screen text-center ">
+        <h2>
+          <FontAwesomeIcon className="pe-4" icon={faPalette} />
+          Artworks
+        </h2>
+        <FontAwesomeIcon className="text-6xl mb-6 fa-spin" icon={faSync} />
+        <p>Loading Designs...</p>
+      </div>
+    );
   }
 
   // ▄▀█ █▀ █▀█ █▀▀ █▀▀ ▀█▀   █▀█ ▄▀█ ▀█▀ █ █▀█   █▀ ▀█▀ ▄▀█ █▀▀ █▄▀
