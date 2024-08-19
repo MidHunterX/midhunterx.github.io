@@ -1,5 +1,5 @@
 import { useState, useRef, Fragment } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
 import { Button, ButtonNull, ButtonSecondaryNull } from "@/constituents/buttons";
 import Image from 'next/image'
 
@@ -31,7 +31,7 @@ export default function ResumeModal() {
           className="relative z-10"
           onClose={closeModal}
         >
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0"
@@ -41,11 +41,11 @@ export default function ResumeModal() {
             leaveTo="opacity-0"
           >
             <div className="fixed inset-0 bg-black/25" />
-          </Transition.Child>
+          </TransitionChild>
 
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center backdrop-blur bg-black/30">
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter="ease-out duration-300"
                 enterFrom="opacity-0 scale-95"
@@ -54,7 +54,7 @@ export default function ResumeModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all bg-neutral-800">
+                <DialogPanel className="w-full max-w-lg transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all bg-neutral-800">
                   <section className="dark">
                     <Image
                       className="rounded-lg"
@@ -78,8 +78,8 @@ export default function ResumeModal() {
                       />
                     </div>
                   </section>
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>
