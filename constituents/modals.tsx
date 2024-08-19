@@ -2,6 +2,8 @@ import { useState, useRef, Fragment } from "react";
 import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
 import { Button, ButtonNull, ButtonSecondaryNull } from "@/constituents/buttons";
 import Image from 'next/image'
+// width, height, blurDataUrl is not needed when importing image :D
+import Resume from '@/public/MidhunJinan_Resume.jpg'
 
 // █▀█ █▀▀ █▀ █░█ █▀▄▀█ █▀▀
 // █▀▄ ██▄ ▄█ █▄█ █░▀░█ ██▄
@@ -59,12 +61,9 @@ export default function ResumeModal() {
                     <Image
                       className="rounded-lg"
                       ref={resumeRef}
-                      src="MidhunJinan_Resume.jpg"
+                      src={Resume}
                       alt="Mid Hunter's Resume"
-                      width="1241"
-                      height="1754"
                       placeholder="blur"
-                      blurDataURL="MidhunJinan_Resume_LOD.jpg"
                     />
                     <div className="flex m-3">
                       <Button
