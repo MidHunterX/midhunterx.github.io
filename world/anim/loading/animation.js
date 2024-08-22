@@ -43,7 +43,7 @@ export const loadingAnimation = () => {
         duration: 1,
         height: "0vh",
         ease: "Power3.easeOut",
-        onComplete: mobileLanding(),
+        // onComplete: mobileLanding(),
       },
       "-=2"
     )
@@ -53,13 +53,13 @@ export const loadingAnimation = () => {
     });
 };
 
-export const mobileLanding = () => {
-  window.innerWidth < 763 &&
-    tl.from(".landing__main2", {
-      duration: 1,
-      delay: 0,
-      opacity: 0,
-      y: 80,
-      ease: "expo.easeOut",
-    });
-};
+// export const mobileLanding = () => {
+//   window.innerWidth < 763 &&
+//     tl.from(".landing__main2", {
+//       duration: 1,
+//       delay: 0,
+//       opacity: 0,
+//       y: 80,
+//       ease: "expo.easeOut",
+//     });
+// };
