@@ -2,7 +2,7 @@
 import { ButtonSecondary } from "@/constituents/buttons";
 import { smoothScroll } from "@/world/smoothScroll";
 import ResumeModal from "@/constituents/modals";
-
+import AnimatedName from "@/world/effects/animatedName";
 
 // █░█ █▀▀ █▀█ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
 // █▀█ ██▄ █▀▄ █▄█   ▄█ ██▄ █▄▄ ░█░ █ █▄█ █░▀█
@@ -39,9 +39,12 @@ oMMo              oMMo
         <div className="max-w-fit bg-gray-100 text-gray-800 text-xs font-medium my-2 px-4 py-1 rounded dark:bg-gray-800 dark:text-gray-200 border border-gray-500">
           Greetings, I am known as
         </div>
+        {/*
         <h1 className="mb-4 text-5xl lg:text-8xl text-white font-extrabold tracking-tight leading-none">
           Mid Hunter
         </h1>
+        */}
+        <AnimatedName />
         <p className="text-lg font-normal text-white lg:text-xl">
           I am a<span className="text-yellow-200"> Software Developer</span>
         </p>
@@ -53,7 +56,11 @@ oMMo              oMMo
         </p>
         <div className="mt-8 flex flex-row">
           <ResumeModal />
-          <ButtonSecondary href="#projects" onClick={smoothScroll} text="Get Started" />
+          <ButtonSecondary
+            href="#projects"
+            onClick={smoothScroll}
+            text="Get Started"
+          />
         </div>
       </div>
     </section>
