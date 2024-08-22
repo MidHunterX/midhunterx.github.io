@@ -4,7 +4,7 @@ const AnimatedName = () => {
   const baseDelay = 4.2;
   return (
     <motion.h1
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={{ delay: baseDelay + 0, duration: 0.5 }}
       className="flex mb-3 text-5xl lg:text-8xl text-white font-extrabold tracking-tight leading-none"
