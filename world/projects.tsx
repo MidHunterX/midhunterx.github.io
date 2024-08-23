@@ -22,6 +22,7 @@ export function TabItem({ text }: { text: string }) {
 export default function Projects() {
   return (
     <section id="projects">
+      <hr className="lg:w-96 lg:rounded h-1 mx-auto bg-black border-0 dark:bg-white"/>
       <TabGroup>
         {/* TAB SELECTION */}
         <TabList className="w-fit mx-auto flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
