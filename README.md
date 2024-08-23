@@ -54,9 +54,14 @@ Step 4: Profit?
 | blobity                        | Kinet based cursor blob    |
 | gsap                           | Animation Framework        |
 | next-themes                    | NextJS Theme Provider      |
-| @svgr/webpack                  | Custom SVG Type for TS     |
+| @svgr/webpack                  | Webpack Loader for SVGR    |
 | @headlessui/react              | Headless Component Library |
 | react-icon-cloud               | Interactive Word Cloud     |
+| framer-motion                  | Animation Framework        |
+| react-intersection-observer    | Intersection Observer API  |
+| sharp                          | Image Optimizer for Web    |
+
+- Even though NextJS uses Turbopack, here we use Webpack for using SVGR plugin to create dynamic SVG styling.
 
 ### Headless Component Libraries
 
