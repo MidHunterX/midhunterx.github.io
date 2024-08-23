@@ -101,7 +101,7 @@ export default function DeveloperSection() {
           body="This is the webpage you are looking at right now. Developed using Next.js to deepen my understanding of React's core concepts and modern web development practices."
           live="https://midhunterx.github.io"
           code="https://github.com/MidHunterX/midhunterx.github.io"
-          techs={['Next.js', 'React.js', 'TailwindCSS']}
+          techs={['Next.js', 'React', 'TailwindCSS', 'HeadlessUI', 'Webpack', 'Framer Motion', 'GSAP']}
         />
 
         <ProjectItem
