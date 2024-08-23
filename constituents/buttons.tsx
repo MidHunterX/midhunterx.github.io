@@ -31,5 +31,5 @@ export const ButtonSecondaryNull = ({ text, ...rest }:{text:string;[key:string]:
 
 // USED IN VIEWING PROJECT
 export const ButtonDisabled = ({ text }:{ text: string }) => (
-  <a className="inline-flex justify-center items-center py-3 px-5 me-4 text-sm md:text-lg text-base font-medium text-center text-white rounded-lg bg-gray-500 cursor-not-allowed"> {text} </a>
+  <a className="inline-flex justify-center items-center py-3 px-5 me-4 text-sm md:text-lg text-base font-medium text-center text-white rounded-lg bg-gray-500 cursor-not-allowed"> <span className="animate-pulse">{text}</span> </a>
 );
