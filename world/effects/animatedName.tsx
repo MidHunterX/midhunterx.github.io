@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const AnimatedName = () => {
-  const baseDelay = 4.2;
+  const baseDelay = 3.5;
   return (
     <motion.h1
       initial={{ opacity: 1 }}
@@ -35,7 +35,7 @@ const AnimatedName = () => {
         // initial={{ x: "-100%", opacity: 0, rotateX: -90 }}
         // animate={{ x: "-130%", opacity: 1, rotateX: 0 }}
         // Flip Effect
-        initial={{ x: "-130%", y: "-60%", opacity: 0, rotateX: -90 }}
+        initial={{ x: "-130%", y: "-40%", opacity: 0, rotateX: -90 }}
         animate={{ x: "-130%", y: "0%", opacity: 1, rotateX: 0 }}
         transition={{ delay: baseDelay + 3.5, duration: 0.5 }}
         style={{ display: "inline-block" }} // allows movement for text
@@ -48,7 +48,7 @@ const AnimatedName = () => {
         // animate={{ x: "-140%", opacity: 0, rotateX: -90 }}
         // Flip Effect
         initial={{ x: "-120%", y: "0%", opacity: 1, rotateX: 0 }}
-        animate={{ x: "-120%", y: "60%", opacity: 0, rotateX: -90 }}
+        animate={{ x: "-120%", y: "40%", opacity: 0, rotateX: -90 }}
         transition={{ delay: baseDelay + 3.5, duration: 0.5 }}
         style={{ display: "inline-block" }} // allows movement for text
       >
