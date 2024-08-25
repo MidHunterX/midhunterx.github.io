@@ -101,7 +101,7 @@ export default function DeveloperSection() {
           body="This is the webpage you are looking at right now. Developed using Next.js to deepen my understanding of React's core concepts and modern web development practices."
           live="https://midhunterx.github.io"
           code="https://github.com/MidHunterX/midhunterx.github.io"
-          techs={['Next.js', 'React', 'TailwindCSS', 'GSAP', 'HeadlessUI', 'Webpack', 'Framer Motion']}
+          techs={['Next.js', 'TypeScript', 'TailwindCSS', 'GSAP', 'HeadlessUI', 'Webpack', 'React', 'Framer Motion']}
         />
 
         <ProjectItem
@@ -109,15 +109,15 @@ export default function DeveloperSection() {
           head="GNOSIS"
           body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning."
           code="https://github.com/MidHunterX/GNOSIS"
-          techs={['Python', 'Django', 'Bootstrap', 'GeminiAI']}
+          techs={['Python', 'Django', 'Bootstrap', 'GeminiAI', 'FuzzyMatching', 'Markdown Editor', 'Authentication']}
         />
 
         <ProjectItem
           img="project/scholarcap.jpg"
           head="Scholar CAP"
-          body="Scholar CAP (Computer Aided Processing) is a python based toolset designed to simplify the processing of student scholarship forms, specifically focusing on banking details. From initial data extraction, sanitization, validation to generation of custom formatted Excel sheet for NEFT."
+          body="Scholar CAP (Computer Aided Processing) is a python toolset for data parsing, sanitization, validation and storage of data from docx student scholarship forms to generation of custom formatted Excel sheet for Bank NEFT."
           code="https://github.com/MidHunterX/Scholar-CAP"
-          techs={['Python', 'openpyxl', 'Multi-Threading']}
+          techs={['Python', 'openpyxl', 'Multi-Threading', 'SQLite3', 'pandas', 'pdfplumber', 'docx']}
         />
 
         <ProjectItem
@@ -151,7 +151,7 @@ export default function DeveloperSection() {
           head="NvME"
           body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
           code="https://github.com/MidHunterX/NvME"
-          techs={['Lua']}
+          techs={['Lua', 'Language Server Protocol', 'TreeSitter', 'Code Autocompletion']}
         />
       </div>
     </section>
