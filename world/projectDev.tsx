@@ -151,7 +151,7 @@ export default function DeveloperSection() {
           head="NvME"
           body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
           code="https://github.com/MidHunterX/NvME"
-          techs={['Lua', 'Language Server Protocol', 'TreeSitter', 'Code Autocompletion']}
+          techs={['Lua', 'TreeSitter Parsing', 'Luasnip Snippet Engine', 'Language Server Protocol', 'CMP Autocompletion']}
         />
       </div>
     </section>
