@@ -107,8 +107,8 @@ export default function DeveloperSection() {
 
         <ProjectItem
           img="project/gnosis.jpg"
-          head="GNOSIS"
-          body="An ambitious project designed to transform the way individuals engage with and acquire knowledge, fostering a community-driven approach to learning."
+          head="γνῶσις (GNŌSIS)"
+          body="Gnosis is a Greek word that means “knowledge”. This project is a community-driven knowledge base with AI Integration just like most of the companies out there these days."
           code="https://github.com/MidHunterX/GNOSIS"
           techs={['Python', 'Django', 'Bootstrap', 'GeminiAI', 'FuzzyMatching', 'Markdown Editor', 'Authentication']}
         />
