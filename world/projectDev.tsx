@@ -8,6 +8,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBox } from "@fortawesome/free-solid-svg-icons";
 import React, { ReactNode } from 'react';
+import AnimatedTitle from "@/world/effects/animatedTitle";
+import AnimatedBody from "@/world/effects/animatedBody";
 
 
 // █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █▀▀ ▄▀█ █▀█ █▀▄
@@ -26,8 +28,10 @@ const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => 
     <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
       <img className="rounded-t-lg" src={img} alt="" />
       <div className="p-5">
-        <h3> {head} </h3>
-        <p> {body} </p>
+
+        <AnimatedTitle text={`${head}`} />
+        <AnimatedBody text={`${body}`} />
+
         {/* TECHNOLOGIES */}
         {techs && (
           <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
