@@ -3,6 +3,7 @@ import { ButtonGroup, ButtonSecondary } from "@/constituents/buttons";
 import { smoothScroll } from "@/world/smoothScroll";
 import ResumeModal from "@/constituents/modals";
 import AnimatedName from "@/world/effects/animatedName";
+import Designations from "@/world/effects/designations";
 
 // █░█ █▀▀ █▀█ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
 // █▀█ ██▄ █▀▄ █▄█   ▄█ ██▄ █▄▄ ░█░ █ █▄█ █░▀█
@@ -41,8 +42,9 @@ oMMo              oMMo
         </div>
         <AnimatedName />
         <p className="text-lg font-normal text-white lg:text-xl">
-          I am a<span className="text-yellow-200"> Software Developer</span>
+          I am a<span className="text-yellow-200">&nbsp;<Designations/></span>
         </p>
+
         <p className="my-3 text-sm md:text-lg text-gray-400 text-justify">
           Just a guy passionate about solving problems and building things.
           Experienced in creating web applications and innovative solutions to
