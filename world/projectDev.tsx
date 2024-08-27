@@ -3,6 +3,7 @@ import {
   Button,
   ButtonSecondary,
   ButtonDisabled,
+  ButtonGroup
 } from "@/constituents/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBox } from "@fortawesome/free-solid-svg-icons";
@@ -60,10 +61,10 @@ type ProjectItemProps = {
 const ProjectItem = ({ img, head, body, live, code, techs }: ProjectItemProps) => {
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs} >
-      <div className="mt-8">
+      <ButtonGroup>
         {live && <Button target="_blank" href={live} text="Website" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
-      </div>
+      </ButtonGroup>
     </ProjectCard>
   );
 };
@@ -71,10 +72,10 @@ const ProjectItem = ({ img, head, body, live, code, techs }: ProjectItemProps) =
 const ProjectItemDisabled = ({ img, head, body, live, code, techs }: ProjectItemProps) => {
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs} >
-      <div className="mt-8">
+      <ButtonGroup>
         {live && <ButtonDisabled text="Currently Viewing" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
-      </div>
+      </ButtonGroup>
     </ProjectCard>
   );
 };
