@@ -4,6 +4,7 @@ import { smoothScroll } from "@/world/smoothScroll";
 import ResumeModal from "@/constituents/modals";
 import AnimatedName from "@/world/effects/animatedName";
 import Designations from "@/world/effects/designations";
+import AnimatedAscii from "@/world/effects/animatedAscii";
 
 // █░█ █▀▀ █▀█ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
 // █▀█ ██▄ █▀▄ █▄█   ▄█ ██▄ █▄▄ ░█░ █ █▄█ █░▀█
@@ -33,7 +34,7 @@ oMMo              oMMo
       className="dark bg-cover bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen min-h-screen pt-8 pb-[50px] lg:flex lg:flex-row items-center"
     >
       <div className="text-white text-center justify-center w-full lg:w-1/3">
-        <pre className="mb-4 font-mono text-sm whitespace-pre-wrap">{art}</pre>
+        <AnimatedAscii asciiArt={art} interval={300}/>
       </div>
 
       <div className="w-full lg:w-1/2 px-[50px]">
