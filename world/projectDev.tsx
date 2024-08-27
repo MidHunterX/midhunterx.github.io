@@ -94,7 +94,7 @@ export default function DeveloperSection() {
         Projects
       </h2>
 
-      <div className="grid w-fit mx-auto sm:px-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         <ProjectItemDisabled
           img="project/portfolio.jpg"
           head="Portfolio Website"
