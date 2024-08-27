@@ -1,6 +1,6 @@
 import { useState, useRef, Fragment } from "react";
 import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
-import { Button, ButtonNull, ButtonSecondaryNull } from "@/constituents/buttons";
+import { Button, ButtonNull, ButtonSecondaryNull, ButtonGroup } from "@/constituents/buttons";
 import Image from 'next/image'
 // width, height, blurDataUrl is not needed when importing image :D
 import Resume from '@/public/MidhunJinan_Resume.jpg'
@@ -65,7 +65,7 @@ export default function ResumeModal() {
                       alt="Mid Hunter's Resume"
                       placeholder="blur"
                     />
-                    <div className="flex m-3">
+                    <ButtonGroup>
                       <Button
                         target="_blank"
                         href="MidhunJinan_Resume.pdf"
@@ -75,7 +75,7 @@ export default function ResumeModal() {
                         onClick={closeModal}
                         text="Go Back"
                       />
-                    </div>
+                    </ButtonGroup>
                   </section>
                 </DialogPanel>
               </TransitionChild>
