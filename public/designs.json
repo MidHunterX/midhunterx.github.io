@@ -10,6 +10,26 @@
     ]
   },
 
+  "render": {
+    "11": [],
+    "169": ["v_3dcar.jpg"]
+  },
+
+  "logo": {
+    "11": ["l_ambigram.jpg", "l_kvr.jpg", "l_csekings.jpg"],
+    "169": []
+  },
+
+  "manipulation": {
+    "11": ["m_egg.jpg", "m_feeshy2.jpg", "m_animal.jpg"],
+    "169": ["m_feeshy.jpg"]
+  },
+
+  "vector": {
+    "11": ["v_me.jpg", "v_psblock.jpg", "v_sandring.jpg", "v_vaish.jpg"],
+    "169": []
+  },
+
   "artwork": {
     "11": [
       "a_candy.jpg",
@@ -37,20 +57,5 @@
       "a_surfing.jpg",
       "a_thirdperson.jpg"
     ]
-  },
-
-  "logo": {
-    "11": ["l_ambigram.jpg", "l_csekings.jpg", "l_kvr.jpg"],
-    "169": []
-  },
-
-  "manipulation": {
-    "11": ["m_egg.jpg", "m_feeshy2.jpg", "m_animal.jpg"],
-    "169": ["m_feeshy.jpg"]
-  },
-
-  "vector": {
-    "11": ["v_me.jpg", "v_psblock.jpg", "v_sandring.jpg", "v_vaish.jpg"],
-    "169": ["v_3dcar.jpg"]
   }
 }
