@@ -4,7 +4,6 @@
 
 ## ✨ Features
 
-- Shows Neutral Gray BG for Artworks @md as a hacky solution to [Hermann Grid Optical Illusion](https://en.wikipedia.org/wiki/Grid_illusion) problem.
 - Shows custom thumbnail when sharing url on WhatsApp/Social Media using Open Graph Metadata Protocol
 - Automatically changes theme based on device `Dark Mode` setting (stackoverflow does not seem to have this feature).
 - SVG icons changes colors automatically based on selected theme.
@@ -12,6 +11,7 @@
 - Implemented XML like component abstaction for data on `./world/workshop.tsx`
 - Implemented JSON file reading for data on `./world/skills.tsx`
 - If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob won't show kinetic effects.
+- Neutral Gray BG for Artworks @md as a hacky solution to [Hermann Grid Optical Illusion](https://en.wikipedia.org/wiki/Grid_illusion) problem.
 
 ## 🍻 Getting Started
 
@@ -48,7 +48,7 @@ Step 4: Profit?
 | Framework/Library              | Description                |
 | ------------------------------ | -------------------------- |
 | Next.js                        | Bundler                    |
-| React                          | UI Library                 |
+| React                          | UI Building Library        |
 | Tailwind CSS                   | CSS Framework              |
 | @fortawesome/react-fontawesome | SVG Icon Library           |
 | blobity                        | Kinet based cursor blob    |
