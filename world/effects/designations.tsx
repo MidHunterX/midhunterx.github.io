@@ -3,13 +3,12 @@ import { useState, useEffect } from "react";
 
 const Designations = ({ interval = 4000 }) => {
   const words = [
-    "Digital Artist",
-    "Software Developer",
-    "Web Developer",
     "Graphic Designer",
-    "Backend Developer",
+    "Software Developer",
     "Python Developer",
+    "Digital Artist",
     "Software Engineer",
+    "Backend Developer",
     "Full Stack Developer",
   ];
   const [index, setIndex] = useState(0);
@@ -26,9 +25,9 @@ const Designations = ({ interval = 4000 }) => {
     <AnimatePresence>
       <motion.span
         key={index}
-        initial={{ opacity: 0, y: "-50%" }}
-        animate={{ opacity: 1, y: "0%" }}
-        exit={{ opacity: 0, y: "50%" }}
+        initial={{ opacity: 0, rotateX: -70, y: "-50%" }}
+        animate={{ opacity: 1, rotateX: 0, y: "0%" }}
+        exit={{ opacity: 0, rotateX: 70, y: "50%" }}
         transition={{ duration: 0.5 }}
         style={{ position: "absolute" }}
       >
