@@ -4,11 +4,11 @@
 
 <span>
     <h3>Made with:</h3>
-    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" /> &nbsp;
-    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" /> &nbsp;
-    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" /> &nbsp;
-    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" /> &nbsp;
-    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" /> &nbsp;
+    <img width=64 src="./public/ico/frameworks/nextdotjs.svg" /> &nbsp;
+    <img width=64 src="./public/ico/libraries/react.svg" /> &nbsp;
+    <img width=64 src="./public/ico/languages/typescript.svg" /> &nbsp;
+    <img width=64 src="./public/ico/frameworks/tailwindcss.svg" /> &nbsp;
+    <img width=64 src="./public/ico/libraries/framer.svg" /> &nbsp;
     <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg" /> &nbsp;
     <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg" /> &nbsp;
 </span>
