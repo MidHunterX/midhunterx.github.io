@@ -2,6 +2,17 @@
 
 > **`Responsive`**, `Optimized` and _`Aesthetic`_
 
+<span>
+    <h3>Made with:</h3>
+    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" /> &nbsp;
+    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" /> &nbsp;
+    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" /> &nbsp;
+    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" /> &nbsp;
+    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" /> &nbsp;
+    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg" /> &nbsp;
+    <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg" /> &nbsp;
+</span>
+
 ## ✨ Features
 
 - Shows custom thumbnail when sharing url on WhatsApp/Social Media using Open Graph Metadata Protocol
