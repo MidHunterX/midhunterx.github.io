@@ -1,31 +1,56 @@
 {
+
   "languages": [
     { "name": "C", "icon": "c" },
     { "name": "Python", "icon": "python" },
     { "name": "Java", "icon": "java" },
-    { "name": "Lua", "icon": "lua" },
-    { "name": "Bash", "icon": "gnubash" },
     { "name": "HTML", "icon": "html5" },
     { "name": "CSS", "icon": "css3" },
     { "name": "JavaScript", "icon": "javascript" },
-    { "name": "TypeScript", "icon": "typescript" }
+    { "name": "TypeScript", "icon": "typescript" },
+    { "name": "Lua", "icon": "lua" },
+    { "name": "Bash", "icon": "gnubash" },
+    { "name": "Fish", "icon": "fishshell" }
   ],
+
   "databases": [
+    { "name": "JSON", "icon": "json" },
     { "name": "MySQL", "icon": "mysql" },
     { "name": "SQLite", "icon": "sqlite" }
   ],
+
   "frameworks": [
     { "name": "Django", "icon": "django" },
-    { "name": "NodeJS", "icon": "nodejs" },
     { "name": "NextJS", "icon": "nextdotjs" },
     { "name": "Bootstrap", "icon": "bootstrap" },
-    { "name": "TailwindCSS", "icon": "tailwindcss" }
+    { "name": "Tailwind CSS", "icon": "tailwindcss" }
   ],
+
+  "libraries": [
+    { "name": "Framer Motion", "icon": "framer" },
+    { "name": "React", "icon": "react" }
+  ],
+
+  "runtime_env": [
+    { "name": "NodeJS", "icon": "nodedotjs" }
+  ],
+
   "tools": [
     { "name": "Git", "icon": "git" },
     { "name": "Neovim", "icon": "neovim" },
     { "name": "Tmux", "icon": "tmux" },
+    { "name": "GitHub", "icon": "github" },
+    { "name": "VS Codium", "icon": "vscodium" },
     { "name": "Firefox", "icon": "firefox" },
     { "name": "Linux", "icon": "linux" }
+  ],
+
+  "misc": [
+    { "name": "InDesign", "icon": "adobeindesign" },
+    { "name": "Photoshop", "icon": "adobephotoshop" },
+    { "name": "Premiere Pro", "icon": "adobepremierepro" },
+    { "name": "Inkscape", "icon": "inkscape" },
+    { "name": "Blender 3D", "icon": "blender" }
   ]
+
 }

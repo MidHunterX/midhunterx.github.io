@@ -19,7 +19,9 @@ export default function Skills() {
     databases: Skill[];
     frameworks: Skill[];
     libraries: Skill[];
+    runtime_env: Skill[];
     tools: Skill[];
+    misc: Skill[];
   };
 
   const [skills, setSkills] = useState<Skills | null>(null);
@@ -74,7 +76,7 @@ export default function Skills() {
           ...skillList.map((skill, index) => (
             <div
               key={`${title}-${index}`}
-              className="place-content-center p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
+              className="place-content-center p-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
               data-blobity-tooltip={`${skill.name}`}
               data-blobity-magnetic="false"
             >
@@ -83,8 +85,8 @@ export default function Skills() {
                 alt={`${skill.name} icon`}
                 data-blobity-tooltip={`${skill.name}`}
                 data-blobity-magnetic="true"
-                width={150}
-                height={150}
+                width={100}
+                height={100}
               />
             </div>
           )),
@@ -138,7 +140,7 @@ export default function Skills() {
             names={getSkillNames()}
           />
         </div>
-        <div className="w-fit mx-auto block grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5 xl:grid-cols-7 gap-6">
+        <div className="w-fit mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5 xl:grid-cols-7 gap-6">
           {renderAllSkills()}
         </div>
       </div>
