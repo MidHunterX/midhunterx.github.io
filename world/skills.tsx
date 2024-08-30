@@ -72,8 +72,10 @@ export default function Skills() {
     const skillElements = [];
     if (skills) {
       for (const [title, skillList] of Object.entries(skills)) {
-        skillElements.push(
-          ...skillList.map((skill, index) => (
+        // Using loops over .map() as Heap/GC allocation in JS is expensive.
+        for (let index = 0; index < skillList.length; index++) {
+          const skill = skillList[index];
+          skillElements.push(
             <div
               key={`${title}-${index}`}
               className="place-content-center p-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
@@ -89,8 +91,8 @@ export default function Skills() {
                 height={100}
               />
             </div>
-          )),
-        );
+          );
+        }
       }
     }
     return skillElements;
