@@ -27,6 +27,7 @@
   ],
 
   "libraries": [
+    { "name": "Headless UI", "icon": "headlessui" },
     { "name": "Framer Motion", "icon": "framer" },
     { "name": "React", "icon": "react" }
   ],
