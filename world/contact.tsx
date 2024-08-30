@@ -1,9 +1,8 @@
 "use client";
-import { Button, ButtonSecondary } from "@/constituents/buttons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAddressBook,
-  faUser,
   faLocationDot,
   faPhone,
   faEnvelope,

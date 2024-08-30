@@ -15,14 +15,17 @@
 
 ## ✨ Features
 
-- Shows custom thumbnail when sharing url on WhatsApp/Social Media using Open Graph Metadata Protocol
-- Automatically changes theme based on device `Dark Mode` setting (stackoverflow does not seem to have this feature).
-- SVG icons changes colors automatically based on selected theme.
-- Fully Responsive Design - Adapts to different viewports
-- Implemented XML like component abstaction for data on `./world/workshop.tsx`
-- Implemented JSON file reading for data on `./world/skills.tsx`
-- If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob won't show kinetic effects.
-- Neutral Gray BG for Artworks @md as a hacky solution to [Hermann Grid Optical Illusion](https://en.wikipedia.org/wiki/Grid_illusion) problem.
+- [x] Shows custom thumbnail when sharing url on WhatsApp/Social Media using Open Graph Metadata Protocol
+- [x] Automatically changes theme based on device `Dark Mode` setting (stackoverflow does not seem to have this feature).
+- [x] SVG icons changes colors automatically based on selected theme.
+- [x] Fully [ Responsive Design ] (https://en.wikipedia.org/wiki/Responsive_web_design) - Adapts to different viewports
+- [x] Better [ accessibility ](https://en.wikipedia.org/wiki/Web_accessibility) for keyboard users
+- [x] Implemented XML like component abstaction for data on `./world/workshop.tsx`
+- [x] Implemented JSON file reading for data on `./world/skills.tsx`
+- [x] If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob won't show kinetic effects.
+- [x] Gray BG for Artworks @md as a hacky solution to [ Hermann Grid Optical Illusion ](https://en.wikipedia.org/wiki/Grid_illusion) problem.
+
+Issue: Cursor blob effect affects VimiumC/Tridactyl users as it emulates cursor click and blob effect uses cursor position to update.
 
 ## 🍻 Getting Started
 
