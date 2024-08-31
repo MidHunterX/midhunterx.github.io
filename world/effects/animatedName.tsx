@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const AnimatedName = () => {
-  const baseDelay = 3.5;
+  const baseDelay = 2.5;
   return (
     <motion.h1
       initial={{ opacity: 1 }}
