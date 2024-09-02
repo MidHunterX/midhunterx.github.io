@@ -21,24 +21,34 @@ const NavItem = ({ href, label, children }: NavItemProps) => (
   </Link>
 );
 
-export default function FastTravel() {
+type FastTravelProps = {
+  isAutoHideEnabled: boolean;
+};
+
+export default function FastTravel({ isAutoHideEnabled }: FastTravelProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      // Show nav if at the top or if scroll up
-      if (currentScrollY <= 100 || currentScrollY < lastScrollY) {
-        setIsVisible(true);
-      } else { setIsVisible(false); }
-      setLastScrollY(currentScrollY);
+      if (isAutoHideEnabled) {
+        // Show nav if at top or if scroll up
+        if (currentScrollY <= 100 || currentScrollY < lastScrollY) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+        setLastScrollY(currentScrollY);
+      } else {
+        setIsVisible(true); // Always show if auto-hide disabled
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, isAutoHideEnabled]);
 
   return (
     <nav

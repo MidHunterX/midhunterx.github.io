@@ -1,5 +1,6 @@
 "use client";
 // Use { } for Named Exports (without a default)
+import { useState, useEffect } from "react";
 import useBlobity from "blobity/lib/react/useBlobity";
 import { useTheme } from "next-themes";
 import LoadingScreen from "@/world/anim/loading/LoadingScreen";
@@ -8,6 +9,22 @@ import Home from "@/world/home";
 import Projects from "@/world/projects";
 import Skills from "@/world/skills";
 import Contact from "@/world/contact";
+
+type ToggleNavProps = {
+  toggleAutoHide: () => void;
+  isAutoHideEnabled: boolean;
+};
+
+const ToggleNav = ({ toggleAutoHide, isAutoHideEnabled }: ToggleNavProps) => {
+  return (
+    <button
+      onClick={toggleAutoHide}
+      className="p-2 bg-gray-700 text-white rounded"
+    >
+      {isAutoHideEnabled ? "Disable Auto-Hide" : "Enable Auto-Hide"}
+    </button>
+  );
+};
 
 export default function Application() {
   useBlobity({
@@ -32,11 +49,21 @@ export default function Application() {
   });
   const { resolvedTheme } = useTheme();
 
+  // FASTTRAVEL AUTOHIDE SETTING
+  const [isAutoHideEnabled, setIsAutoHideEnabled] = useState(true);
+  const toggleAutoHide = () => {
+    setIsAutoHideEnabled((prev) => !prev);
+  };
+
   return (
     <section style={{ color: resolvedTheme === "dark" ? "white" : "black" }}>
       <LoadingScreen />
-      <FastTravel />
+      <FastTravel isAutoHideEnabled={isAutoHideEnabled} />
       <Home />
+      <ToggleNav
+        toggleAutoHide={toggleAutoHide}
+        isAutoHideEnabled={isAutoHideEnabled}
+      />
       <Projects />
       <Skills />
       <Contact />
