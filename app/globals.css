@@ -33,22 +33,22 @@ body {
 }
 
 h1 {
-  @apply mb-3 text-5xl font-extrabold dark:text-white;
+  @apply mb-3 text-5xl font-extrabold text-black dark:text-white;
 }
 h2 {
-  @apply mb-20 text-center text-5xl font-bold dark:text-white;
+  @apply mb-20 text-center text-5xl font-bold text-black dark:text-white;
 }
 h3 {
-  @apply mb-3 text-3xl font-bold dark:text-white;
+  @apply mb-3 text-3xl font-bold text-black dark:text-white;
 }
 h4 {
-  @apply mb-3 text-2xl font-bold dark:text-white;
+  @apply mb-3 text-2xl font-bold text-black dark:text-white;
 }
 h5 {
-  @apply mb-3 text-xl font-bold dark:text-white;
+  @apply mb-3 text-xl font-bold text-black dark:text-white;
 }
 h6 {
-  @apply mb-3 text-lg font-bold dark:text-white;
+  @apply mb-3 text-lg font-bold text-black dark:text-white;
 }
 
 p {
