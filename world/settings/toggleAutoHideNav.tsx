@@ -10,7 +10,12 @@ export const ToggleAutoHideNav = ({
   isAutoHideNavEnabled: isAutoHideEnabled,
 }: ToggleAutoHideNavProps) => {
   return (
-    <article className="flex place-items-center gap-2">
+    <article className="flex place-items-center place-content-between gap-2">
+      <p className="p-2 m-0">
+        {isAutoHideEnabled
+          ? "Auto-Hide Navbar (Enabled)"
+          : "Auto-Hide Navbar (Disabled)"}
+      </p>
       <Switch
         checked={isAutoHideEnabled}
         onChange={toggleAutoHide}
@@ -24,11 +29,6 @@ export const ToggleAutoHideNav = ({
           group-data-[checked]:translate-x-6 bg-white dark:bg-black"
         />
       </Switch>
-      <p className="p-2 m-0">
-        {isAutoHideEnabled
-          ? "Auto-Hide Navbar (Enabled)"
-          : "Auto-Hide Navbar (Disabled)"}
-      </p>
     </article>
   );
 };
