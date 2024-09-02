@@ -49,10 +49,21 @@ export default function Application() {
   });
   const { resolvedTheme } = useTheme();
 
-  // FASTTRAVEL AUTOHIDE SETTING
+  // FASTTRAVEL AUTOHIDE GET (LOCALSTORAGE)
+  useEffect(() => {
+    const savedAutoHideSetting = localStorage.getItem("autoHideNavbar");
+    if (savedAutoHideSetting !== null) {
+      setIsAutoHideEnabled(JSON.parse(savedAutoHideSetting)); // str to bool
+    }
+  }, []);
+  // FASTTRAVEL AUTOHIDE SET
   const [isAutoHideEnabled, setIsAutoHideEnabled] = useState(true);
   const toggleAutoHide = () => {
-    setIsAutoHideEnabled((prev) => !prev);
+    setIsAutoHideEnabled((prev) => {
+      const newValue = !prev;
+      localStorage.setItem("autoHideNavbar", JSON.stringify(newValue)); // bool to str
+      return newValue;
+    });
   };
 
   return (
