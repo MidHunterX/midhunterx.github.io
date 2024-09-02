@@ -10,6 +10,8 @@ import Projects from "@/world/projects";
 import Skills from "@/world/skills";
 import Contact from "@/world/contact";
 
+import { Switch } from "@headlessui/react";
+
 type ToggleNavProps = {
   toggleAutoHide: () => void;
   isAutoHideEnabled: boolean;
@@ -17,12 +19,26 @@ type ToggleNavProps = {
 
 const ToggleNav = ({ toggleAutoHide, isAutoHideEnabled }: ToggleNavProps) => {
   return (
-    <button
-      onClick={toggleAutoHide}
-      className="p-2 bg-gray-700 text-white rounded"
-    >
-      {isAutoHideEnabled ? "Disable Auto-Hide" : "Enable Auto-Hide"}
-    </button>
+    <article className="flex place-items-center gap-3">
+      <Switch
+        checked={isAutoHideEnabled}
+        onChange={toggleAutoHide}
+        className="group inline-flex h-6 w-11 items-center rounded-full
+        bg-gray-300 dark:bg-gray-600 transition data-[checked]:bg-blue-600 dark:data-[checked]:bg-yellow-200"
+        data-blobity-magnetic="false"
+        data-blobity-radius="15"
+      >
+        <span
+          className="size-4 translate-x-1 rounded-full transition
+          group-data-[checked]:translate-x-6 bg-white dark:bg-black"
+        />
+      </Switch>
+      <p className="p-2 m-0 text-white">
+        {isAutoHideEnabled
+          ? "Auto-Hide Navbar Enabled"
+          : "Auto-Hide Navbar Disabled"}
+      </p>
+    </article>
   );
 };
 
