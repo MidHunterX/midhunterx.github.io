@@ -53,7 +53,13 @@ export default function Application() {
   useEffect(() => {
     const savedAutoHideSetting = localStorage.getItem("autoHideNavbar");
     if (savedAutoHideSetting !== null) {
-      setIsAutoHideEnabled(JSON.parse(savedAutoHideSetting)); // str to bool
+      try {
+        setIsAutoHideEnabled(JSON.parse(savedAutoHideSetting)); // str to bool
+      } catch (error) {
+        console.error("Resetting autohide value in localStorage.", error);
+        localStorage.setItem("autoHideNavbar", JSON.stringify(true)); // Reset to default val
+        setIsAutoHideEnabled(true);
+      }
     }
   }, []);
   // FASTTRAVEL AUTOHIDE SET
