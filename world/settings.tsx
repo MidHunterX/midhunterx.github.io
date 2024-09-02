@@ -60,11 +60,11 @@ export default function Settings({ children }: SettingsProps) {
     <section id="settings">
       <button
         onClick={open}
-        className="absolute sm:fixed right-5 top-5"
+        className="absolute sm:fixed right-3 top-3 sm:right-5 sm:top-5"
         data-blobity-magnetic="false"
       >
-        <h3 className="m-0 p-0 text-gray-500">
-          <FontAwesomeIcon icon={faGear} />
+        <h3 className="m-0 p-0 text-gray-400">
+          <FontAwesomeIcon className="p-2" icon={faGear} />
         </h3>
       </button>
 
@@ -91,7 +91,7 @@ export default function Settings({ children }: SettingsProps) {
             <div className="flex min-h-full items-center justify-center p-4">
               <DialogPanel
                 transition
-                className="w-full max-w-md rounded-xl bg-white/70 dark:bg-white/20 p-6 backdrop-blur-xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+                className="w-full max-w-md rounded-xl bg-white/70 dark:bg-white/20 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
               >
                 <Button
                   className="float-right"
@@ -102,7 +102,10 @@ export default function Settings({ children }: SettingsProps) {
                     <FontAwesomeIcon icon={faXmark} />
                   </h3>
                 </Button>
-                <h3 className="mb-8">Portfolio Settings</h3>
+                <h3 className="mb-8">
+                  <FontAwesomeIcon className="me-2" icon={faGear} />
+                  Settings
+                </h3>
                 {children}
               </DialogPanel>
             </div>

@@ -11,6 +11,7 @@ import Contact from "@/world/contact";
 import { useAutoHideNav } from "@/world/settings";
 import { ToggleAutoHideNav } from "@/world/settings/toggleAutoHideNav";
 import Settings from "@/world/settings";
+import { ThemeSwitchRadio } from "@/world/settings/toggleThemes";
 
 export default function Application() {
   useBlobity({
@@ -46,6 +47,7 @@ export default function Application() {
           toggleAutoHideNav={toggleAutoHideNav}
           isAutoHideNavEnabled={isAutoHideNavEnabled}
         />
+        <ThemeSwitchRadio />
       </Settings>
       <Projects />
       <Skills />
