@@ -1,6 +1,5 @@
 "use client";
 // Use { } for Named Exports (without a default)
-import { useState, useEffect } from "react";
 import useBlobity from "blobity/lib/react/useBlobity";
 import { useTheme } from "next-themes";
 import LoadingScreen from "@/world/anim/loading/LoadingScreen";
