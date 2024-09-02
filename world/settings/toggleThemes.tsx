@@ -86,7 +86,9 @@ export function ThemeSwitchRadio() {
         <Radio
           key={plan.value}
           value={plan.value}
-          className="group relative flex cursor-pointer rounded-lg bg-white/5 my-2 py-3 px-5 text-white shadow-md transition focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[checked]:bg-white/20"
+          className="group relative flex cursor-pointer rounded-lg bg-white/5 my-2 py-3 px-5 text-white shadow-md focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[checked]:bg-white/20"
+          data-blobity
+          data-blobity-magnetic="false"
         >
           <div className="flex w-full items-center justify-between">
             <div>
