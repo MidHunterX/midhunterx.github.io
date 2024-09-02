@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
+import { useState, useEffect } from "react";
 import { smoothScroll } from "@/world/smoothScroll";
 import { ThemeSwitchNav } from "@/world/themeswitch";
 
@@ -21,8 +22,28 @@ const NavItem = ({ href, label, children }: NavItemProps) => (
 );
 
 export default function FastTravel() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      // Show nav if at the top or if scroll up
+      if (currentScrollY <= 100 || currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      } else { setIsVisible(false); }
+      setLastScrollY(currentScrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <nav className="fixed bottom-0 sm:bottom-8 left-0 right-0 mx-auto flex items-center justify-center gap-1 sm:rounded-lg border-0 sm:border-2 border-gray-500 bg-neutral-950 px-1 py-1 sm:w-[383.3px] md:p-2 lg:w-fit z-10">
+    <nav
+      className={`fixed bottom-0 sm:bottom-6 left-0 right-0 mx-auto flex items-center justify-center gap-1 sm:rounded-xl border-0 sm:border-2 border-gray-500 bg-neutral-950 px-1 py-1 sm:w-[383.3px] md:p-2 lg:w-fit z-10 transition-transform duration-500 ${ isVisible ? "translate-y-0" : "translate-y-20" }`}
+    >
       <NavItem href="#home" label="Fast Travel to Home">
         Home
       </NavItem>

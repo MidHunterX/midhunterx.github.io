@@ -25,6 +25,9 @@
 - [x] Implemented JSON file reading for data on `./world/skills.tsx`
 - [x] If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob won't show kinetic effects.
 - [x] Gray BG for Artworks @md as a hacky solution to [ Hermann Grid Optical Illusion ](https://en.wikipedia.org/wiki/Grid_illusion) problem.
+- [x] Base64 Placeholder and Lazy-Loading of Resume
+- [x] Show Navbar on Hero to avoid confusion on page structure and layout
+- [x] Only show Navbar when needed (i.e. moving to previous section)
 
 Issue: Cursor blob effect affects VimiumC/Tridactyl users as it emulates cursor click and blob effect uses cursor position to update.
 
