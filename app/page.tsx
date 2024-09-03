@@ -12,6 +12,7 @@ import { useAutoHideNav } from "@/world/settings";
 import { ToggleAutoHideNav } from "@/world/settings/toggleAutoHideNav";
 import Settings from "@/world/settings";
 import { ThemeSwitchRadio } from "@/world/settings/toggleThemes";
+import { useEffect } from "react";
 
 export default function Application() {
   useBlobity({
@@ -31,9 +32,18 @@ export default function Application() {
     fontColor: "#0e1016",
     zIndex: 100,
     size: 40,
-    radius: 4,
+    radius: 8,
     magnetic: true,
   });
+
+  // REFRESH TO TOP
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
+
   const { resolvedTheme } = useTheme();
   const { isAutoHideNavEnabled, toggleAutoHideNav } = useAutoHideNav();
 
