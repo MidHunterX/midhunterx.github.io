@@ -51,7 +51,7 @@ export default function FastTravel({ isAutoHideEnabled }: FastTravelProps) {
 
   return (
     <nav
-      className={`fixed bottom-0 sm:bottom-6 left-0 right-0 mx-auto flex items-center justify-center gap-1 sm:rounded-xl border-0 sm:border-2 border-gray-500 bg-neutral-950 px-1 py-1 sm:w-[383.3px] md:p-2 lg:w-fit z-10 transition-transform duration-500 ${isVisible ? "translate-y-0" : "translate-y-20"}`}
+      className={`fixed bottom-0 sm:bottom-6 left-0 right-0 mx-auto flex items-center justify-center gap-1 sm:rounded-xl border-0 sm:border-2 border-gray-500 bg-neutral-950 px-1 py-1 sm:w-[383.3px] md:p-2 lg:w-fit z-20 transition-transform duration-500 ${isVisible ? "translate-y-0" : "translate-y-20"}`}
     >
       <NavItem href="#home" label="Fast Travel to Home">
         Home

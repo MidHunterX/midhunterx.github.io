@@ -72,7 +72,7 @@ export default function Settings({ children }: SettingsProps) {
         <Dialog
           // open={isOpen}
           as="div"
-          className="relative z-10 focus:outline-none"
+          className="relative z-30 focus:outline-none"
           onClose={close}
         >
           <TransitionChild
