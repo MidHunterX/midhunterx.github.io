@@ -60,11 +60,12 @@ export default function Settings({ children }: SettingsProps) {
     <section id="settings">
       <button
         onClick={open}
-        className="absolute sm:fixed right-3 top-3 sm:right-5 sm:top-5"
+        className="absolute sm:fixed right-5 top-5 p-3"
         data-blobity-magnetic="false"
+        data-blobity-radius="12"
       >
         <h3 className="m-0 p-0 text-gray-400">
-          <FontAwesomeIcon className="p-2" icon={faGear} />
+          <FontAwesomeIcon icon={faGear} />
         </h3>
       </button>
 
