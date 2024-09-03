@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="bg-gray-100 dark:bg-black">
+        <main className="bg-gray-100 dark:bg-neutral-950">
           <ThemeProvider attribute="class">{children}</ThemeProvider>
         </main>
       </body>
