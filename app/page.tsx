@@ -41,7 +41,6 @@ export default function Application() {
     <section style={{ color: resolvedTheme === "dark" ? "white" : "black" }}>
       <LoadingScreen />
       <FastTravel isAutoHideEnabled={isAutoHideNavEnabled} />
-      <Home />
       <Settings>
         <ToggleAutoHideNav
           toggleAutoHideNav={toggleAutoHideNav}
@@ -49,6 +48,7 @@ export default function Application() {
         />
         <ThemeSwitchRadio />
       </Settings>
+      <Home />
       <Projects />
       <Skills />
       <Contact />
