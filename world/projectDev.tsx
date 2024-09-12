@@ -100,21 +100,30 @@ export default function DeveloperSection() {
       </h2>
 
       <div className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <ProjectItem
+          img="project/game-trackr.jpg"
+          head="Game Trackr"
+          body="Personal game library 2.0 built using Angular for tracking and showcasing every game I played throughout my life, complete with details from IGDB API and tracked playtime."
+          live="https://midhunterx.github.io/Game-Trackr"
+          code="https://github.com/MidHunterX/Game-Trackr"
+          techs={['Angular', 'TypeScript', 'TailwindCSS', 'SASS', 'DaisyUI', 'Python', 'IGDB API']}
+        />
+
         <ProjectItemDisabled
           img="project/portfolio.jpg"
           head="Portfolio Website"
           body="This is the webpage you are looking at right now. Developed using Next.js to deepen my understanding of React's core concepts and modern web development practices."
           live="https://midhunterx.github.io"
           code="https://github.com/MidHunterX/midhunterx.github.io"
-          techs={['Next.js', 'TypeScript', 'TailwindCSS', 'GSAP', 'HeadlessUI', 'Webpack', 'React', 'Framer Motion']}
+          techs={['Next.js', 'React', 'TypeScript', 'TailwindCSS', 'GSAP', 'HeadlessUI', 'Webpack', 'Framer Motion']}
         />
 
         <ProjectItem
           img="project/gnosis.jpg"
           head="γνῶσις (GNŌSIS)"
-          body="Gnosis is a Greek word that means “knowledge”. This project is a community-driven knowledge base with AI Integration just like most of the companies out there these days."
+          body="Gnosis is a Greek word that means “knowledge”. This project is a community-driven knowledge base with AI Integration for exploring answers to all of your questions in different media formats."
           code="https://github.com/MidHunterX/GNOSIS"
-          techs={['Python', 'Django', 'Bootstrap', 'GeminiAI', 'FuzzyMatching', 'Markdown Editor', 'Authentication']}
+          techs={['Django', 'Python', 'Bootstrap', 'GeminiAI', 'FuzzyMatching', 'Markdown Editor', 'Authentication']}
         />
 
         <ProjectItem
@@ -131,7 +140,7 @@ export default function DeveloperSection() {
           body="A Computer Science Engineering Mini Project of a Webservice implementing Symmetric Encryption/Decryption using the good ol' Caesar Cipher algorithm"
           live="https://midhunterx.github.io/Caesar-Cipher-Cryptography"
           code="https://github.com/MidHunterX/Caesar-Cipher-Cryptography"
-          techs={['HTML', 'CSS', 'Javascript']}
+          techs={['HTML', 'CSS', 'Javascript', 'Frequency Analysis', 'Cipher Cracking']}
         />
 
         <ProjectItem
@@ -148,7 +157,7 @@ export default function DeveloperSection() {
           head="Hunter OS"
           body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configs curated to meet individual needs."
           code="https://github.com/MidHunterX/Hunter-OS"
-          techs={['Bash', 'Python', 'Conf']}
+          techs={['Wayland', 'SystemD', 'GRUB2', 'dhcpcd', 'Kitty Terminal', 'VIFM', 'Battery Optimized']}
         />
 
         <ProjectItem

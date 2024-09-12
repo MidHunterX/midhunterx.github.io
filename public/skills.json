@@ -9,6 +9,7 @@
     { "name": "JavaScript", "icon": "javascript" },
     { "name": "TypeScript", "icon": "typescript" },
     { "name": "Lua", "icon": "lua" },
+    { "name": "Sass", "icon": "sass" },
     { "name": "Bash", "icon": "gnubash" },
     { "name": "Fish", "icon": "fishshell" }
   ],
@@ -21,14 +22,16 @@
   "frameworks": [
     { "name": "Django", "icon": "django" },
     { "name": "NextJS", "icon": "nextdotjs" },
+    { "name": "Angular", "icon": "angular" },
     { "name": "Bootstrap", "icon": "bootstrap" },
     { "name": "Tailwind CSS", "icon": "tailwindcss" }
   ],
 
   "libraries": [
-    { "name": "Headless UI", "icon": "headlessui" },
+    { "name": "React", "icon": "react" },
     { "name": "Framer Motion", "icon": "framer" },
-    { "name": "React", "icon": "react" }
+    { "name": "Headless UI", "icon": "headlessui" },
+    { "name": "Daisy UI", "icon": "daisyui" }
   ],
 
   "runtime_env": [
