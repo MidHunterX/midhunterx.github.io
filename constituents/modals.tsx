@@ -35,7 +35,7 @@ export default function ResumeModal() {
         <Dialog
           as="div"
           initialFocus={resumeRef}
-          className="relative z-10"
+          className="relative z-30"
           onClose={closeModal}
         >
           <TransitionChild
