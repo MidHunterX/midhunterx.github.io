@@ -49,6 +49,7 @@
   ],
 
   "misc": [
+    { "name": "Figma", "icon": "figma" },
     { "name": "InDesign", "icon": "adobeindesign" },
     { "name": "Photoshop", "icon": "adobephotoshop" },
     { "name": "Premiere Pro", "icon": "adobepremierepro" },

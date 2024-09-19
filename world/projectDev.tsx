@@ -106,7 +106,7 @@ export default function DeveloperSection() {
           body="Personal game library 2.0 built using Angular for tracking and showcasing every game I played throughout my life, complete with details from IGDB API and tracked playtime."
           live="https://midhunterx.github.io/Game-Trackr"
           code="https://github.com/MidHunterX/Game-Trackr"
-          techs={['Angular', 'TypeScript', 'TailwindCSS', 'SASS', 'DaisyUI', 'Python', 'IGDB API']}
+          techs={['Angular', 'Figma', 'TypeScript', 'TailwindCSS', 'SASS', 'DaisyUI', 'Python', 'IGDB API']}
         />
 
         <ProjectItemDisabled

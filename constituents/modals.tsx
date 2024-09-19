@@ -61,7 +61,7 @@ export default function ResumeModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <DialogPanel className="w-full max-w-lg transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all bg-neutral-800">
+                <DialogPanel className="w-full max-w-lg transform overflow-hidden rounded-3xl text-left align-middle shadow-xl transition-all bg-neutral-800">
                   <section className="dark">
                     <Image
                       className="rounded-lg"
