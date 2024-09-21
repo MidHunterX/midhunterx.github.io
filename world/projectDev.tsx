@@ -10,6 +10,8 @@ import { faBox } from "@fortawesome/free-solid-svg-icons";
 import React, { ReactNode } from 'react';
 import AnimatedTitle from "@/world/effects/animatedTitle";
 import AnimatedBody from "@/world/effects/animatedBody";
+import Tilt from 'react-parallax-tilt';
+import { useEffect, useState } from "react";
 
 
 // █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █▀▀ ▄▀█ █▀█ █▀▄
@@ -24,17 +26,47 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => {
-  return (
-    <div className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700">
-      <img className="rounded-t-lg" src={img} alt="" />
-      <div className="p-5">
+  const [tiltEnable, setTiltEnable] = useState(false);
 
-        <AnimatedTitle text={`${head}`} />
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setTiltEnable(true);
+      } else {
+        setTiltEnable(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return (
+    <Tilt
+      tiltEnable={tiltEnable}
+      perspective={1000}
+      // scale={1.05}
+      transitionSpeed={2000}
+      style={{ transformStyle: 'preserve-3d' }}
+      className="group max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700"
+    >
+      <div className="rounded-t-lg overflow-hidden">
+        <img className="group-hover:scale-110 transition duration-500" src={img} alt="" />
+      </div>
+
+      <div className="p-5" style={{ transformStyle: 'preserve-3d' }}>
+        <div className="px-2" style={{transform: "translateZ(3rem)"}}>
+          <AnimatedTitle text={`${head}`} />
+        </div>
         <AnimatedBody text={`${body}`} />
 
         {/* TECHNOLOGIES */}
         {techs && (
-          <ul className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
+          <ul style={{transform: "translateZ(2rem)"}} className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
             {techs.map((tech, index) => (
               <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded-lg border border-gray-500 px-2.5 py-1">
                 {tech}
@@ -43,9 +75,11 @@ const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => 
           </ul>
         )}
         {/* BUTTONS */}
-        { children }
+        <div className="px-3 pb-3" style={{transform: "translateZ(4rem)"}}>
+          { children }
+        </div>
       </div>
-    </div>
+    </Tilt>
   );
 };
 

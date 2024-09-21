@@ -26,6 +26,7 @@
 - [x] If [ prefers-reduced-motion ](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) is set, cursor blob won't show kinetic effects.
 - [x] Gray BG for Artworks @md as a hacky solution to [ Hermann Grid Optical Illusion ](https://en.wikipedia.org/wiki/Grid_illusion) problem.
 - [x] Base64 Placeholder and Lazy-Loading of Resume
+- [x] Card tilt effect enabled only for PC users (because it is resource intensive and might cause navigational stuttering for mobile users)
 - [x] Show Navbar on Hero to avoid confusion on page structure and layout
 - [x] Only show Navbar when needed (i.e. moving to previous section)
 
@@ -75,6 +76,7 @@ Step 4: Profit?
 | @svgr/webpack                  | Webpack Loader for SVGR    |
 | @headlessui/react              | Headless Component Library |
 | react-icon-cloud               | Interactive Word Cloud     |
+| react-parallax-tilt            | Card parallax effect       |
 | framer-motion                  | Animation Framework        |
 | react-intersection-observer    | Intersection Observer API  |
 | sharp                          | Image Optimizer for Web    |
