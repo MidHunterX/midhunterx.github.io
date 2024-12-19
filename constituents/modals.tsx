@@ -61,10 +61,10 @@ export default function ResumeModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <DialogPanel className="w-full max-w-lg transform overflow-hidden rounded-3xl text-left align-middle shadow-xl transition-all bg-neutral-800">
-                  <section className="dark">
+                <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-3xl text-left align-middle shadow-xl transition-all bg-neutral-800">
+                  <section className="dark p-2">
                     <Image
-                      className="rounded-lg"
+                      className="rounded-3xl"
                       ref={resumeRef}
                       src="MidhunJinan_Resume.jpg"
                       alt="Mid Hunter's Resume"
