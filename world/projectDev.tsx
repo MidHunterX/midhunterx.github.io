@@ -135,6 +135,15 @@ export default function DeveloperSection() {
       </h2>
 
       <div className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+
+        <ProjectItem
+          img="project/expression.jpg"
+          head="Expression"
+          body="Fast, lightweight, rule-based wallpaper daemon for Linux, written in Rust; optimized for minimal system resource usage and source code is built with design patterns for maintainability."
+          code="https://github.com/MidHunterX/Expression"
+          techs={['Rust', 'TOML Parsing', 'Process Control']}
+        />
+
         <ProjectItem
           img="project/game-trackr.jpg"
           head="Game Trackr"
