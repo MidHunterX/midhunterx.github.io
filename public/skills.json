@@ -1,13 +1,14 @@
 {
 
   "languages": [
-    { "name": "C", "icon": "c" },
     { "name": "Python", "icon": "python" },
+    { "name": "Rust", "icon": "rust" },
     { "name": "Java", "icon": "java" },
     { "name": "HTML", "icon": "html5" },
     { "name": "CSS", "icon": "css3" },
     { "name": "JavaScript", "icon": "javascript" },
     { "name": "TypeScript", "icon": "typescript" },
+    { "name": "C", "icon": "c" },
     { "name": "Lua", "icon": "lua" },
     { "name": "Sass", "icon": "sass" },
     { "name": "Bash", "icon": "gnubash" },
