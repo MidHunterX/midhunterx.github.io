@@ -12,6 +12,7 @@ import AnimatedTitle from "@/world/effects/animatedTitle";
 import AnimatedBody from "@/world/effects/animatedBody";
 import Tilt from 'react-parallax-tilt';
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 
 // █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █▀▀ ▄▀█ █▀█ █▀▄
@@ -55,7 +56,7 @@ const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => 
       className="group max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700"
     >
       <div className="rounded-t-lg overflow-hidden">
-        <img className="group-hover:scale-110 transition duration-500" src={img} alt="" />
+        <Image className="group-hover:scale-110 transition duration-500" src={img} alt="" width={1920} height={1080} />
       </div>
 
       <div className="p-5" style={{ transformStyle: 'preserve-3d' }}>
@@ -153,6 +154,14 @@ export default function DeveloperSection() {
         />
 
         <ProjectItem
+          img="project/hunteros.jpg"
+          head="Hunter OS"
+          body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configs curated to meet individual needs."
+          code="https://github.com/MidHunterX/Hunter-OS"
+          techs={['Wayland', 'SystemD', 'GRUB2', 'dhcpcd', 'Kitty Terminal', 'VIFM', 'Battery Optimized']}
+        />
+
+        <ProjectItem
           img="project/gnosis.jpg"
           head="γνῶσις (GNŌSIS)"
           body="Gnosis is a Greek word that means “knowledge”. This project is a community-driven knowledge base with AI Integration for exploring answers to all of your questions in different media formats."
@@ -166,6 +175,14 @@ export default function DeveloperSection() {
           body="Scholar CAP (Computer Aided Processing) is a python toolset for data parsing, sanitization, validation and storage of data from docx student scholarship forms to generation of custom formatted Excel sheet for Bank NEFT."
           code="https://github.com/MidHunterX/Scholar-CAP"
           techs={['Python', 'openpyxl', 'Multi-Threading', 'SQLite3', 'pandas', 'pdfplumber', 'docx']}
+        />
+
+        <ProjectItem
+          img="project/nvme.jpg"
+          head="NvME"
+          body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
+          code="https://github.com/MidHunterX/NvME"
+          techs={['Lua', 'TreeSitter Parsing', 'Luasnip Snippet Engine', 'Language Server Protocol', 'CMP Autocompletion']}
         />
 
         <ProjectItem
@@ -186,21 +203,6 @@ export default function DeveloperSection() {
           techs={['HTML', 'CSS', 'Javascript']}
         />
 
-        <ProjectItem
-          img="project/hunteros.jpg"
-          head="Hunter OS"
-          body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configs curated to meet individual needs."
-          code="https://github.com/MidHunterX/Hunter-OS"
-          techs={['Wayland', 'SystemD', 'GRUB2', 'dhcpcd', 'Kitty Terminal', 'VIFM', 'Battery Optimized']}
-        />
-
-        <ProjectItem
-          img="project/nvme.jpg"
-          head="NvME"
-          body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
-          code="https://github.com/MidHunterX/NvME"
-          techs={['Lua', 'TreeSitter Parsing', 'Luasnip Snippet Engine', 'Language Server Protocol', 'CMP Autocompletion']}
-        />
       </div>
     </section>
   );
