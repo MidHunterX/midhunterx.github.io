@@ -1,0 +1,278 @@
+#!/usr/bin/env bash
+
+# -----------------------------[ CONFIGURATION ]----------------------------- #
+
+# Default: project dir name
+PROJECT_NAME="Portfolio"
+# Default: none
+# [ none | python | django | fastapi | nodejs | nextjs | elixir | rust ]
+PROJECT_TYPE="nextjs"
+
+# Settings: [ true | false ]
+CUSTOM_LAYOUT=false
+CUSTOM_ENV=true
+AUTOSTART_SERVER=true
+AUTORUN_COMMANDS=true
+
+# Services: [ true | false ]
+# USE_POSTGRES=true
+# USE_DOCKER=true
+# USE_MONGODB=true
+# USE_REDIS=true
+
+# ------------------------[ CUSTOM LAYOUT OVERRIDES ]------------------------ #
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
+setup_custom_env() {
+  # Project specific custom init setup example
+  setup_env "node_modules/" "npm install --legacy-peer-deps"
+}
+
+setup_custom_layout() {
+  # Project specific custom layout setup example
+
+  # Server (FastAPI)
+  cd "../fastapi-project/"
+  setup_python_env
+  source "./venv/bin/activate"
+  create_tmux_session "API Server" "fastapi dev main.py"
+
+  # Server (NextJS)
+  cd "$SCRIPT_DIR"
+  setup_node_env
+  create_window "Web Server" "npm run dev"
+
+  # Editor (FastAPI)
+  cd "../fastapi-project/"
+  create_window "Editor (API)" "nvim"
+  deactivate
+
+  # Editor (NextJS)
+  cd "$SCRIPT_DIR"
+  create_window "Editor (Web)" "nvim"
+
+  # Open Browser
+  (
+    cd $SCRIPT_DIR
+    PROFILE="Personal"
+    NEW_TAB_URL="http://localhost:3000" # Frontend
+    FF_ATTRIB="-P $PROFILE -no-remote -new-tab $NEW_TAB_URL"
+    WORKSPACE='hyprctl dispatch -- exec [workspace 2]'
+    # Wait for host url to be available to prevent race condition
+    while ! curl -sf "$NEW_TAB_URL" >/dev/null; do
+      sleep 0.2
+    done
+    $WORKSPACE firefox-developer-edition $FF_ATTRIB &
+  ) &
+}
+
+# =========================================================================== #
+
+# █░█ ▀█▀ █ █░░ █▀
+# █▄█ ░█░ █ █▄▄ ▄█
+
+create_tmux_session() {
+  local NAME="$1"
+  local CMD="$2"
+  tmux new-session -d -s "$PROJECT_NAME" -n "$NAME"
+  if command -v "${CMD%% *}" >/dev/null; then
+    tmux send-keys -t "$PROJECT_NAME" "$CMD"
+    [ "$AUTOSTART_SERVER" = true ] && tmux send-keys -t "$PROJECT_NAME" Enter
+  fi
+}
+
+# create_window(str:window_name str:command int:window_index)
+create_window() {
+  local NAME="$1"
+  local CMD="$2"
+  if command -v "${CMD%% *}" >/dev/null; then
+    tmux new-window -t "$PROJECT_NAME" -n "$NAME"
+    tmux send-keys -t "$PROJECT_NAME" "$CMD"
+    [ "$AUTORUN_COMMANDS" = true ] && tmux send-keys -t "$PROJECT_NAME" Enter
+  fi
+}
+
+# create_temp_window(str:window_name str:command)
+create_temp_window() {
+  local NAME="$1"
+  local CMD="$2"
+  if command -v "${CMD%% *}" >/dev/null; then
+    tmux new-window -t "$PROJECT_NAME" -n "$1" "$2"
+  fi
+}
+
+# █░░ ▄▀█ █▄█ █▀█ █░█ ▀█▀ █▀
+# █▄▄ █▀█ ░█░ █▄█ █▄█ ░█░ ▄█
+
+setup_default_layout() {
+  create_tmux_session "Cmd"
+  create_temp_window "Editor" "nvim"
+}
+
+setup_python_layout() {
+  create_tmux_session "Cmd" "python main.py"
+  create_temp_window "Editor" "nvim"
+}
+
+setup_fastapi_layout() {
+  create_tmux_session "Server" "fastapi dev main.py"
+  create_temp_window "Editor" "nvim"
+  create_window "Test" "clear && pytest"
+}
+
+setup_nextjs_layout() {
+  create_tmux_session "Server" "npm run dev"
+  create_temp_window "Editor" "nvim"
+}
+
+setup_django_layout() {
+  create_tmux_session "Server" "python manage.py runserver"
+  create_temp_window "Editor" "nvim"
+  create_window "Test" "python manage.py test"
+}
+
+setup_node_layout() {
+  create_tmux_session "Server" "npm start"
+  create_temp_window "Editor" "nvim"
+  create_window "Test" "npm test"
+}
+
+setup_rust_layout() {
+  create_tmux_session "Run" "cargo run"
+  create_temp_window "Editor" "nvim"
+  create_window "Test" "cargo test"
+}
+
+setup_elixir_layout() {
+  create_tmux_session "Server" "iex -S mix phx.server"
+  create_temp_window "Editor" "nvim"
+}
+
+# █▀ █▀▀ █▀█ █░█ █ █▀▀ █▀▀ █▀
+# ▄█ ██▄ █▀▄ ▀▄▀ █ █▄▄ ██▄ ▄█
+
+init_services() {
+  # Syntax: [systemctl-service-name]="$USE_SERVICE"
+  declare -A SERVICES=(
+    [postgresql]="$USE_POSTGRES"
+    [docker]="$USE_DOCKER"
+    [mongod]="$USE_MONGODB"
+    [redis - server]="$USE_REDIS"
+  )
+
+  for service in "${!SERVICES[@]}"; do
+    if [[ "${SERVICES[$service]}" = true ]]; then
+      if ! systemctl is-active --quiet "$service"; then
+        echo "🚀 Starting up $service..."
+        sudo systemctl start "$service"
+      fi
+    fi
+  done
+}
+
+# █▀▀ █▄░█ █░█   █▀ █▀▀ ▀█▀ █░█ █▀█
+# ██▄ █░▀█ ▀▄▀   ▄█ ██▄ ░█░ █▄█ █▀▀
+
+setup_env() {
+  local DEPENDENCY_DIR="$1"
+  local DEPENDENCY_CMD="$2"
+  if [[ ! -d $DEPENDENCY_DIR ]]; then
+    echo "🚀 Setting up dependencies..."
+    command -v ${DEPENDENCY_CMD%% *} >/dev/null || {
+      echo "❌ Error: ${DEPENDENCY_CMD%% *} not found"
+      exit 1
+    }
+    $DEPENDENCY_CMD
+  fi
+}
+
+setup_python_env() {
+  local DEPENDENCY_DIR="venv/"
+  local DEPENDENCY_CMD="python -m venv venv"
+  if [[ ! -d $DEPENDENCY_DIR ]]; then
+    setup_env "$DEPENDENCY_DIR" "$DEPENDENCY_CMD"
+    echo "📦 Installing requirements..."
+    source "$DEPENDENCY_DIR/bin/activate"
+    if [[ -f "requirements.txt" ]]; then
+      pip install -r requirements.txt
+    else
+      echo "🚧 Warning: No requirements.txt found"
+    fi
+  fi
+  source "$DEPENDENCY_DIR/bin/activate"
+}
+
+setup_node_env() {
+  setup_env "node_modules/" "npm install"
+}
+
+setup_elixir_env() {
+  setup_env "deps/" "mix setup"
+}
+
+# █▀▄▀█ ▄▀█ █ █▄░█
+# █░▀░█ █▀█ █ █░▀█
+
+main() {
+  if ! command -v tmux >/dev/null; then
+    echo "Tmux is required for full functionality."
+    echo "Install with: sudo apt install tmux (or equivalent for your OS)"
+    exit 0
+  fi
+  init_services
+
+  # SESSION_NAME Fallback
+  if [[ -z "$PROJECT_NAME" ]]; then
+    PROJECT_NAME="$(basename "$PWD")"
+  fi
+
+  # Attach session if exists
+  if tmux has-session -t "$PROJECT_NAME" 2>/dev/null; then
+    echo "Session '$PROJECT_NAME' already exists. Attaching..."
+    tmux attach -t "$PROJECT_NAME"
+    exit 0
+  fi
+
+  # ENV SETUP
+  if [[ "$CUSTOM_ENV" = true ]]; then
+    setup_custom_env
+  else
+    case "$PROJECT_TYPE" in
+    "none") ;; # Do nothing
+    "python") setup_python_env ;;
+    "django") setup_python_env ;;
+    "fastapi") setup_python_env ;;
+    "nodejs") setup_node_env ;;
+    "nextjs") setup_node_env ;;
+    "elixir") setup_elixir_env ;;
+    "rust") ;; # Rust sets up its own environment with cargo
+    *) echo "Unknown technology: $PROJECT_TYPE" ;;
+    esac
+  fi
+
+  # LAYOUT SETUP
+  if [[ "$CUSTOM_LAYOUT" = true ]]; then
+    setup_custom_layout
+  else
+    case "$PROJECT_TYPE" in
+    "none") setup_default_layout ;;
+    "python") setup_python_layout ;;
+    "django") setup_django_layout ;;
+    "fastapi") setup_fastapi_layout ;;
+    "nodejs") setup_node_layout ;;
+    "nextjs") setup_nextjs_layout ;;
+    "elixir") setup_elixir_layout ;;
+    "rust") setup_rust_layout ;;
+    *)
+      echo "Using default layout..."
+      setup_default_layout
+      ;;
+    esac
+  fi
+
+  tmux attach -t "$PROJECT_NAME"
+}
+
+main
