@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# -------------------------------------------------------- OVERRIDE TMUX LAYOUT
+
+USE_CUSTOM_LAYOUT=true
+setup_layout_custom() {
+  # 1. Server
+  setup_node_env
+  create_window "Server" "npm run away"
+
+  # 2. Editor
+  create_window "Editor" "nvim"
+}
