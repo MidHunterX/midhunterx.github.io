@@ -67,9 +67,9 @@ const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => 
 
         {/* TECHNOLOGIES */}
         {techs && (
-          <ul style={{transform: "translateZ(2rem)"}} className="gap-3 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
+          <ul style={{transform: "translateZ(2rem)"}} className="gap-2 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
             {techs.map((tech, index) => (
-              <li key={index} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded-lg border border-gray-500 px-2.5 py-1">
+              <li key={index} className="technologies rounded-md">
                 {tech}
               </li>
             ))}

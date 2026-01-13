@@ -50,7 +50,7 @@ oMMo              oMMo
 
       <div className="w-full lg:w-1/2 px-[50px]">
         <AnimatedName />
-        <p className="text-lg font-normal text-white lg:text-xl">
+        <p className="mb-0 text-lg font-normal text-white lg:text-xl">
           I am a
           <span className="text-yellow-200">
             &nbsp;
@@ -58,10 +58,9 @@ oMMo              oMMo
           </span>
         </p>
 
-        <p className="my-3 text-sm md:text-lg text-gray-400 text-justify">
-          Just a guy passionate about solving problems and building things. Experienced in creating web applications and
-          innovative solutions to complex problems. Explore my portfolio to see my projects and feel free to connect
-          with me!
+        <p className="mb-3 text-gray-400 text-justify">
+          who likes to solve problems and architect things. Experienced in creating web applications and
+          innovative solutions to complex problems. Feel free to explore this portfolio! Scroll down to learn more.
         </p>
         <ButtonGroup className="justify-center sm:justify-start">
           <ResumeModal />

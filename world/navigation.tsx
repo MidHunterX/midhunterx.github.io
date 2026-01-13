@@ -14,7 +14,7 @@ type NavItemProps = {
 
 const NavItem = ({ href, label, children }: NavItemProps) => (
   <Link href={href} onClick={smoothScroll} aria-label={label}>
-    <p className="text-white m-0 rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
+    <p className="text-white m-0 rounded py-2 px-2 text-sm sm:px-4 md:py-1 md:px-4">
       {children}
     </p>
   </Link>
