@@ -73,16 +73,12 @@ export default function Skills() {
             skillElements.push(
               <div
                 key={`${title}-${index}`}
-                className="flex flex-grow items-center gap-3 place-content-center p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
-                data-blobity-tooltip={`${skill.name}`}
-                data-blobity-magnetic="false"
+                className="flex flex-grow items-center gap-3 place-content-center p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700"
               >
                 <IconComponent
                   className="object-contain text-gray-800 dark:text-gray-200"
                   src={`/ico/${title}/${skill.icon}.svg`}
                   alt={`${skill.name} icon`}
-                  data-blobity-tooltip={`${skill.name}`}
-                  data-blobity-magnetic="true"
                   width={48}
                   height={48}
                 />
