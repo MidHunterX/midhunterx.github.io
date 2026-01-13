@@ -95,7 +95,7 @@ type ProjectItemProps = {
   live?: string;
   code?: string;
   techs?: string[];
-  slug?: string;
+  slug?: string; // Name of the asciidoc file
 };
 
 const ProjectItem = ({ img, head, body, live, code, techs, slug }: ProjectItemProps) => {
@@ -167,7 +167,7 @@ export default function DeveloperSection() {
         <ProjectItem
           img="project/hunteros.jpg"
           head="Hunter OS"
-          slug="hunter-os"
+          // slug="hunter-os"
           body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configs curated to meet individual needs."
           code="https://github.com/MidHunterX/Hunter-OS"
           techs={['Wayland', 'SystemD', 'GRUB2', 'dhcpcd', 'Kitty Terminal', 'VIFM', 'Battery Optimized']}
