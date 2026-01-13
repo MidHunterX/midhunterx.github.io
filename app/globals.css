@@ -58,7 +58,9 @@ p {
 /* THEME TRANSITION */
 /* ================ */
 /* This makes blobity magnetic effect lag by this transition time */
-/* St, we are going to avoid things blobity likes like anchors and buttons */
-main, section, article, div, svg, h2, h3, p, li {
-  @apply transition-all duration-[1000ms];
-}
+/* So, we are going to avoid things blobity likes like anchors and buttons */
+/* BUG: This also makes an initial background transition from white
+* This means, every reload is a flashbang with this enabled */
+/* main, section, article, div, svg, li {
+  @apply transition-all duration-[500ms];
+} */
