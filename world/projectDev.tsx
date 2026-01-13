@@ -132,7 +132,7 @@ export default function DeveloperSection() {
       className="px-3 md:px-[100px] py-[100px]"
     >
       <h2>
-        <FontAwesomeIcon className="pe-4" icon={faBox} />
+        <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faBox} />
         Projects
       </h2>
 

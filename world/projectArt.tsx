@@ -37,7 +37,7 @@ export default function ArtworkSection() {
     return (
       <div className="w-fit mx-auto py-[100px] h-screen text-center ">
         <h2>
-          <FontAwesomeIcon className="pe-4" icon={faPalette} />
+          <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faPalette} />
           Artworks
         </h2>
         <FontAwesomeIcon className="text-6xl mb-6 fa-spin" icon={faSync} />

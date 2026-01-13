@@ -124,7 +124,7 @@ export default function Skills() {
   return (
     <section id="skills" className="px-3 md:px-[100px] py-[100px]">
       <h2>
-        <FontAwesomeIcon className="pe-4" icon={faToolbox} />
+        <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faToolbox} />
         Skills
       </h2>
 
