@@ -1,16 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const Designations = ({ interval = 4000 }) => {
-  const words = [
-    "Graphic Designer",
-    "Software Developer",
-    "Python Developer",
-    "Digital Artist",
-    "Software Engineer",
-    "Backend Developer",
-    "Full Stack Developer",
-  ];
+/*
+ * Example Usage:
+ * <Designations words={[ "Software Engineer", "Backend Developer", "Full Stack Developer" ]} />
+ */
+const Designations = ({ words, interval = 3000 }: { words: string[]; interval?: number }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

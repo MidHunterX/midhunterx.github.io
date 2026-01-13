@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface AnimatedAsciiProps {
   asciiArt: string;
@@ -49,7 +49,7 @@ const AnimatedAscii = ({ asciiArt, interval = 100 }: AnimatedAsciiProps) => {
     };
 
     startRandomAnimations();
-  }, [asciiArt, characters, interval]);
+  }, [asciiArt, interval]);
 
   return (
     <pre style={{ fontFamily: 'monospace' }}>
