@@ -80,6 +80,7 @@ Step 4: Profit?
 | framer-motion                  | Animation Framework        |
 | react-intersection-observer    | Intersection Observer API  |
 | sharp                          | Image Optimizer for Web    |
+| asciidoctor/core               | AsciiDoc Parser            |
 
 - Even though NextJS uses Turbopack, here we use Webpack for using SVGR plugin to create dynamic SVG styling.
 
