@@ -46,9 +46,6 @@ oMMo              oMMo
       </div>
 
       <div className="w-full lg:w-1/2 px-[50px]">
-        <div className="max-w-fit bg-gray-100 text-gray-800 text-xs font-medium my-2 px-4 py-1 rounded dark:bg-gray-800 dark:text-gray-200 border border-gray-500">
-          Greetings, I am known as
-        </div>
         <AnimatedName />
         <p className="text-lg font-normal text-white lg:text-xl">
           I am a
