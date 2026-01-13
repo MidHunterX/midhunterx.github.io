@@ -47,10 +47,12 @@ export default function Application() {
       {/* <LoadingScreen /> */}
       <FastTravel isAutoHideEnabled={isAutoHideNavEnabled} />
       <Settings>
+        <h5 className="mt-4">UX</h5>
         <ToggleAutoHideNav
           toggleAutoHideNav={toggleAutoHideNav}
           isAutoHideNavEnabled={isAutoHideNavEnabled}
         />
+        <h5 className="mt-4">Themes</h5>
         <ThemeSwitchRadio />
       </Settings>
       <Home />

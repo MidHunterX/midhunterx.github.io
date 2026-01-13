@@ -81,7 +81,6 @@ export function ThemeSwitchRadio() {
   }
   return (
     <RadioGroup value={theme} onChange={(e) => setTheme(e)} aria-label="Themes">
-      <h5 className="mt-4">Themes</h5>
       {plans.map((plan) => (
         <Radio
           key={plan.value}

@@ -11,7 +11,7 @@ export const ToggleAutoHideNav = ({
 }: ToggleAutoHideNavProps) => {
   return (
     <article className="flex place-items-center place-content-between gap-2">
-      <p className="p-2 m-0">
+      <p className="m-0">
         {isAutoHideEnabled
           ? "Auto-Hide Navbar (Enabled)"
           : "Auto-Hide Navbar (Disabled)"}
