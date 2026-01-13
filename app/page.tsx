@@ -37,19 +37,14 @@ export default function Application() {
   });
 
   // REFRESH TO TOP
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-    });
-  }, []);
+  // useEffect(() => window.scrollTo({ top: 0, left: 0 }), []);
 
   const { resolvedTheme } = useTheme();
   const { isAutoHideNavEnabled, toggleAutoHideNav } = useAutoHideNav();
 
   return (
     <section style={{ color: resolvedTheme === "dark" ? "white" : "black" }}>
-      <LoadingScreen />
+      {/* <LoadingScreen /> */}
       <FastTravel isAutoHideEnabled={isAutoHideNavEnabled} />
       <Settings>
         <ToggleAutoHideNav
