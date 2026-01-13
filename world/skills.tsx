@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faToolbox } from "@fortawesome/free-solid-svg-icons";
 import IconCloud from "@/world/effects/iconCloud";
@@ -12,6 +11,7 @@ export default function Skills() {
   type Skill = {
     name: string;
     icon: string;
+    desc: string;
   };
 
   type Skills = {
@@ -73,19 +73,23 @@ export default function Skills() {
             skillElements.push(
               <div
                 key={`${title}-${index}`}
-                className="place-content-center p-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
+                className="flex flex-grow items-center gap-3 place-content-center p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#161D1F] dark:border-gray-700 dark:hover:bg-gray-700"
                 data-blobity-tooltip={`${skill.name}`}
                 data-blobity-magnetic="false"
               >
                 <IconComponent
-                  className="w-full h-full object-contain text-gray-800 dark:text-gray-200"
+                  className="object-contain text-gray-800 dark:text-gray-200"
                   src={`/ico/${title}/${skill.icon}.svg`}
                   alt={`${skill.name} icon`}
                   data-blobity-tooltip={`${skill.name}`}
                   data-blobity-magnetic="true"
-                  width={100}
-                  height={100}
+                  width={48}
+                  height={48}
                 />
+                <div>
+                  <p className="font-bold mb-0">{skill.name}</p>
+                  <p className="text-xs mb-0">{skill.desc}</p>
+                </div>
               </div>,
             );
           }
@@ -125,11 +129,14 @@ export default function Skills() {
       </h2>
 
       <div className="flex gap-10">
-        {/* CLOUD ONLY FOR PC-MASTER-RACE ;) */}
+        {/*
+          Mobile users might take a performance hit and canvas interferes with
+          swipe gestures so: CLOUD ONLY FOR PC-MASTER-RACE ;D
+        */}
         <div className="w-fit mx-auto hidden lg:block">
           <IconCloud iconSlugs={getSkillIcons()} names={getSkillNames()} />
         </div>
-        <div className="w-fit mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5 xl:grid-cols-7 gap-6">
+        <div className="w-fit mx-auto flex flex-wrap gap-2">
           {renderAllSkills()}
         </div>
       </div>

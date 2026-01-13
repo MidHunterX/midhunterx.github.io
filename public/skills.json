@@ -1,61 +1,207 @@
 {
-
   "languages": [
-    { "name": "Python", "icon": "python" },
-    { "name": "Rust", "icon": "rust" },
-    { "name": "Java", "icon": "java" },
-    { "name": "HTML", "icon": "html5" },
-    { "name": "CSS", "icon": "css3" },
-    { "name": "JavaScript", "icon": "javascript" },
-    { "name": "TypeScript", "icon": "typescript" },
-    { "name": "C", "icon": "c" },
-    { "name": "Lua", "icon": "lua" },
-    { "name": "Sass", "icon": "sass" },
-    { "name": "Bash", "icon": "gnubash" },
-    { "name": "Fish", "icon": "fishshell" }
+    {
+      "name": "Python",
+      "icon": "python",
+      "desc": "Scripting Language"
+    },
+    {
+      "name": "Rust",
+      "icon": "rust",
+      "desc": "Programming Language"
+    },
+    {
+      "name": "Java",
+      "icon": "java",
+      "desc": "Programming Language"
+    },
+    {
+      "name": "HTML",
+      "icon": "html5",
+      "desc": "Web Development"
+    },
+    {
+      "name": "CSS",
+      "icon": "css3",
+      "desc": "Web Development"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "javascript",
+      "desc": "Web Development"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "typescript",
+      "desc": "Web Development"
+    },
+    {
+      "name": "C",
+      "icon": "c",
+      "desc": "Programming Language"
+    },
+    {
+      "name": "Lua",
+      "icon": "lua",
+      "desc": "Scripting Language"
+    },
+    {
+      "name": "Sass",
+      "icon": "sass",
+      "desc": "Web Development"
+    },
+    {
+      "name": "Bash",
+      "icon": "gnubash",
+      "desc": "Shell Scripting"
+    },
+    {
+      "name": "Fish",
+      "icon": "fishshell",
+      "desc": "Shell Scripting"
+    }
   ],
 
   "databases": [
-    { "name": "MySQL", "icon": "mysql" },
-    { "name": "SQLite", "icon": "sqlite" }
+    {
+      "name": "MySQL",
+      "icon": "mysql",
+      "desc": "Relational Database"
+    },
+    {
+      "name": "SQLite",
+      "icon": "sqlite",
+      "desc": "Relational Database"
+    }
   ],
 
   "frameworks": [
-    { "name": "Django", "icon": "django" },
-    { "name": "NextJS", "icon": "nextdotjs" },
-    { "name": "Angular", "icon": "angular" },
-    { "name": "Bootstrap", "icon": "bootstrap" },
-    { "name": "Tailwind CSS", "icon": "tailwindcss" }
+    {
+      "name": "Django",
+      "icon": "django",
+      "desc": "Web Framework"
+    },
+    {
+      "name": "NextJS",
+      "icon": "nextdotjs",
+      "desc": "Web Framework"
+    },
+    {
+      "name": "Angular",
+      "icon": "angular",
+      "desc": "Web Framework"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "bootstrap",
+      "desc": "CSS Framework"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "tailwindcss",
+      "desc": "CSS Framework"
+    }
   ],
 
   "libraries": [
-    { "name": "React", "icon": "react" },
-    { "name": "Framer Motion", "icon": "framer" },
-    { "name": "Headless UI", "icon": "headlessui" },
-    { "name": "Daisy UI", "icon": "daisyui" }
+    {
+      "name": "React",
+      "icon": "react",
+      "desc": "Web UI Library"
+    },
+    {
+      "name": "Framer Motion",
+      "icon": "framer",
+      "desc": "Web Animation Library"
+    },
+    {
+      "name": "Headless UI",
+      "icon": "headlessui",
+      "desc": "Web UI Library"
+    },
+    {
+      "name": "Daisy UI",
+      "icon": "daisyui",
+      "desc": "Web UI Library"
+    }
   ],
 
   "runtime_env": [
-    { "name": "NodeJS", "icon": "nodedotjs" }
+    {
+      "name": "NodeJS",
+      "icon": "nodedotjs",
+      "desc": "JS Runtime Environment"
+    }
   ],
 
   "tools": [
-    { "name": "Git", "icon": "git" },
-    { "name": "Neovim", "icon": "neovim" },
-    { "name": "Tmux", "icon": "tmux" },
-    { "name": "GitHub", "icon": "github" },
-    { "name": "VS Codium", "icon": "vscodium" },
-    { "name": "Firefox", "icon": "firefox" },
-    { "name": "Linux", "icon": "linux" }
+    {
+      "name": "Git",
+      "icon": "git",
+      "desc": "Version Control System"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "desc": "Developer Collaboration Platform"
+    },
+    {
+      "name": "Tmux",
+      "icon": "tmux",
+      "desc": "Terminal Multiplexer"
+    },
+    {
+      "name": "Neovim",
+      "icon": "neovim",
+      "desc": "TUI Code Editor"
+    },
+    {
+      "name": "VS Codium",
+      "icon": "vscodium",
+      "desc": "GUI Code Editor"
+    },
+    {
+      "name": "Firefox",
+      "icon": "firefox",
+      "desc": "Web Browser"
+    },
+    {
+      "name": "Linux",
+      "icon": "linux",
+      "desc": "Operating System"
+    }
   ],
 
   "misc": [
-    { "name": "Figma", "icon": "figma" },
-    { "name": "InDesign", "icon": "adobeindesign" },
-    { "name": "Photoshop", "icon": "adobephotoshop" },
-    { "name": "Premiere Pro", "icon": "adobepremierepro" },
-    { "name": "Inkscape", "icon": "inkscape" },
-    { "name": "Blender 3D", "icon": "blender" }
+    {
+      "name": "Figma",
+      "icon": "figma",
+      "desc": "UI/UX Design"
+    },
+    {
+      "name": "InDesign",
+      "icon": "adobeindesign",
+      "desc": "Graphic Design"
+    },
+    {
+      "name": "Photoshop",
+      "icon": "adobephotoshop",
+      "desc": "Image Manipulation"
+    },
+    {
+      "name": "Premiere Pro",
+      "icon": "adobepremierepro",
+      "desc": "Video Editing"
+    },
+    {
+      "name": "Inkscape",
+      "icon": "inkscape",
+      "desc": "Vector Designing"
+    },
+    {
+      "name": "Blender",
+      "icon": "blender",
+      "desc": "3D Modelling"
+    }
   ]
-
 }
