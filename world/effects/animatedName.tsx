@@ -19,7 +19,7 @@ const AnimatedName = () => {
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
         transition={{ delay: baseDelay + 0, duration: 0.5 }}
-        className="flex mb-3 text-5xl lg:text-8xl text-white font-extrabold tracking-tight leading-none"
+        className="w-full flex mb-3 text-5xl lg:text-6xl text-white font-extrabold tracking-tight leading-none"
       >
         {/*
         Visually hidden but available for SEO and screen readers.
