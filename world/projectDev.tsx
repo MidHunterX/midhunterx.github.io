@@ -110,10 +110,11 @@ const ProjectItem = ({ img, head, body, live, code, techs, slug }: ProjectItemPr
   );
 };
 
-const ProjectItemDisabled = ({ img, head, body, live, code, techs }: ProjectItemProps) => {
+const ProjectItemDisabled = ({ img, head, body, live, code, techs, slug }: ProjectItemProps) => {
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs} >
       <ButtonGroup>
+        {slug && <Button href={`/projects/${slug}`} text="Case Study" />}
         {live && <ButtonDisabled text="Currently Viewing" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
       </ButtonGroup>

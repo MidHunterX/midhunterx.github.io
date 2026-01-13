@@ -39,7 +39,7 @@ oMMo              oMMo
   return (
     <section
       id="home"
-      className="dark bg-cover bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen min-h-screen pt-8 pb-[50px] lg:flex lg:flex-row items-center"
+      className="max-w-[1800px] mx-auto dark bg-cover bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen min-h-screen pt-8 pb-[50px] lg:flex lg:flex-row items-center"
     >
       {/* Here's what I want the indexing mechanism to see >:D */}
       <h1 className="hidden">MidHunterX</h1>

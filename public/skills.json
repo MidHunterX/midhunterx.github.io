@@ -112,7 +112,7 @@
     {
       "name": "Framer Motion",
       "icon": "framer",
-      "desc": "Web Animation Library"
+      "desc": "Web Animation"
     },
     {
       "name": "Headless UI",
@@ -130,7 +130,7 @@
     {
       "name": "NodeJS",
       "icon": "nodedotjs",
-      "desc": "JS Runtime Environment"
+      "desc": "JS Runtime Env"
     }
   ],
 
@@ -143,7 +143,7 @@
     {
       "name": "GitHub",
       "icon": "github",
-      "desc": "Developer Collaboration Platform"
+      "desc": "Developer Platform"
     },
     {
       "name": "Tmux",
