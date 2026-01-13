@@ -13,7 +13,7 @@ const AnimatedName = () => {
       >
         Show {showUsername ? "Legal Name" : "User Name"}
       </button>
-      <motion.h1
+      <motion.p
         key={showUsername ? "username" : "legalname"} // Re-trigger animation on toggle
         aria-label={showUsername ? "Mid Hunter" : "Midhun Jinan"}
         initial={{ opacity: 1 }}
@@ -126,7 +126,7 @@ const AnimatedName = () => {
             </motion.span>
           </>
         )}
-      </motion.h1>
+      </motion.p>
     </div>
   );
 };
