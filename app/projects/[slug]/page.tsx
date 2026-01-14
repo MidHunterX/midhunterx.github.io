@@ -25,12 +25,22 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
           ← Back to Projects
         </Link>
 
+        {/* Overriding default styles with tailwind typography */}
         <article
-          className="prose prose-lg dark:prose-invert max-w-none
-            /* Custom styling for AsciiDoc specific elements */
-            prose-headings:font-bold
-            prose-a:text-blue-600
-            dark:prose-a:text-blue-400"
+          className="max-w-none
+          prose dark:prose-invert
+          prose-a:text-blue-600 dark:prose-a:text-yellow-200
+          hover:prose-a:text-blue-800 dark:hover:prose-a:text-yellow-400
+
+          prose-table:border
+          prose-table:border-gray-300 dark:prose-table:border-gray-600
+          prose-th:p-2
+          prose-td:p-2
+          prose-th:bg-gray-100 dark:prose-th:bg-gray-700
+
+          prose-code:before:hidden
+          prose-code:after:hidden
+          "
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>

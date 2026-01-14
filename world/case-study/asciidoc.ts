@@ -27,7 +27,9 @@ export async function getCaseStudyContent(slug: string) {
       // This helps if you want to use Tailwind classes inside Asciidoc
       sectanchors: true,
       // 'source-highlighter': 'highlightjs', // or 'prism'
-    }
+    },
+    standalone: true,
+    safe: 'safe'
   });
 
   return html.toString();
