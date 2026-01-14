@@ -81,6 +81,7 @@ Step 4: Profit?
 | react-intersection-observer    | Intersection Observer API  |
 | sharp                          | Image Optimizer for Web    |
 | asciidoctor/core               | AsciiDoc Parser            |
+| tailwindcss/typography            | Tailwind CSS Typography    |
 
 - Even though NextJS uses Turbopack, here we use Webpack for using SVGR plugin to create dynamic SVG styling.
 
