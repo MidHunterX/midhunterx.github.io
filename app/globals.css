@@ -65,7 +65,7 @@ p {
 }
 
 .technologies {
-  @apply bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-200 text-xs border border-gray-500 px-[0.8em] py-[0.1em];
+  @apply bg-gray-200 text-gray-900 dark:bg-gray-700 dark:text-gray-200 text-xs border border-gray-500 px-[0.8em] py-[0.1em];
 }
 
 /* THEME TRANSITION */

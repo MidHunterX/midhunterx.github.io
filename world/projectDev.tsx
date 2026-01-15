@@ -1,6 +1,7 @@
 "use client";
 import {
   Button,
+  ButtonNull,
   ButtonSecondary,
   ButtonDisabled,
   ButtonGroup
@@ -13,6 +14,9 @@ import AnimatedBody from "@/world/effects/animatedBody";
 import Tilt from 'react-parallax-tilt';
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
+import { Fragment } from "react";
 
 
 // █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █▀▀ ▄▀█ █▀█ █▀▄
@@ -95,14 +99,14 @@ type ProjectItemProps = {
   live?: string;
   code?: string;
   techs?: string[];
-  slug?: string; // Name of the asciidoc file
+  onOpen?: () => void; // Callback function for case study modal
 };
 
-const ProjectItem = ({ img, head, body, live, code, techs, slug }: ProjectItemProps) => {
+const ProjectItem = ({ img, head, body, live, code, techs, onOpen }: ProjectItemProps) => {
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs} >
       <ButtonGroup>
-        {slug && <Button href={`/projects/${slug}`} text="Case Study" />}
+        {onOpen && <ButtonNull onClick={onOpen} text="Case Study" />}
         {live && <Button target="_blank" href={live} text="Website" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
       </ButtonGroup>
@@ -110,11 +114,11 @@ const ProjectItem = ({ img, head, body, live, code, techs, slug }: ProjectItemPr
   );
 };
 
-const ProjectItemDisabled = ({ img, head, body, live, code, techs, slug }: ProjectItemProps) => {
+const ProjectItemDisabled = ({ img, head, body, live, code, techs, onOpen }: ProjectItemProps) => {
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs} >
       <ButtonGroup>
-        {slug && <Button href={`/projects/${slug}`} text="Case Study" />}
+        {onOpen && <ButtonNull onClick={onOpen} text="Case Study" />}
         {live && <ButtonDisabled text="Currently Viewing" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
       </ButtonGroup>
@@ -122,11 +126,26 @@ const ProjectItemDisabled = ({ img, head, body, live, code, techs, slug }: Proje
   );
 };
 
+// dynamic import only when button is clicked
+const CaseStudyComponents: Record<string, any> = {
+  "hunter-os": dynamic(() => import("./case-study/HunterOSContent")),
+  // "expression": dynamic(() => import("./case-study/ExpressionContent")),
+};
 
 // █▀▄ █▀▀ █░█ █▀▀ █░░ █▀█ █▀█ █▀▀ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
 // █▄▀ ██▄ ▀▄▀ ██▄ █▄▄ █▄█ █▀▀ ██▄ █▀▄   ▄█ ██▄ █▄▄ ░█░ █ █▄█ █░▀█
 
 export default function DeveloperSection() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSlug, setActiveSlug] = useState<string | null>(null);
+
+  const openCaseStudy = (slug: string) => {
+    setActiveSlug(slug);
+    setIsOpen(true);
+  };
+
+  const ContentComponent = activeSlug ? CaseStudyComponents[activeSlug] : null;
+
   return (
     <section
       id="developerSection"
@@ -168,7 +187,7 @@ export default function DeveloperSection() {
         <ProjectItem
           img="project/hunteros.jpg"
           head="Hunter OS"
-          // slug="hunter-os"
+          onOpen={() => openCaseStudy("hunter-os")}
           body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configs curated to meet individual needs."
           code="https://github.com/MidHunterX/Hunter-OS"
           techs={['Wayland', 'SystemD', 'GRUB2', 'dhcpcd', 'Kitty Terminal', 'VIFM', 'Battery Optimized']}
@@ -217,6 +236,36 @@ export default function DeveloperSection() {
         />
 
       </div>
+
+      {/* CASE STUDY MODAL */}
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-50" onClose={() => setIsOpen(false)}>
+          <TransitionChild
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
+          </TransitionChild>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4">
+              <DialogPanel className="w-full max-w-5xl transform overflow-hidden rounded-3xl bg-white dark:bg-[#161D1F] p-8 text-left shadow-xl transition-all">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="absolute top-4 right-6 text-2xl"
+                >×</button>
+
+                {ContentComponent ? <ContentComponent /> : <p>Loading...</p>}
+              </DialogPanel>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
     </section>
   );
 }

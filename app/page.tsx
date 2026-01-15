@@ -2,7 +2,7 @@
 // Use { } for Named Exports (without a default)
 import useBlobity from "blobity/lib/react/useBlobity";
 import { useTheme } from "next-themes";
-import LoadingScreen from "@/world/anim/loading/LoadingScreen";
+// import LoadingScreen from "@/world/anim/loading/LoadingScreen";
 import FastTravel from "@/world/navigation";
 import Home from "@/world/home";
 import Projects from "@/world/projects";
@@ -12,7 +12,7 @@ import { useAutoHideNav } from "@/world/settings";
 import { ToggleAutoHideNav } from "@/world/settings/toggleAutoHideNav";
 import Settings from "@/world/settings";
 import { ThemeSwitchRadio } from "@/world/settings/toggleThemes";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function Application() {
   useBlobity({
