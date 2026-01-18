@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const AnimatedName = () => {
+const AnimatedName = ({className}: {className?: string}) => {
   const baseDelay = 0.3;
   const [showUsername, setShowUsername] = useState(true);
 
@@ -19,13 +19,13 @@ const AnimatedName = () => {
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
         transition={{ delay: baseDelay + 0, duration: 0.5 }}
-        className="w-full flex mb-3 text-5xl lg:text-6xl text-white font-extrabold tracking-tight leading-none"
+        className={className}
       >
         {/*
         Visually hidden but available for SEO and screen readers.
         Tailwind CSS 'sr-only' class is perfect for this.
         It hides the element without using display: none.
-      */}
+        */}
         <span className="sr-only">{showUsername ? "Mid Hunter" : "Midhun Jinan"}</span>
 
         <motion.span aria-hidden="true" transition={{ delay: baseDelay, duration: 0.5 }}>
