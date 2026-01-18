@@ -61,8 +61,8 @@ oMMo              oMMo
         </p>
 
         <p className="mb-3 text-gray-400 text-justify">
-          who likes to solve problems and architect things. Experienced in creating web applications and innovative
-          solutions to complex problems. Feel free to explore this portfolio! Scroll down to learn more.
+          Specializing in <span className="text-gray-200 font-medium">high-performance architecture</span>, developer experience (DevEx), and ergonomic computing.
+          I build the underlying systems that make software efficient, scalable, and resilient.
         </p>
         <ButtonGroup className="justify-center sm:justify-start">
           <ResumeModal />
