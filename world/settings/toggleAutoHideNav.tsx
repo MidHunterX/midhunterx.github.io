@@ -1,14 +1,14 @@
 import { Switch } from "@headlessui/react";
 
-type ToggleAutoHideNavProps = {
-  toggleAutoHideNav: () => void;
-  isAutoHideNavEnabled: boolean;
+type SettingsItem = {
+  toggle: () => void;
+  status: boolean;
 };
 
 export const ToggleAutoHideNav = ({
-  toggleAutoHideNav: toggleAutoHide,
-  isAutoHideNavEnabled: isAutoHideEnabled,
-}: ToggleAutoHideNavProps) => {
+  toggle: toggleAutoHide,
+  status: isAutoHideEnabled,
+}: SettingsItem) => {
   return (
     <article className="flex place-items-center place-content-between gap-2">
       <p className="m-0">
