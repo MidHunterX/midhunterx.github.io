@@ -32,6 +32,11 @@
 
 Issue: Cursor blob effect affects VimiumC/Tridactyl users as it emulates cursor click and blob effect uses cursor position to update.
 
+### Minor Features
+
+- Blob assistant disabled on touch screen only devices as there's no need for blob tooltip/interaction helper unless it is a mouse.
+- Chose White/Blue for Light mode & Black/Yellow for Dark mode because Yellow is opposite of Blue and Black is opposite of White. In color semiotics, Blue is associated with trust/confidence and Yellow with optimism/energy.
+
 ## 🍻 Getting Started
 
 Step 1: Clone the project, cd into it and install dependencies
