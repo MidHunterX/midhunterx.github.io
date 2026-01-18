@@ -31,15 +31,16 @@ oMMo              oMMo
   const designations = [
     "Software Engineer",
     "Backend Developer",
+    "Systems Architect",
     "Full Stack Developer",
     "Platform Engineer",
-    "Graphic Designer",
+    "HCI Researcher",
   ];
 
   return (
     <section
       id="home"
-      className="max-w-[1800px] mx-auto dark bg-cover bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen min-h-screen pt-8 pb-[50px] lg:flex lg:flex-row items-center"
+      className="dark bg-cover bg-no-repeat bg-[url('/hero.jpg')] bg-gray-700 bg-blend-multiply max-w-screen min-h-screen flex flex-col lg:flex-row items-center justify-center"
     >
       <div className="text-white text-center justify-center w-full lg:w-1/3">
         <AnimatedAscii asciiArt={art} interval={300} />
