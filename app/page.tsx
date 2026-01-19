@@ -18,7 +18,7 @@ export default function Application() {
   const [isBlobEnabled, setBlobStatus] = useState(true);
   useEffect(() => setBlobStatus(window.matchMedia("(pointer: fine)").matches), []);
 
-  useBlobity(
+  const blobity = useBlobity(
     isBlobEnabled
       ? {
           licenseKey: "opensource",
@@ -62,7 +62,7 @@ export default function Application() {
         <h5 className="mt-4">Themes</h5>
         <ThemeSwitchRadio />
       </Settings>
-      <Home />
+      <Home blob={blobity} />
       <Projects />
       <Skills />
       <Contact />

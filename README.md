@@ -32,10 +32,11 @@
 
 Issue: Cursor blob effect affects VimiumC/Tridactyl users as it emulates cursor click and blob effect uses cursor position to update.
 
-### Minor Features
+### UX Features
 
-- Blob assistant disabled on touch screen only devices as there's no need for blob tooltip/interaction helper unless it is a mouse.
 - Chose White/Blue for Light mode & Black/Yellow for Dark mode because Yellow is opposite of Blue and Black is opposite of White. In color semiotics, Blue is associated with trust/confidence and Yellow with optimism/energy.
+- Blob assistant disabled on touch screen only devices as there's no need for blob tooltip/interaction helper unless it is a mouse.
+- Blob stays out of the way on hero section since this is where you land for the first time and this gives you moment to look around a bit before tagging along and assisting you.
 
 ## 🍻 Getting Started
 
