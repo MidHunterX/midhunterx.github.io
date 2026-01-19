@@ -13,7 +13,7 @@ const ResumeBlur = "data:text/plain;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KC
 // █▀█ █▀▀ █▀ █░█ █▀▄▀█ █▀▀
 // █▀▄ ██▄ ▄█ █▄█ █░▀░█ ██▄
 
-export default function ResumeModal() {
+export default function ResumeModal({...rest}) {
   let resumeRef = useRef(null);
   let [isOpen, setIsOpen] = useState(false);
 
@@ -29,6 +29,7 @@ export default function ResumeModal() {
       <ButtonNull
         onClick={openModal}
         text="View Resume"
+        {...rest}
       />
 
       <Transition appear show={isOpen} as={Fragment}>

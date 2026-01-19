@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const AnimatedName = ({className}: {className?: string}) => {
+const AnimatedName = ({className, ...rest}: {className?: string}) => {
   const baseDelay = 0.3;
   const [showUsername, setShowUsername] = useState(true);
 
@@ -9,7 +9,8 @@ const AnimatedName = ({className}: {className?: string}) => {
     <div className="flex flex-col items-start">
       <button
         onClick={() => setShowUsername(!showUsername)}
-        className="max-w-fit bg-gray-100 text-gray-800 text-xs font-medium my-2 px-4 py-1 rounded dark:bg-gray-800 dark:text-gray-200 border border-gray-500"
+        className="max-w-fit bg-gray-100 hover:bg-gray-300 text-gray-800 text-xs font-medium my-2 px-4 py-1 rounded dark:bg-gray-800 hover:dark:bg-gray-600 dark:text-gray-200 border border-gray-500"
+        {...rest}
       >
         Show {showUsername ? "Legal Name" : "User Name"}
       </button>
