@@ -1,5 +1,5 @@
 "use client";
-import { Button, ButtonNull, ButtonSecondary, ButtonDisabled, ButtonGroup } from "@/constituents/buttons";
+import { Button, ButtonNull, ButtonSecondary, ButtonDisabled, ButtonGroup, ButtonSecondaryNull } from "@/constituents/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBox, faXmark } from "@fortawesome/free-solid-svg-icons";
 import React, { ReactNode } from "react";
@@ -101,9 +101,9 @@ const ProjectItem = ({ img, head, body, live, code, techs, onOpen }: ProjectItem
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs}>
       <ButtonGroup>
-        {onOpen && <ButtonNull onClick={onOpen} text="Case Study" />}
         {live && <Button target="_blank" href={live} text="Website" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
+        {onOpen && <ButtonSecondaryNull onClick={onOpen} text="Read More" />}
       </ButtonGroup>
     </ProjectCard>
   );
@@ -113,18 +113,22 @@ const ProjectItemDisabled = ({ img, head, body, live, code, techs, onOpen }: Pro
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs}>
       <ButtonGroup>
-        {onOpen && <ButtonNull onClick={onOpen} text="Case Study" />}
-        {live && <ButtonDisabled text="Currently Viewing" />}
+        {live && <ButtonDisabled text="Viewing" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
+        {onOpen && <ButtonSecondaryNull onClick={onOpen} text="Read More" />}
       </ButtonGroup>
     </ProjectCard>
   );
 };
 
 // dynamic import only when button is clicked
+const loading_case_study = () => <div className="p-20 text-center">Loading Case Study...</div>;
 const CaseStudyComponents: Record<string, any> = {
-  "scholarcap": dynamic(() => import("./case-study/ScholarCap"), {
-    loading: () => <div className="p-20 text-center">Loading Case Study...</div>
+  scholarcap: dynamic(() => import("./case-study/ScholarCap"), {
+    loading: () => loading_case_study(),
+  }),
+  gametrackr: dynamic(() => import("./case-study/GameTrackr"), {
+    loading: () => loading_case_study(),
   }),
 };
 
@@ -166,6 +170,7 @@ export default function DeveloperSection() {
         <ProjectItem
           img="project/game-trackr.jpg"
           head="Game Trackr"
+          onOpen={() => openCaseStudy("gametrackr")}
           body="Personal game library 2.0 built using Angular for tracking and showcasing every game I played throughout my life, complete with details from IGDB API and tracked playtime."
           live="https://midhunterx.github.io/Game-Trackr"
           code="https://github.com/MidHunterX/Game-Trackr"
@@ -266,9 +271,7 @@ export default function DeveloperSection() {
                   <FontAwesomeIcon icon={faXmark} />
                 </button>
 
-                <div key={activeSlug}>
-                  {ContentComponent ? <ContentComponent /> : <p>Loading...</p>}
-                </div>
+                <div key={activeSlug}>{ContentComponent ? <ContentComponent /> : <p>Loading...</p>}</div>
               </DialogPanel>
             </div>
           </section>
