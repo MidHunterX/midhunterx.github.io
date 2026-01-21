@@ -255,12 +255,12 @@ export default function DeveloperSection() {
           </TransitionChild>
 
           {/* Case Study Modal Section */}
-          <section className="fixed inset-0 overflow-y-auto">
+          <section className="fixed inset-0">
             <div className="flex min-h-full items-center justify-center p-4">
-              <DialogPanel className="w-full max-w-5xl transform overflow-hidden rounded-3xl bg-white dark:bg-[#161D1F] p-8 text-left shadow-xl transition-all">
+              <DialogPanel className="relative w-full max-w-5xl max-h-[90vh] transform overscroll-contain overflow-y-auto overflow-hidden rounded-3xl bg-white dark:bg-[#161D1F] text-left shadow-xl transition-all">
                 <button
                   onClick={() => closeCaseStudy()}
-                  className="absolute top-4 right-6 text-2xl px-2 py-1 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
+                  className="absolute top-4 right-6 z-50 text-2xl px-2 py-1 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
                   data-blobity-magnetic="false"
                 >
                   <FontAwesomeIcon icon={faXmark} />
