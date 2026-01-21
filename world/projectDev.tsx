@@ -1,5 +1,12 @@
 "use client";
-import { Button, ButtonNull, ButtonSecondary, ButtonDisabled, ButtonGroup, ButtonSecondaryNull } from "@/constituents/buttons";
+import {
+  Button,
+  ButtonNull,
+  ButtonSecondary,
+  ButtonDisabled,
+  ButtonGroup,
+  ButtonSecondaryNull,
+} from "@/constituents/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBox, faXmark } from "@fortawesome/free-solid-svg-icons";
 import React, { ReactNode } from "react";
@@ -84,6 +91,112 @@ const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => 
   );
 };
 
+import {
+  faArrowsSpin,
+  faSitemap,
+  faMicrochip,
+  faDatabase,
+  faGaugeHigh,
+  faShieldHalved,
+  faBriefcase,
+} from "@fortawesome/free-solid-svg-icons";
+
+type ProjectCategory =
+  | "Automation" // For: Scholar CAP, Newspaper Scripting
+  | "Workflow Design" // For: Newspaper Layout optimization, Game Trackr UX
+  | "System Design" // For: Hunter OS, NvME, Expression (Rust)
+  | "Data Engineering" // For: Gnosis (AI/Knowledge), Scholar CAP (DB focus)
+  | "Optimization" // For: Performance tuning, cost reduction
+  | "Cryptography"; // For: Caesar Cipher project
+
+interface ProfessionalCardProps {
+  img?: string; // Optional
+  category: ProjectCategory;
+  title: string;
+  metric?: string; // e.g., "40% faster" or "Saved 20hrs/week"
+  description: string;
+  techs?: string[];
+  children: ReactNode;
+}
+
+const CategoryIcon = ({ category }: { category: ProjectCategory }) => {
+  switch (category) {
+    case "Automation":
+      return <FontAwesomeIcon icon={faArrowsSpin} className="text-blue-500" />;
+    case "Workflow Design":
+      return <FontAwesomeIcon icon={faSitemap} className="text-purple-500" />;
+    case "System Design":
+      return <FontAwesomeIcon icon={faMicrochip} className="text-orange-500" />;
+    case "Data Engineering":
+      return <FontAwesomeIcon icon={faDatabase} className="text-cyan-500" />;
+    case "Optimization":
+      return <FontAwesomeIcon icon={faGaugeHigh} className="text-emerald-500" />;
+    case "Cryptography":
+      return <FontAwesomeIcon icon={faShieldHalved} className="text-amber-500" />;
+    default:
+      return <FontAwesomeIcon icon={faBriefcase} className="text-gray-500" />;
+  }
+};
+
+const ProfessionalCard = ({ img, category, title, metric, description, techs, children }: ProfessionalCardProps) => {
+  return (
+    <article className="group flex flex-col h-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-[#1A2326] dark:border-gray-800 transition-all hover:border-blue-500/50">
+      {/* IMAGE OR PLACEHOLDER */}
+      {img ? (
+        <div className="h-48 overflow-hidden rounded-t-xl border-b dark:border-gray-800">
+          <Image
+            className="group-hover:scale-105 transition duration-700 object-cover h-full w-full"
+            src={img}
+            alt={title}
+            width={800}
+            height={400}
+          />
+        </div>
+      ) : (
+        <div className="h-32 flex items-end px-6 pb-2 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#1E292B] dark:to-[#161D1F] rounded-t-xl">
+          <div className="text-4xl opacity-20 group-hover:opacity-40 transition-opacity">
+            <CategoryIcon category={category} />
+          </div>
+        </div>
+      )}
+
+      <div className="p-6 flex flex-col flex-grow">
+        {/* TOP ROW: CATEGORY & METRIC */}
+        <div className="flex justify-between items-center mb-4">
+          <span className="text-[10px] uppercase tracking-widest font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded">
+            {category}
+          </span>
+          {metric && <span className="text-xs font-medium text-green-600 dark:text-green-400">{metric}</span>}
+        </div>
+
+        <div className="mb-2">
+          <AnimatedTitle text={title} />
+        </div>
+
+        <div className="flex-grow">
+          <AnimatedBody text={description} />
+        </div>
+
+        {/* TECH STACK */}
+        {techs && (
+          <div className="flex flex-wrap gap-2">
+            {techs.map((tech) => (
+              <span
+                key={tech}
+                className="text-[11px] font-mono text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700 px-2 py-0.5 rounded"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <div className="mt-auto border-t border-gray-100 dark:border-gray-800">{children}</div>
+      </div>
+    </article>
+  );
+};
+
 // █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █ ▀█▀ █▀▀ █▀▄▀█
 // █▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░   █ ░█░ ██▄ █░▀░█
 
@@ -130,6 +243,9 @@ const CaseStudyComponents: Record<string, any> = {
   gametrackr: dynamic(() => import("./case-study/GameTrackr"), {
     loading: () => loading_case_study(),
   }),
+  newsautomation: dynamic(() => import("./case-study/NewsAutomation"), {
+    loading: () => loading_case_study(),
+  }),
 };
 
 // █▀▄ █▀▀ █░█ █▀▀ █░░ █▀█ █▀█ █▀▀ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
@@ -152,11 +268,52 @@ export default function DeveloperSection() {
   const ContentComponent = activeSlug ? CaseStudyComponents[activeSlug] : null;
 
   return (
-    <section id="developerSection" className="px-3 md:px-[100px] py-[100px]">
+    <section id="developerSection" className="px-3 md:px-[100px] py-[100px] grid gap-8">
       <h2>
         <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faBox} />
         Projects
       </h2>
+
+      <section className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 gap-8">
+        <ProfessionalCard
+          // img="project/scholarcap.jpg"
+          category="Automation"
+          title="Scholarship Disbursement Pipeline"
+          metric="Optimal Operational Efficiency"
+          description="Engineered an end-to-end automation suite for an NGO to manage scholarship processing for 3,200+ students across 500+ schools. Replaced months of manual data entry with a Python-based pipeline that parses digital forms, validates banking details against RBI datasets using multi-threaded asynchronous loading, and generates bank-ready NEFT spreadsheets. Reduced manual error rates by 300%, ensuring high-fidelity financial transfers."
+          techs={[
+            "Python",
+            "SQLite3",
+            "Multi-threading",
+            "Data Validation",
+            "RBI Dataset Integration",
+            "Financial Workflow",
+          ]}
+        >
+          <ButtonGroup>
+            <ButtonNull text="View Case Study" onClick={() => openCaseStudy("scholarcap")} />
+            <ButtonSecondary target="_blank" href="https://github.com/MidHunterX/Scholar-CAP" text="Source Code" />
+          </ButtonGroup>
+        </ProfessionalCard>
+
+        <ProfessionalCard
+          category="Workflow Design"
+          title="Newspaper Editorial Pipeline"
+          metric="90% Reduction in Production Time"
+          description="Re-engineered a legacy daily newspaper production workflow. Developed custom ExtendScript (JS) solutions to automate ISO-standardized exports, dynamic page numbering, and automated image fitting. Resolved deep-level technical hurdles including 'nda' character rendering and Malayalam Unicode hyphenation logic, reducing daily layout time from 5 hours to 25 minutes."
+          techs={[
+            "ExtendScript (JS)",
+            "InDesign Automation",
+            "Indic Typography",
+            "Workflow Optimization",
+            "ISO Standardization",
+          ]}
+        >
+          <ButtonGroup>
+            <ButtonNull text="View Case Study" onClick={() => openCaseStudy("newsautomation")} />
+          </ButtonGroup>
+        </ProfessionalCard>
+      </section>
 
       <div className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         <ProjectItem
