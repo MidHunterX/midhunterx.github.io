@@ -123,8 +123,9 @@ const ProjectItemDisabled = ({ img, head, body, live, code, techs, onOpen }: Pro
 
 // dynamic import only when button is clicked
 const CaseStudyComponents: Record<string, any> = {
-  "hunter-os": dynamic(() => import("./case-study/HunterOSContent")),
-  // "expression": dynamic(() => import("./case-study/ExpressionContent")),
+  "scholarcap": dynamic(() => import("./case-study/ScholarCap"), {
+    loading: () => <div className="p-20 text-center">Loading Case Study...</div>
+  }),
 };
 
 // █▀▄ █▀▀ █░█ █▀▀ █░░ █▀█ █▀█ █▀▀ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
@@ -137,6 +138,11 @@ export default function DeveloperSection() {
   const openCaseStudy = (slug: string) => {
     setActiveSlug(slug);
     setIsOpen(true);
+  };
+
+  const closeCaseStudy = () => {
+    setIsOpen(false);
+    setTimeout(() => setActiveSlug(null), 300);
   };
 
   const ContentComponent = activeSlug ? CaseStudyComponents[activeSlug] : null;
@@ -178,7 +184,6 @@ export default function DeveloperSection() {
         <ProjectItem
           img="project/hunteros.jpg"
           head="Hunter OS"
-          onOpen={() => openCaseStudy("hunter-os")}
           body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configs curated to meet individual needs."
           code="https://github.com/MidHunterX/Hunter-OS"
           techs={["Wayland", "SystemD", "GRUB2", "dhcpcd", "Kitty Terminal", "VIFM", "Battery Optimized"]}
@@ -195,6 +200,7 @@ export default function DeveloperSection() {
         <ProjectItem
           img="project/scholarcap.jpg"
           head="Scholar CAP"
+          onOpen={() => openCaseStudy("scholarcap")}
           body="Scholar CAP (Computer Aided Processing) is a python toolset for data parsing, sanitization, validation and storage of data from docx student scholarship forms to generation of custom formatted Excel sheet for Bank NEFT."
           code="https://github.com/MidHunterX/Scholar-CAP"
           techs={["Python", "openpyxl", "Multi-Threading", "SQLite3", "pandas", "pdfplumber", "docx"]}
@@ -248,21 +254,24 @@ export default function DeveloperSection() {
             <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
           </TransitionChild>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          {/* Case Study Modal Section */}
+          <section className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4">
               <DialogPanel className="w-full max-w-5xl transform overflow-hidden rounded-3xl bg-white dark:bg-[#161D1F] p-8 text-left shadow-xl transition-all">
                 <button
-                  onClick={() => setIsOpen(false)}
-                  className="absolute top-4 right-6 text-2xl px-2 py-1"
+                  onClick={() => closeCaseStudy()}
+                  className="absolute top-4 right-6 text-2xl px-2 py-1 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
                   data-blobity-magnetic="false"
                 >
                   <FontAwesomeIcon icon={faXmark} />
                 </button>
 
-                {ContentComponent ? <ContentComponent /> : <p>Loading...</p>}
+                <div key={activeSlug}>
+                  {ContentComponent ? <ContentComponent /> : <p>Loading...</p>}
+                </div>
               </DialogPanel>
             </div>
-          </div>
+          </section>
         </Dialog>
       </Transition>
     </section>
