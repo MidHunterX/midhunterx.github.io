@@ -158,3 +158,7 @@ export const metadata: Metadata = {
 - Step 3: Test preview using a chrome extension called `Social Share Preview`. It works even with localhost development.
 
 Note: Change metadataBase URL to `http://localhost:3000` on development temporarily to see changes in localhost.
+
+## secrets.env
+
+- 🥚 EasterEgg 1: Hover on JavaScript

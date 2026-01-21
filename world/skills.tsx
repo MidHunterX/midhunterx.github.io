@@ -69,6 +69,31 @@ export default function Skills() {
           const skill = skillList[index];
           const IconComponent = importSvgIcon(title, skill.icon);
 
+          // EASTER_EGG: JavaScript
+          if (skill.name == "JavaScript") {
+            skillElements.push(
+              <div
+                key={`${title}-${index}`}
+                className="flex flex-grow items-center gap-3 place-content-center p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700"
+                data-blobity-tooltip="🤮"
+                data-blobity-magnetic="false"
+              >
+                <IconComponent
+                  className="object-contain text-gray-800 dark:text-gray-200"
+                  src={`/ico/${title}/${skill.icon}.svg`}
+                  alt={`${skill.name} icon`}
+                  width={48}
+                  height={48}
+                />
+                <div>
+                  <p className="font-bold mb-0">{skill.name}</p>
+                  <p className="text-xs mb-0">{skill.desc}</p>
+                </div>
+              </div>,
+            );
+            continue; // to the next loop
+          }
+
           if (IconComponent) {
             skillElements.push(
               <div
