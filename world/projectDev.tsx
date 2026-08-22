@@ -140,7 +140,7 @@ const CategoryIcon = ({ category }: { category: ProjectCategory }) => {
 
 const ProfessionalCard = ({ img, category, title, metric, description, techs, children }: ProfessionalCardProps) => {
   return (
-    <article className="group flex flex-col h-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-[#1A2326] dark:border-gray-800 transition-all hover:border-blue-500/50">
+    <article className="group flex flex-col h-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-[#1A2326] dark:border-gray-800">
       {/* IMAGE OR PLACEHOLDER */}
       {img ? (
         <div className="h-48 overflow-hidden rounded-t-xl border-b dark:border-gray-800">
@@ -179,18 +179,14 @@ const ProfessionalCard = ({ img, category, title, metric, description, techs, ch
 
         {/* TECH STACK */}
         {techs && (
-          <div className="flex flex-wrap gap-2">
-            {techs.map((tech) => (
-              <span
-                key={tech}
-                className="text-[11px] font-mono text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700 px-2 py-0.5 rounded"
-              >
+          <ul className="gap-2 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
+            {techs.map((tech, index) => (
+              <li key={index} className="technologies rounded-md">
                 {tech}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
-
         <div className="mt-auto border-t border-gray-100 dark:border-gray-800">{children}</div>
       </div>
     </article>
@@ -291,8 +287,8 @@ export default function DeveloperSection() {
           ]}
         >
           <ButtonGroup>
-            <ButtonNull text="View Case Study" onClick={() => openCaseStudy("scholarcap")} />
-            <ButtonSecondary target="_blank" href="https://github.com/MidHunterX/Scholar-CAP" text="Source Code" />
+            <ButtonNull text="Case Study" onClick={() => openCaseStudy("scholarcap")} />
+            <ButtonSecondary target="_blank" href="https://github.com/MidHunterX/Scholar-CAP" text="GitHub" />
           </ButtonGroup>
         </ProfessionalCard>
 
@@ -310,7 +306,7 @@ export default function DeveloperSection() {
           ]}
         >
           <ButtonGroup>
-            <ButtonNull text="View Case Study" onClick={() => openCaseStudy("newsautomation")} />
+            <ButtonNull text="Case Study" onClick={() => openCaseStudy("newsautomation")} />
           </ButtonGroup>
         </ProfessionalCard>
       </section>
