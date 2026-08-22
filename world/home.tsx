@@ -41,7 +41,7 @@ oMMo              oMMo
     "Systems Architect",
     "Full Stack Developer",
     "Platform Engineer",
-    "HCI Researcher",
+    "DevEx Enthusiast",
   ];
 
   const [isCursorInSection, setIsCursorInSection] = useState(false);

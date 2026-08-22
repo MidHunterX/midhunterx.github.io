@@ -1,5 +1,7 @@
 {
   "digitalart": {
+    "title": "Digital Art",
+    "description": "A collection of digital paintings and artworks created using various digital techniques and software. These pieces showcase vibrant colors, creative compositions, and imaginative concepts.",
     "11": [],
     "169": [
       "d_archer.jpg",
@@ -11,26 +13,36 @@
   },
 
   "render": {
+    "title": "3D Renders",
+    "description": "Photorealistic and stylized 3D renderings created with advanced modeling and rendering software. These images demonstrate lighting, texture, and material techniques in three-dimensional space.",
     "11": [],
     "169": ["v_3dcar.jpg"]
   },
 
   "logo": {
+    "title": "Logo Designs",
+    "description": "Professional logo designs and brand identity concepts. Each logo represents unique brand stories through typography, symbols, and strategic color choices.",
     "11": ["l_ambigram.jpg", "l_kvr.jpg", "l_csekings.jpg"],
     "169": []
   },
 
   "manipulation": {
+    "title": "Photo Manipulation",
+    "description": "Creative photo manipulations that blend multiple images and elements to create surreal and thought-provoking compositions. These pieces push the boundaries of realistic imagery.",
     "11": ["m_egg.jpg", "m_feeshy2.jpg", "m_animal.jpg"],
     "169": ["m_feeshy.jpg"]
   },
 
   "vector": {
+    "title": "Vector Art",
+    "description": "Clean and scalable vector illustrations created using mathematical precision. These designs feature crisp lines, geometric shapes, and bold color palettes suitable for various applications.",
     "11": ["v_me.jpg", "v_psblock.jpg", "v_sandring.jpg", "v_vaish.jpg"],
     "169": []
   },
 
   "illustration": {
+    "title": "Illustrations",
+    "description": "A diverse collection of digital illustrations ranging from character designs to environmental scenes. These artworks showcase storytelling through visual narratives and artistic expression.",
     "11": [
       "a_candy.jpg",
       "a_coffindance.jpg",

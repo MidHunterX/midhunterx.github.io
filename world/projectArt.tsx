@@ -7,12 +7,15 @@ import Image from "next/image";
 export default function ArtworkSection() {
   // █░░ █▀█ ▄▀█ █▀▄ █ █▄░█ █▀▀   ░░█ █▀ █▀█ █▄░█
   // █▄▄ █▄█ █▀█ █▄▀ █ █░▀█ █▄█   █▄█ ▄█ █▄█ █░▀█
+  type CategoryData = {
+    title: string;
+    description: string;
+    "11": string[];
+    "169": string[];
+  };
 
-  // DATASTRUCTURE
   type Designs = {
-    [category: string]: {
-      [aspect: string]: string[];
-    };
+    [category: string]: CategoryData;
   };
 
   // LOADING JSON DATA
@@ -48,10 +51,8 @@ export default function ArtworkSection() {
     );
   }
 
-  // ▄▀█ █▀ █▀█ █▀▀ █▀▀ ▀█▀   █▀█ ▄▀█ ▀█▀ █ █▀█   █▀ ▀█▀ ▄▀█ █▀▀ █▄▀
-  // █▀█ ▄█ █▀▀ ██▄ █▄▄ ░█░   █▀▄ █▀█ ░█░ █ █▄█   ▄█ ░█░ █▀█ █▄▄ █░█
-  // RETURNS ALL RENDERED IMAGE ELEMENTS INTO AN ARRAY
-  // Usage Example: {images169}
+  // ▄▀█ █▀ █▀█ █▀▀ █▀▀ ▀█▀   █▀█ ▄▀█ ▀█▀ █ █▀█
+  // █▀█ ▄█ █▀▀ ██▄ █▄▄ ░█░   █▀▄ █▀█ ░█░ █ █▄█
   // Build a map: category -> array of image objects
   type ImageItem = {
     src: string;
@@ -59,26 +60,48 @@ export default function ArtworkSection() {
     aspect: "11" | "169";
   };
 
-  const categoryMap: { [category: string]: ImageItem[] } = {};
+  type CategoryInfo = {
+    title: string;
+    description: string;
+    images: ImageItem[];
+  };
+
+  const categoryMap: { [category: string]: CategoryInfo } = {};
 
   for (const category in designs) {
     if (!designs.hasOwnProperty(category)) continue;
-    const aspects = designs[category];
+    const categoryData = designs[category];
     const items: ImageItem[] = [];
 
-    for (const aspect in aspects) {
-      if (!aspects.hasOwnProperty(aspect)) continue;
-      const images = aspects[aspect];
-      for (const image of images) {
+    // Process 1:1 aspect images
+    if (categoryData["11"] && Array.isArray(categoryData["11"])) {
+      for (const image of categoryData["11"]) {
         items.push({
-          src: `/designs/${category}/${aspect}/${image}`,
+          src: `/designs/${category}/11/${image}`,
           alt: image,
-          aspect: aspect as "11" | "169",
+          aspect: "11",
         });
       }
     }
 
-    if (items.length > 0) categoryMap[category] = items;
+    // Process 16:9 aspect images
+    if (categoryData["169"] && Array.isArray(categoryData["169"])) {
+      for (const image of categoryData["169"]) {
+        items.push({
+          src: `/designs/${category}/169/${image}`,
+          alt: image,
+          aspect: "169",
+        });
+      }
+    }
+
+    if (items.length > 0) {
+      categoryMap[category] = {
+        title: categoryData.title || category,
+        description: categoryData.description || "",
+        images: items,
+      };
+    }
   }
 
   // ▄▀█ █▀█ ▀█▀ █░█░█ █▀█ █▀█ █▄▀   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
@@ -91,12 +114,20 @@ export default function ArtworkSection() {
         Artworks
       </h2>
 
-      {Object.entries(categoryMap).map(([category, images]) => (
+      {Object.entries(categoryMap).map(([category, categoryInfo]) => (
         <div key={category} className="mb-12">
-          <h3 className="text-2xl font-bold mb-4 capitalize">{category}</h3>
+          <div className="mb-4">
+            <h3 className="text-2xl font-bold capitalize">{categoryInfo.title}</h3>
+            {categoryInfo.description && (
+              <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm md:text-base max-w-3xl">
+                {categoryInfo.description}
+              </p>
+            )}
+          </div>
+
           {/* Masonry grid using CSS Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-auto">
-            {images.map((img, idx) => {
+            {categoryInfo.images.map((img, idx) => {
               const isWide = img.aspect === "169";
 
               return (
