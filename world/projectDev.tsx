@@ -265,7 +265,7 @@ export default function DeveloperSection() {
 
   return (
     <section id="developerSection" className="px-3 md:px-[100px] py-[100px] grid gap-8">
-      <h2>
+      <h2 className="text-center mb-8">
         <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faBox} />
         Projects
       </h2>
@@ -415,15 +415,16 @@ export default function DeveloperSection() {
           {/* Case Study Modal Section */}
           <section className="fixed inset-0">
             <div className="flex min-h-full items-center justify-center p-4">
-              <DialogPanel className="relative w-full max-w-5xl max-h-[90vh] transform overscroll-contain overflow-y-auto overflow-hidden rounded-3xl bg-white dark:bg-[#161D1F] text-left shadow-xl transition-all">
-                <button
-                  onClick={() => closeCaseStudy()}
-                  className="absolute top-4 right-6 z-50 text-2xl px-2 py-1 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
-                  data-blobity-magnetic="false"
-                >
-                  <FontAwesomeIcon icon={faXmark} />
-                </button>
-
+              <DialogPanel className="relative w-full max-w-7xl max-h-[95vh] transform overscroll-contain overflow-y-auto overflow-hidden rounded-3xl bg-white dark:bg-[#161D1F] text-left shadow-xl transition-all">
+                <div className="sticky top-0 z-50 flex justify-end">
+                  <button
+                    onClick={() => closeCaseStudy()}
+                    className="absolute top-4 right-6 z-50 text-2xl px-2 py-1 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
+                    data-blobity-magnetic="false"
+                  >
+                    <FontAwesomeIcon icon={faXmark} />
+                  </button>
+                </div>
                 <div key={activeSlug}>{ContentComponent ? <ContentComponent /> : <p>Loading...</p>}</div>
               </DialogPanel>
             </div>

@@ -18,7 +18,7 @@ export default function Contact() {
       id="contact"
       className="px-3 md:px-[100px] h-svh flex flex-col justify-center"
     >
-      <h2>
+      <h2 className="text-center mb-14">
         <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faAddressBook} />
         Contact
       </h2>

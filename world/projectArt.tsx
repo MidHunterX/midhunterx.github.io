@@ -41,7 +41,7 @@ export default function ArtworkSection() {
   if (!designs) {
     return (
       <div className="w-fit mx-auto py-[100px] h-screen text-center">
-        <h2>
+        <h2 className="text-center mb-14">
           <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faPalette} />
           Artworks
         </h2>
@@ -109,7 +109,7 @@ export default function ArtworkSection() {
   // Render each category with its own masonry grid
   return (
     <section id="artworkSection" className="px-3 md:px-[100px] py-[100px] w-full mx-auto">
-      <h2 className="mb-8">
+      <h2 className="text-center mb-14">
         <FontAwesomeIcon className="pe-4" icon={faPalette} />
         Artworks
       </h2>
