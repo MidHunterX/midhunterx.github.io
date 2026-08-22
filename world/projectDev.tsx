@@ -6,6 +6,7 @@ import {
   ButtonDisabled,
   ButtonGroup,
   ButtonSecondaryNull,
+  ButtonCaseStudy,
 } from "@/constituents/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBox, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -212,7 +213,7 @@ const ProjectItem = ({ img, head, body, live, code, techs, onOpen }: ProjectItem
       <ButtonGroup>
         {live && <Button target="_blank" href={live} text="Website" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
-        {onOpen && <ButtonSecondaryNull onClick={onOpen} text="Read More" />}
+        {onOpen && <ButtonCaseStudy onClick={onOpen} text="Read More" />}
       </ButtonGroup>
     </ProjectCard>
   );

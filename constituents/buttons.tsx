@@ -40,6 +40,13 @@ export const ButtonSecondaryNull = ({ text, ...rest }:{text:string;[key:string]:
   <button className="btn font-medium text-black hover:text-white dark:text-white dark:hover:text-black rounded-lg border border-black dark:border-white hover:bg-gray-900 dark:hover:bg-gray-100" {...rest}> {text} </button>
 );
 
+export const ButtonCaseStudy = ({ text, ...rest }:{text:string;[key:string]:any;}) => (
+  <button
+    className="btn text-blue-700 hover:text-blue-900 dark:text-yellow-200 dark:hover:text-yellow-500"
+    {...rest}> {text}
+  </button>
+);
+
 // USED IN VIEWING PROJECT
 export const ButtonDisabled = ({ text }:{ text: string }) => (
   <a
