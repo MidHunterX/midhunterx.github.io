@@ -313,6 +313,15 @@ export default function DeveloperSection() {
       </section>
 
       <div className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+
+        <ProjectItem
+          img="project/project-launcher.jpg"
+          head="Project Launcher"
+          body="A development environment orchestrator that automatically detects your project type and sets up appropriate environment variables, optional system services, initializes and sets up a complete tmux development environment"
+          code="https://github.com/MidHunterX/Project-Launcher"
+          techs={["Bash", "System Services"]}
+        />
+
         <ProjectItem
           img="project/expression.jpg"
           head="Expression"
