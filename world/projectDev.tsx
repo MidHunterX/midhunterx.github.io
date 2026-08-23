@@ -243,6 +243,9 @@ const CaseStudyComponents: Record<string, any> = {
   newsautomation: dynamic(() => import("./case-study/NewsAutomation"), {
     loading: () => loading_case_study(),
   }),
+  cartops: dynamic(() => import("./case-study/CartOps"), {
+    loading: () => loading_case_study(),
+  })
 };
 
 // █▀▄ █▀▀ █░█ █▀▀ █░░ █▀█ █▀█ █▀▀ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
@@ -313,6 +316,14 @@ export default function DeveloperSection() {
       </section>
 
       <div className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <ProjectItem
+          img="project/cart-ops.jpg"
+          head="Cart Ops"
+          onOpen={() => openCaseStudy("cartops")}
+          body="A smart, offline-first Android toolset to calculate live cart totals, organize shopping lists, track item pricing history and analytics; focusing on UX."
+          code="https://github.com/MidHunterX/Cart-Ops"
+          techs={["Flutter", "Drift", "Provider", "Product Design"]}
+        />
 
         <ProjectItem
           img="project/project-launcher.jpg"
