@@ -329,13 +329,23 @@ export default function DeveloperSection() {
 
       <div className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         <ProjectItem
-          year="Jun 2026"
+          year="Jul 2026"
           img="project/cart-ops.jpg"
           head="Cart Ops"
           onOpen={() => openCaseStudy("cartops")}
           body="A smart, offline-first Android toolset to calculate live cart totals, organize shopping lists, track item pricing history and analytics; focusing on UX."
           code="https://github.com/MidHunterX/Cart-Ops"
           techs={["Flutter", "Drift", "Provider", "Product Design"]}
+        />
+
+        <ProjectItem
+          year="Jun 2026"
+          img="project/anisodactyl.jpg"
+          head="Anisodactyl"
+          body="Clean async-first Python library for automating CRUD operations and generating dynamic, filterable REST API endpoints."
+          live="https://pypi.org/project/anisodactyl/"
+          code="https://github.com/MidHunterX/Anisodactyl"
+          techs={["Python", "FastAPI", "SQLAlchemy", "Pydantic", "RESTful API", "PyPI"]}
         />
 
         <ProjectItem
@@ -442,6 +452,17 @@ export default function DeveloperSection() {
           code="https://github.com/MidHunterX/Played-Games-List"
           techs={["HTML", "CSS", "Javascript"]}
         />
+
+        {/*
+        <ProjectItem
+          year="May 2021"
+          img="project/rainmeter-timetable.png"
+          head="Desktop Timetable Widget"
+          body="A desktop widget for Rainmeter which displays a customized timetable for a school or university."
+          code="https://github.com/MidHunterX/rainmeter-TimeTable"
+          techs={["Rainmeter Script"]}
+        />
+        */}
       </div>
 
       {/* CASE STUDY MODAL */}
