@@ -6,6 +6,11 @@
       "desc": "Scripting Language"
     },
     {
+      "name": "Dart",
+      "icon": "dart",
+      "desc": "Programming Language"
+    },
+    {
       "name": "Rust",
       "icon": "rust",
       "desc": "Programming Language"
@@ -85,6 +90,11 @@
       "name": "NextJS",
       "icon": "nextdotjs",
       "desc": "Web Framework"
+    },
+    {
+      "name": "Flutter",
+      "icon": "flutter",
+      "desc": "Mobile Framework"
     },
     {
       "name": "Angular",
