@@ -245,7 +245,10 @@ const CaseStudyComponents: Record<string, any> = {
   }),
   cartops: dynamic(() => import("./case-study/CartOps"), {
     loading: () => loading_case_study(),
-  })
+  }),
+  projectlauncher: dynamic(() => import("./case-study/ProjectLauncher"), {
+    loading: () => loading_case_study(),
+  }),
 };
 
 // █▀▄ █▀▀ █░█ █▀▀ █░░ █▀█ █▀█ █▀▀ █▀█   █▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█
@@ -328,6 +331,7 @@ export default function DeveloperSection() {
         <ProjectItem
           img="project/project-launcher.jpg"
           head="Project Launcher"
+          onOpen={() => openCaseStudy("projectlauncher")}
           body="A development environment orchestrator that automatically detects your project type and sets up appropriate environment variables, optional system services, initializes and sets up a complete tmux development environment"
           code="https://github.com/MidHunterX/Project-Launcher"
           techs={["Bash", "System Services"]}
