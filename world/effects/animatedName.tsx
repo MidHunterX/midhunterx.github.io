@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const AnimatedName = ({className, ...rest}: {className?: string}) => {
+const AnimatedName = ({ className, ...rest }: { className?: string }) => {
   const baseDelay = 0.3;
   const [showUsername, setShowUsername] = useState(true);
+  const animDuration = 0.6;
 
   return (
     <div className="flex flex-col items-start">
       <button
         onClick={() => setShowUsername(!showUsername)}
-        className="max-w-fit bg-gray-100 hover:bg-gray-300 text-gray-800 text-xs font-medium my-2 px-4 py-1 rounded dark:bg-gray-800 hover:dark:bg-gray-600 dark:text-gray-200 border border-gray-500"
+        className="max-w-fit bg-gray-100 hover:bg-gray-300 text-gray-800 text-xs font-medium my-2 px-4 py-1 rounded-full dark:bg-gray-800 hover:dark:bg-gray-600 dark:text-gray-200 border border-gray-500"
         {...rest}
       >
         Show {showUsername ? "Legal Name" : "User Name"}
@@ -19,7 +20,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
         aria-label={showUsername ? "Mid Hunter" : "Midhun Jinan"}
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: baseDelay + 0, duration: 0.5 }}
+        transition={{ delay: baseDelay + 0, duration: animDuration }}
         className={className}
       >
         {/*
@@ -29,7 +30,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
         */}
         <span className="sr-only">{showUsername ? "Mid Hunter" : "Midhun Jinan"}</span>
 
-        <motion.span aria-hidden="true" transition={{ delay: baseDelay, duration: 0.5 }}>
+        <motion.span aria-hidden="true" transition={{ delay: baseDelay, duration: animDuration }}>
           Mid
         </motion.span>
 
@@ -39,7 +40,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
               aria-hidden="true"
               initial={{ x: "0%", opacity: 0 }}
               animate={{ x: "7%", opacity: 1 }}
-              transition={{ delay: baseDelay, duration: 0.5 }}
+              transition={{ delay: baseDelay, duration: animDuration }}
               style={{ display: "inline-block" }} // allows movement for text
             >
               Hun
@@ -48,7 +49,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
               aria-hidden="true"
               initial={{ x: "-107%", opacity: 1 }}
               animate={{ x: "-85%", opacity: 0 }}
-              transition={{ delay: baseDelay, duration: 0.5 }}
+              transition={{ delay: baseDelay, duration: animDuration }}
               style={{ display: "inline-block" }} // allows movement for text
             >
               hun
@@ -62,7 +63,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
               aria-hidden="true"
               initial={{ x: "-130%", y: "-40%", opacity: 0, rotateX: -90 }}
               animate={{ x: "-130%", y: "0%", opacity: 1, rotateX: 0 }}
-              transition={{ delay: baseDelay + 0.5, duration: 0.5 }}
+              transition={{ delay: baseDelay + 0.5, duration: animDuration }}
               style={{ display: "inline-block" }} // allows movement for text
             >
               ter
@@ -75,7 +76,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
               aria-hidden="true"
               initial={{ x: "-120%", y: "0%", opacity: 1, rotateX: 0 }}
               animate={{ x: "-120%", y: "40%", opacity: 0, rotateX: -90 }}
-              transition={{ delay: baseDelay + 0.5, duration: 0.5 }}
+              transition={{ delay: baseDelay + 0.5, duration: animDuration }}
               style={{ display: "inline-block" }} // allows movement for text
             >
               Jinan
@@ -87,7 +88,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
               aria-hidden="true"
               initial={{ x: "7%", opacity: 1 }}
               animate={{ x: "0%", opacity: 0 }}
-              transition={{ delay: baseDelay, duration: 0.5 }}
+              transition={{ delay: baseDelay, duration: animDuration }}
               style={{ display: "inline-block" }} // allows movement for text
             >
               Hun
@@ -96,7 +97,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
               aria-hidden="true"
               initial={{ x: "-85%", opacity: 0 }}
               animate={{ x: "-107%", opacity: 1 }}
-              transition={{ delay: baseDelay, duration: 0.5 }}
+              transition={{ delay: baseDelay, duration: animDuration }}
               style={{ display: "inline-block" }} // allows movement for text
             >
               hun
@@ -107,7 +108,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
               aria-hidden="true"
               initial={{ x: "-130%", y: "0%", opacity: 1, rotateX: 0 }}
               animate={{ x: "-130%", y: "-40%", opacity: 0, rotateX: -90 }}
-              transition={{ delay: baseDelay + 0.5, duration: 0.5 }}
+              transition={{ delay: baseDelay + 0.5, duration: animDuration }}
               style={{ display: "inline-block" }} // allows movement for text
             >
               ter
@@ -120,7 +121,7 @@ const AnimatedName = ({className, ...rest}: {className?: string}) => {
               aria-hidden="true"
               initial={{ x: "-120%", y: "40%", opacity: 0, rotateX: -90 }}
               animate={{ x: "-120%", y: "0%", opacity: 1, rotateX: 0 }}
-              transition={{ delay: baseDelay + 0.5, duration: 0.5 }}
+              transition={{ delay: baseDelay + 0.5, duration: animDuration }}
               style={{ display: "inline-block" }} // allows movement for text
             >
               Jinan
