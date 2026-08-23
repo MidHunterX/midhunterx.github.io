@@ -28,10 +28,11 @@ type ProjectCardProps = {
   head: string;
   body: string;
   techs?: string[];
+  year?: string | number;
   children: ReactNode; // ReactNode allows any JSX content
 };
 
-const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => {
+const ProjectCard = ({ img, head, body, techs, year, children }: ProjectCardProps) => {
   const [tiltEnable, setTiltEnable] = useState(false);
 
   useEffect(() => {
@@ -60,8 +61,15 @@ const ProjectCard = ({ img, head, body, techs, children }: ProjectCardProps) => 
       style={{ transformStyle: "preserve-3d" }}
       className="group max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700"
     >
-      <div className="rounded-t-lg overflow-hidden">
+      <div className="rounded-t-lg overflow-hidden relative">
         <Image className="group-hover:scale-110 transition duration-500" src={img} alt="" width={1920} height={1080} />
+
+        {/* YEAR PILL */}
+        {year && (
+          <div className="absolute top-3 right-3 px-3 py-1 bg-gray-950/30 backdrop-blur-sm text-white text-xs font-medium rounded-full border border-white/20 shadow-lg">
+            {year}
+          </div>
+        )}
       </div>
 
       <div className="p-5" style={{ transformStyle: "preserve-3d" }}>
@@ -114,7 +122,7 @@ interface ProfessionalCardProps {
   img?: string; // Optional
   category: ProjectCategory;
   title: string;
-  metric?: string; // e.g., "40% faster" or "Saved 20hrs/week"
+  metric?: string; // "40% faster" or "Saved 20hrs/week"
   description: string;
   techs?: string[];
   children: ReactNode;
@@ -204,12 +212,13 @@ type ProjectItemProps = {
   live?: string;
   code?: string;
   techs?: string[];
+  year?: string | number;
   onOpen?: () => void; // Callback function for case study modal
 };
 
-const ProjectItem = ({ img, head, body, live, code, techs, onOpen }: ProjectItemProps) => {
+const ProjectItem = ({ img, head, body, live, code, techs, year, onOpen }: ProjectItemProps) => {
   return (
-    <ProjectCard img={img} head={head} body={body} techs={techs}>
+    <ProjectCard img={img} head={head} body={body} techs={techs} year={year}>
       <ButtonGroup>
         {live && <Button target="_blank" href={live} text="Website" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
@@ -219,9 +228,9 @@ const ProjectItem = ({ img, head, body, live, code, techs, onOpen }: ProjectItem
   );
 };
 
-const ProjectItemDisabled = ({ img, head, body, live, code, techs, onOpen }: ProjectItemProps) => {
+const ProjectItemDisabled = ({ img, head, body, live, code, techs, year, onOpen }: ProjectItemProps) => {
   return (
-    <ProjectCard img={img} head={head} body={body} techs={techs}>
+    <ProjectCard img={img} head={head} body={body} techs={techs} year={year}>
       <ButtonGroup>
         {live && <ButtonDisabled text="Viewing" />}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
@@ -320,6 +329,7 @@ export default function DeveloperSection() {
 
       <div className="grid w-fit mx-auto sm:px-0 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         <ProjectItem
+          year="Jun 2026"
           img="project/cart-ops.jpg"
           head="Cart Ops"
           onOpen={() => openCaseStudy("cartops")}
@@ -329,15 +339,19 @@ export default function DeveloperSection() {
         />
 
         <ProjectItem
+          year="Mar 2025"
           img="project/project-launcher.jpg"
           head="Project Launcher"
           onOpen={() => openCaseStudy("projectlauncher")}
-          body="A development environment orchestrator that automatically detects your project type and sets up appropriate environment variables, optional system services, initializes and sets up a complete tmux development environment"
+          body="Development environment orchestrator that automatically detects
+          project type and set up a complete tmux development environment along
+          with system services and many more."
           code="https://github.com/MidHunterX/Project-Launcher"
           techs={["Bash", "System Services"]}
         />
 
         <ProjectItem
+          year="Mar 2025"
           img="project/expression.jpg"
           head="Expression"
           body="Fast, lightweight, rule-based wallpaper daemon for Linux, written in Rust; optimized for minimal system resource usage and source code is built with design patterns for maintainability."
@@ -346,6 +360,7 @@ export default function DeveloperSection() {
         />
 
         <ProjectItem
+          year="Aug 2024"
           img="project/game-trackr.jpg"
           head="Game Trackr"
           onOpen={() => openCaseStudy("gametrackr")}
@@ -356,6 +371,7 @@ export default function DeveloperSection() {
         />
 
         <ProjectItemDisabled
+          year="Apr 2024"
           img="project/portfolio.jpg"
           head="Portfolio Website"
           body="This is the webpage you are looking at right now. Developed using Next.js to deepen my understanding of React's core concepts and modern web development practices."
@@ -365,6 +381,16 @@ export default function DeveloperSection() {
         />
 
         <ProjectItem
+          year="Mar 2024"
+          img="project/gnosis.jpg"
+          head="γνῶσις (GNŌSIS)"
+          body="Gnosis is the Greek word for “knowledge”. Community-driven knowledge base with AI Integration for exploring answers to all of your questions in different media formats."
+          code="https://github.com/MidHunterX/GNOSIS"
+          techs={["Django", "Python", "Bootstrap", "GeminiAI", "FuzzyMatching", "Markdown Editor", "Authentication"]}
+        />
+
+        <ProjectItem
+          year="Feb 2024"
           img="project/hunteros.jpg"
           head="Hunter OS"
           body="A custom-tailored Linux distribution designed specifically for personal use, offering a unique and optimized experience with all the essential operating system features and configs curated to meet individual needs."
@@ -373,14 +399,7 @@ export default function DeveloperSection() {
         />
 
         <ProjectItem
-          img="project/gnosis.jpg"
-          head="γνῶσις (GNŌSIS)"
-          body="Gnosis is a Greek word that means “knowledge”. This project is a community-driven knowledge base with AI Integration for exploring answers to all of your questions in different media formats."
-          code="https://github.com/MidHunterX/GNOSIS"
-          techs={["Django", "Python", "Bootstrap", "GeminiAI", "FuzzyMatching", "Markdown Editor", "Authentication"]}
-        />
-
-        <ProjectItem
+          year="Oct 2023"
           img="project/scholarcap.jpg"
           head="Scholar CAP"
           onOpen={() => openCaseStudy("scholarcap")}
@@ -390,6 +409,7 @@ export default function DeveloperSection() {
         />
 
         <ProjectItem
+          year="Aug 2023"
           img="project/nvme.jpg"
           head="NvME"
           body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
@@ -404,6 +424,7 @@ export default function DeveloperSection() {
         />
 
         <ProjectItem
+          year="May 2022"
           img="project/breakingcipher.jpg"
           head="Breaking the Caesar Cipher"
           body="A Computer Science Engineering Mini Project of a Webservice implementing Symmetric Encryption/Decryption using the good ol' Caesar Cipher algorithm"
@@ -413,6 +434,7 @@ export default function DeveloperSection() {
         />
 
         <ProjectItem
+          year="Oct 2021"
           img="project/playedgames.jpg"
           head="Played Games List"
           body="A web development project which help keep create and keep an organized list of all the PC games I have finished playing, while also familiarizing and applying basic web development concepts and best practices."
