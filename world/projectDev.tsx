@@ -421,7 +421,7 @@ export default function DeveloperSection() {
         <ProjectItem
           year="Aug 2023"
           img="project/nvme.jpg"
-          head="NvME"
+          head="Hunter Nvim"
           body="This project involves building a personalized NeoVim setup from scratch, incorporating all the desired features and customizations to ensure a perfectly comfortable and efficient development environment tailored to individual preferences."
           code="https://github.com/MidHunterX/NvME"
           techs={[

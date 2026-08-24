@@ -94,11 +94,11 @@ oMMo              oMMo
 
         <p className="mb-3 text-gray-400 text-justify">
           Specializing in <span className="text-gray-200 font-medium">high-performance architecture</span>, developer
-          experience (DevEx), and ergonomic computing. I build the underlying systems that make software efficient,
-          scalable, and resilient.
+          experience (DevEx), and workflow automation pipelines. I build the underlying systems that make software
+          maintainable, efficient and resilient.
         </p>
         <ButtonGroup className="justify-center sm:justify-start">
-          <ResumeModal data-no-blobity/>
+          <ResumeModal data-no-blobity />
           <ButtonSecondary href="#projects" onClick={smoothScroll} text="Show Projects" data-no-blobity />
         </ButtonGroup>
       </hgroup>
