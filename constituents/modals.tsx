@@ -1,6 +1,8 @@
 import { useState, useRef, Fragment } from "react";
-import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
+import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
 import { Button, ButtonNull, ButtonSecondaryNull, ButtonGroup } from "@/constituents/buttons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image'
 // width, height, blurDataUrl is not needed when importing image :D
 // import Resume from '@/public/MidhunJinan_Resume.jpg'
@@ -48,7 +50,7 @@ export default function ResumeModal({...rest}) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/25" />
+            <div className="fixed inset-0 bg-black/25" aria-hidden="true" />
           </TransitionChild>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -62,8 +64,24 @@ export default function ResumeModal({...rest}) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-3xl text-left align-middle shadow-xl transition-all bg-neutral-800">
+                <DialogPanel className="relative w-full max-w-4xl transform overflow-hidden rounded-3xl text-left align-middle shadow-2xl transition-all bg-neutral-800">
+                  {/* Explicit close affordance — previously the only way out was
+                      the backdrop click or scrolling down to "Go Back" */}
+                  <button
+                    onClick={closeModal}
+                    aria-label="Close résumé preview"
+                    data-blobity-magnetic="false"
+                    className="absolute top-4 right-4 z-10 text-xl text-white/70 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded-full"
+                  >
+                    <FontAwesomeIcon icon={faXmark} />
+                  </button>
+
                   <section className="dark p-2">
+                    {/* Screen readers get a real dialog title; sighted users
+                        still just see the résumé image, unchanged */}
+                    <DialogTitle as="h3" className="sr-only">
+                      Résumé preview
+                    </DialogTitle>
                     <Image
                       className="rounded-3xl"
                       ref={resumeRef}
@@ -73,9 +91,10 @@ export default function ResumeModal({...rest}) {
                       // When no image import used
                       width={1241}
                       height={1754}
+                      sizes="(max-width: 768px) 100vw, 1241px"
                       blurDataURL={ResumeBlur}
                     />
-                    <ButtonGroup>
+                    <ButtonGroup className="px-2 pb-2">
                       <Button
                         target="_blank"
                         href="MidhunJinan_Resume.pdf"
