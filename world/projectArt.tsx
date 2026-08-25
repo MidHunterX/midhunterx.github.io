@@ -4,6 +4,42 @@ import { faPalette, faSync } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+type SpecialImageProps = {
+  src: string;
+  alt: string;
+  isWide?: boolean;
+  className?: string;
+};
+
+const specialComponents = new Map<string, React.ComponentType<SpecialImageProps>>();
+
+function AmbigramImage({ src, alt, isWide }: SpecialImageProps) {
+  const [rotated, setRotated] = useState(false);
+  const toggleRotate = () => setRotated((prev) => !prev);
+  return (
+    <div className="relative w-full h-full">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover rounded-lg transition-transform duration-300"
+        style={{ transform: rotated ? "rotate(180deg)" : "rotate(0deg)" }}
+        sizes={
+          isWide
+            ? "(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 50vw"
+            : "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        }
+      />
+      <button
+        onClick={toggleRotate}
+        className="absolute bottom-2 right-2 bg-black/70 text-white px-3 py-1 rounded-md text-sm hover:bg-black/90 transition z-10"
+      >
+        Rotate 180°
+      </button>
+    </div>
+  );
+}
+
 export default function ArtworkSection() {
   // █░░ █▀█ ▄▀█ █▀▄ █ █▄░█ █▀▀   ░░█ █▀ █▀█ █▄░█
   // █▄▄ █▄█ █▀█ █▄▀ █ █░▀█ █▄█   █▄█ ▄█ █▄█ █░▀█
@@ -129,6 +165,18 @@ export default function ArtworkSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-auto">
             {categoryInfo.images.map((img, idx) => {
               const isWide = img.aspect === "169";
+
+              if (img.src === "/designs/logo/11/l_ambigram.jpg") {
+                return (
+                  <div
+                    key={`${category}-${idx}`}
+                    className={`relative w-full ${isWide ? "sm:col-span-2 lg:col-span-2 xl:col-span-2" : "col-span-1"}`}
+                    style={{ aspectRatio: isWide ? "16/9" : "1/1" }}
+                  >
+                    <AmbigramImage src={img.src} alt={img.alt} isWide={isWide} />
+                  </div>
+                );
+              }
 
               return (
                 <div
