@@ -19,9 +19,29 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
 import { Fragment } from "react";
+import {
+  faArrowsSpin,
+  faSitemap,
+  faMicrochip,
+  faDatabase,
+  faGaugeHigh,
+  faShieldHalved,
+  faBriefcase,
+} from "@fortawesome/free-solid-svg-icons";
 
 // █▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀   █▀▀ ▄▀█ █▀█ █▀▄
 // █▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░   █▄▄ █▀█ █▀▄ █▄▀
+
+// Shared by both card types so the tag styling only has to be tuned once.
+const TechList = ({ techs }: { techs: string[] }) => (
+  <ul className="gap-2 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
+    {techs.map((tech) => (
+      <li key={tech} className="technologies rounded-md">
+        {tech}
+      </li>
+    ))}
+  </ul>
+);
 
 type ProjectCardProps = {
   img: string;
@@ -36,19 +56,16 @@ const ProjectCard = ({ img, head, body, techs, year, children }: ProjectCardProp
   const [tiltEnable, setTiltEnable] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setTiltEnable(true);
-      } else {
-        setTiltEnable(false);
-      }
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleChange = () => {
+      setTiltEnable(window.innerWidth >= 1024 && !reduceMotion.matches);
     };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    // Cleanup event listener on component unmount
+    handleChange();
+    window.addEventListener("resize", handleChange);
+    reduceMotion.addEventListener("change", handleChange);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", handleChange);
+      reduceMotion.removeEventListener("change", handleChange);
     };
   }, []);
 
@@ -56,12 +73,11 @@ const ProjectCard = ({ img, head, body, techs, year, children }: ProjectCardProp
     <Tilt
       tiltEnable={tiltEnable}
       perspective={1000}
-      // scale={1.05}
       transitionSpeed={2000}
       style={{ transformStyle: "preserve-3d" }}
-      className="group max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-[#161D1F] dark:border-gray-700"
+      className="group max-w-lg bg-white border border-gray-200 rounded-xl shadow dark:bg-[#161D1F] dark:border-gray-700 hover:shadow-lg dark:hover:border-gray-600 transition-shadow duration-300"
     >
-      <div className="rounded-t-lg overflow-hidden relative">
+      <div className="rounded-t-xl overflow-hidden relative">
         <Image className="group-hover:scale-110 transition duration-500" src={img} alt="" width={1920} height={1080} />
 
         {/* YEAR PILL */}
@@ -80,16 +96,9 @@ const ProjectCard = ({ img, head, body, techs, year, children }: ProjectCardProp
 
         {/* TECHNOLOGIES */}
         {techs && (
-          <ul
-            style={{ transform: "translateZ(2rem)" }}
-            className="gap-2 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400"
-          >
-            {techs.map((tech, index) => (
-              <li key={index} className="technologies rounded-md">
-                {tech}
-              </li>
-            ))}
-          </ul>
+          <div style={{ transform: "translateZ(2rem)" }}>
+            <TechList techs={techs} />
+          </div>
         )}
         {/* BUTTONS */}
         <div className="px-3 pb-3" style={{ transform: "translateZ(4rem)" }}>
@@ -100,16 +109,6 @@ const ProjectCard = ({ img, head, body, techs, year, children }: ProjectCardProp
   );
 };
 
-import {
-  faArrowsSpin,
-  faSitemap,
-  faMicrochip,
-  faDatabase,
-  faGaugeHigh,
-  faShieldHalved,
-  faBriefcase,
-} from "@fortawesome/free-solid-svg-icons";
-
 type ProjectCategory =
   | "Automation" // For: Scholar CAP, Newspaper Scripting
   | "Workflow Design" // For: Newspaper Layout optimization, Game Trackr UX
@@ -119,7 +118,7 @@ type ProjectCategory =
   | "Cryptography"; // For: Caesar Cipher project
 
 interface ProfessionalCardProps {
-  img?: string; // Optional
+  img?: string;
   category: ProjectCategory;
   title: string;
   metric?: string; // "40% faster" or "Saved 20hrs/week"
@@ -128,28 +127,23 @@ interface ProfessionalCardProps {
   children: ReactNode;
 }
 
+const CATEGORY_ICON: Record<ProjectCategory, { icon: typeof faBriefcase; className: string }> = {
+  Automation: { icon: faArrowsSpin, className: "text-blue-500" },
+  "Workflow Design": { icon: faSitemap, className: "text-purple-500" },
+  "System Design": { icon: faMicrochip, className: "text-orange-500" },
+  "Data Engineering": { icon: faDatabase, className: "text-cyan-500" },
+  Optimization: { icon: faGaugeHigh, className: "text-emerald-500" },
+  Cryptography: { icon: faShieldHalved, className: "text-amber-500" },
+};
+
 const CategoryIcon = ({ category }: { category: ProjectCategory }) => {
-  switch (category) {
-    case "Automation":
-      return <FontAwesomeIcon icon={faArrowsSpin} className="text-blue-500" />;
-    case "Workflow Design":
-      return <FontAwesomeIcon icon={faSitemap} className="text-purple-500" />;
-    case "System Design":
-      return <FontAwesomeIcon icon={faMicrochip} className="text-orange-500" />;
-    case "Data Engineering":
-      return <FontAwesomeIcon icon={faDatabase} className="text-cyan-500" />;
-    case "Optimization":
-      return <FontAwesomeIcon icon={faGaugeHigh} className="text-emerald-500" />;
-    case "Cryptography":
-      return <FontAwesomeIcon icon={faShieldHalved} className="text-amber-500" />;
-    default:
-      return <FontAwesomeIcon icon={faBriefcase} className="text-gray-500" />;
-  }
+  const { icon, className } = CATEGORY_ICON[category] ?? { icon: faBriefcase, className: "text-gray-500" };
+  return <FontAwesomeIcon icon={icon} className={className} aria-hidden="true" />;
 };
 
 const ProfessionalCard = ({ img, category, title, metric, description, techs, children }: ProfessionalCardProps) => {
   return (
-    <article className="group flex flex-col h-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-[#1A2326] dark:border-gray-800">
+    <article className="group flex flex-col h-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-[#1A2326] dark:border-gray-800 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300">
       {/* IMAGE OR PLACEHOLDER */}
       {img ? (
         <div className="h-48 overflow-hidden rounded-t-xl border-b dark:border-gray-800">
@@ -187,16 +181,9 @@ const ProfessionalCard = ({ img, category, title, metric, description, techs, ch
         </div>
 
         {/* TECH STACK */}
-        {techs && (
-          <ul className="gap-2 flex flex-wrap max-w-md text-gray-500 dark:text-gray-400">
-            {techs.map((tech, index) => (
-              <li key={index} className="technologies rounded-md">
-                {tech}
-              </li>
-            ))}
-          </ul>
-        )}
-        <div className="mt-auto border-t border-gray-100 dark:border-gray-800">{children}</div>
+        {techs && <TechList techs={techs} />}
+
+        <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">{children}</div>
       </div>
     </article>
   );
@@ -214,27 +201,21 @@ type ProjectItemProps = {
   techs?: string[];
   year?: string | number;
   onOpen?: () => void; // Callback function for case study modal
+  disabled?: boolean; // true for the project that is the page currently being viewed
 };
 
-const ProjectItem = ({ img, head, body, live, code, techs, year, onOpen }: ProjectItemProps) => {
+const ProjectItem = ({ img, head, body, live, code, techs, year, onOpen, disabled }: ProjectItemProps) => {
   return (
     <ProjectCard img={img} head={head} body={body} techs={techs} year={year}>
       <ButtonGroup>
-        {live && <Button target="_blank" href={live} text="Website" />}
+        {live && (disabled ? <ButtonDisabled text="Viewing" /> : <Button target="_blank" href={live} text="Website" />)}
         {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
-        {onOpen && <ButtonCaseStudy onClick={onOpen} text="Read More" />}
-      </ButtonGroup>
-    </ProjectCard>
-  );
-};
-
-const ProjectItemDisabled = ({ img, head, body, live, code, techs, year, onOpen }: ProjectItemProps) => {
-  return (
-    <ProjectCard img={img} head={head} body={body} techs={techs} year={year}>
-      <ButtonGroup>
-        {live && <ButtonDisabled text="Viewing" />}
-        {code && <ButtonSecondary target="_blank" href={code} text="GitHub" />}
-        {onOpen && <ButtonSecondaryNull onClick={onOpen} text="Read More" />}
+        {onOpen &&
+          (disabled ? (
+            <ButtonSecondaryNull onClick={onOpen} text="Read More" />
+          ) : (
+            <ButtonCaseStudy onClick={onOpen} text="Read More" />
+          ))}
       </ButtonGroup>
     </ProjectCard>
   );
@@ -282,7 +263,7 @@ export default function DeveloperSection() {
   return (
     <section id="developerSection" className="px-3 md:px-[100px] py-[100px] grid gap-8">
       <h2 className="text-center mb-8">
-        <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faBox} />
+        <FontAwesomeIcon height={48} width={48} className="pe-4" icon={faBox} aria-hidden="true" />
         Projects
       </h2>
 
@@ -380,7 +361,7 @@ export default function DeveloperSection() {
           techs={["Angular", "Figma", "TypeScript", "TailwindCSS", "SASS", "DaisyUI", "Python", "IGDB API"]}
         />
 
-        <ProjectItemDisabled
+        <ProjectItem
           year="Apr 2024"
           img="project/portfolio.jpg"
           head="Portfolio Website"
@@ -388,6 +369,7 @@ export default function DeveloperSection() {
           live="https://midhunterx.github.io"
           code="https://github.com/MidHunterX/midhunterx.github.io"
           techs={["Next.js", "React", "TypeScript", "TailwindCSS", "GSAP", "HeadlessUI", "Webpack", "Framer Motion"]}
+          disabled
         />
 
         <ProjectItem
@@ -477,7 +459,7 @@ export default function DeveloperSection() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
+            <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" aria-hidden="true" />
           </TransitionChild>
 
           {/* Case Study Modal Section */}
@@ -487,7 +469,8 @@ export default function DeveloperSection() {
                 <div className="sticky top-0 z-50 flex justify-end">
                   <button
                     onClick={() => closeCaseStudy()}
-                    className="absolute top-4 right-6 z-50 text-2xl px-2 py-1 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
+                    aria-label="Close case study"
+                    className="absolute top-4 right-6 z-50 text-2xl px-2 py-1 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-full"
                     data-blobity-magnetic="false"
                   >
                     <FontAwesomeIcon icon={faXmark} />
