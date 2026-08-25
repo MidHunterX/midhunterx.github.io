@@ -42,8 +42,10 @@ export const ButtonSecondaryNull = ({ text, ...rest }:{text:string;[key:string]:
 
 export const ButtonCaseStudy = ({ text, ...rest }:{text:string;[key:string]:any;}) => (
   <button
-    className="btn text-blue-700 bg-blue-50 hover:text-blue-900
-      dark:text-yellow-200 dark:bg-gray-800 dark:hover:text-yellow-500"
+    className="btn text-blue-700 bg-blue-50
+      dark:hover:text-yellow-300 dark:hover:bg-yellow-950
+      hover:text-blue-800 hover:bg-gray-300
+      dark:text-yellow-200 dark:bg-gray-800"
     {...rest}> {text}
   </button>
 );
