@@ -273,7 +273,7 @@ export default function DeveloperSection() {
           category="Automation"
           title="Scholarship Disbursement Pipeline"
           metric="Optimal Operational Efficiency"
-          description="Engineered an end-to-end automation suite for an NGO to manage scholarship processing for 3,200+ students across 500+ schools. Replaced months of manual data entry with a Python-based pipeline that parses digital forms, validates banking details against RBI datasets using multi-threaded asynchronous loading, and generates bank-ready NEFT spreadsheets. Reduced manual error rates by 300%, ensuring high-fidelity financial transfers."
+          description="Engineered an end-to-end automation suite for an NGO to manage scholarship processing for 3,200+ students across 500+ schools. Replaced months of manual data entry with a Python-based pipeline that parses digital forms, validates banking details against RBI datasets using multi-threaded asynchronous loading, and generates bank-ready NEFT spreadsheets. Reduced manual error rates by 92%, ensuring high-fidelity financial transfers."
           techs={[
             "Python",
             "SQLite3",
@@ -292,8 +292,8 @@ export default function DeveloperSection() {
         <ProfessionalCard
           category="Workflow Design"
           title="Newspaper Editorial Pipeline"
-          metric="90% Reduction in Production Time"
-          description="Re-engineered a legacy daily newspaper production workflow. Developed custom ExtendScript (JS) solutions to automate ISO-standardized exports, dynamic page numbering, and automated image fitting. Resolved deep-level technical hurdles including 'nda' character rendering and Malayalam Unicode hyphenation logic, reducing daily layout time from 5 hours to 25 minutes."
+          metric="91.7% Reduction in Production Time"
+          description="Re-engineered a legacy daily newspaper production workflow. Developed custom ExtendScript solutions to automate ISO-standardized exports, dynamic page numbering, and automated image fitting. Resolved complex regional typography hurdles including 'nda' character rendering and Malayalam Unicode hyphenation logic, reducing daily production time from 5 hours to 25 minutes."
           techs={[
             "ExtendScript (JS)",
             "InDesign Automation",
